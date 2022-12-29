@@ -41,7 +41,7 @@ export default function CardOverviewAnImageWithDescrAndpoints() {
             <div className="sm:block flex flex-col mt-10">
               <Link
                 to={"/landing"}
-                className="get-started text-white font-bold px-6 py-4 rounded outline-none focus:outline-none mr-1 mb-2 bg-lightBlue-500 active:bg-lightBlue-600 uppercase text-sm shadow hover:shadow-lg ease-linear transition-all duration-150"
+                className="get-started text-white font-bold px-6 py-4 rounded outline-none focus:outline-none mr-1 mb-2 bg-sky-500 active:bg-sky-600 uppercase text-sm shadow hover:shadow-lg ease-linear transition-all duration-150"
               >
                 <i className="fas fa-briefcase text-lg mr-1"></i>
                 Our projects

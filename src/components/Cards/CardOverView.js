@@ -30,7 +30,7 @@ export default function CardOverViewAndItenDescription() {
           // style={{ flexDirection: "row-reverse" }}
         >
           <div className="w-12/12 md:w-6/12 lg:w-4/12 px-12 md:px-4 mr-auto ml-auto -mt-32">
-            <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg bg-lightBlue-500">
+            <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg bg-sky-500">
               <img
                 alt="..."
                 // src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=80"
@@ -46,7 +46,7 @@ export default function CardOverViewAndItenDescription() {
                 >
                   <polygon
                     points="-30,95 583,95 583,65"
-                    className="text-lightBlue-500 fill-current"
+                    className="text-sky-500 fill-current"
                   ></polygon>
                 </svg>
                 <h4 className="text-xl font-bold text-white">
@@ -231,7 +231,7 @@ export default function CardOverViewAndItenDescription() {
                   </div>
                 </Link>
                 <Link to={"/shop"}>
-                  <div className="bg-lightBlue-500 shadow-lg rounded-lg text-center p-8 mt-8">
+                  <div className="bg-sky-500 shadow-lg rounded-lg text-center p-8 mt-8">
                     <img
                       alt="..."
                       className="shadow-md rounded-full max-w-full w-16 mx-auto p-2 bg-white"

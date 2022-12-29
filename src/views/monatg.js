@@ -112,14 +112,14 @@ export default function Montag() {
 
                   </div>
                   <Link
-                    className="bg-lightBlue-500 p-5 mt-5  active:bg-lightBlue-600 uppercase text-white font-bold hover:shadow-md shadow text-x px-6 py-2 rounded   ease-linear transition-all duration-150"
+                    className="bg-sky-500 p-5 mt-5  active:bg-sky-600 uppercase text-white font-bold hover:shadow-md shadow text-x px-6 py-2 rounded   ease-linear transition-all duration-150"
                     type="button"
                     to={"/shop"}
                   >
                     الرجوع
                   </Link>
                   <Link
-                    className="bg-lightBlue-500 p-5 mt-5 ml-2 active:bg-lightBlue-600 uppercase text-white font-bold hover:shadow-md shadow text-x px-6 py-2 rounded   ease-linear transition-all duration-150"
+                    className="bg-sky-500 p-5 mt-5 ml-2 active:bg-sky-600 uppercase text-white font-bold hover:shadow-md shadow text-x px-6 py-2 rounded   ease-linear transition-all duration-150"
                     type="button"
                     to={"/first_step"}
                   >
@@ -134,7 +134,7 @@ export default function Montag() {
                       </p>
                       <Link
                         to={"/first_step"}
-                        className="font-normal text-lightBlue-500"
+                        className="font-normal text-sky-500"
                       >
                         طلب المنتج
                       </Link>

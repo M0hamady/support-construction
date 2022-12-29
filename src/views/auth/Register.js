@@ -97,7 +97,7 @@ export default function Register() {
                         I agree with the{" "}
                         <a
                           href="#pablo"
-                          className="text-lightBlue-500"
+                          className="text-sky-500"
                           onClick={(e) => e.preventDefault()}
                         >
                           Privacy Policy

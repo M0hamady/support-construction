@@ -26,7 +26,7 @@ export default function CardTable({ color, orders, table_name }) {
       <div
         className={
           "relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded duration-150 " +
-          (color === "light" ? "bg-white" : "bg-lightBlue-900 text-white")
+          (color === "light" ? "bg-white" : "bg-sky-900 text-white")
         }
         style={{ transition: "1s" }}
       >
@@ -54,7 +54,7 @@ export default function CardTable({ color, orders, table_name }) {
                     "px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left " +
                     (color === "light"
                       ? "bg-blueGray-50 text-blueGray-500 border-blueGray-100"
-                      : "bg-lightBlue-800 text-lightBlue-300 border-lightBlue-700")
+                      : "bg-sky-800 text-sky-300 border-sky-700")
                   }
                 >
                   With
@@ -64,7 +64,7 @@ export default function CardTable({ color, orders, table_name }) {
                     "px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left " +
                     (color === "light"
                       ? "bg-blueGray-50 text-blueGray-500 border-blueGray-100"
-                      : "bg-lightBlue-800 text-lightBlue-300 border-lightBlue-700")
+                      : "bg-sky-800 text-sky-300 border-sky-700")
                   }
                 >
                   DAte
@@ -74,7 +74,7 @@ export default function CardTable({ color, orders, table_name }) {
                     "px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left " +
                     (color === "light"
                       ? "bg-blueGray-50 text-blueGray-500 border-blueGray-100"
-                      : "bg-lightBlue-800 text-lightBlue-300 border-lightBlue-700")
+                      : "bg-sky-800 text-sky-300 border-sky-700")
                   }
                 >
                   Status
@@ -84,7 +84,7 @@ export default function CardTable({ color, orders, table_name }) {
                     "px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left " +
                     (color === "light"
                       ? "bg-blueGray-50 text-blueGray-500 border-blueGray-100"
-                      : "bg-lightBlue-800 text-lightBlue-300 border-lightBlue-700")
+                      : "bg-sky-800 text-sky-300 border-sky-700")
                   }
                 >
                   is accebted
@@ -94,7 +94,7 @@ export default function CardTable({ color, orders, table_name }) {
                     "px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left " +
                     (color === "light"
                       ? "bg-blueGray-50 text-blueGray-500 border-blueGray-100"
-                      : "bg-lightBlue-800 text-lightBlue-300 border-lightBlue-700")
+                      : "bg-sky-800 text-sky-300 border-sky-700")
                   }
                 >
                   time remaining
@@ -104,7 +104,7 @@ export default function CardTable({ color, orders, table_name }) {
                     "px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left " +
                     (color === "light"
                       ? "bg-blueGray-50 text-blueGray-500 border-blueGray-100"
-                      : "bg-lightBlue-800 text-lightBlue-300 border-lightBlue-700")
+                      : "bg-sky-800 text-sky-300 border-sky-700")
                   }
                 ></th>
               </tr>

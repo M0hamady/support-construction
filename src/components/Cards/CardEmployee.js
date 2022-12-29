@@ -28,13 +28,13 @@ export default function CardEmployee() {
                     </p>
                     <div className="mt-6">
                       <button
-                        className="bg-lightBlue-400 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1 hover:shadow-lg ease-linear transition-all duration-150"
+                        className="bg-sky-400 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1 hover:shadow-lg ease-linear transition-all duration-150"
                         type="button"
                       >
                         <i className="fab fa-twitter"></i>
                       </button>
                       <button
-                        className="bg-lightBlue-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1 hover:shadow-lg ease-linear transition-all duration-150"
+                        className="bg-sky-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1 hover:shadow-lg ease-linear transition-all duration-150"
                         type="button"
                       >
                         <i className="fab fa-facebook-f"></i>
@@ -69,7 +69,7 @@ export default function CardEmployee() {
                         <i className="fab fa-google"></i>
                       </button>
                       <button
-                        className="bg-lightBlue-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1 hover:shadow-lg ease-linear transition-all duration-150"
+                        className="bg-sky-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1 hover:shadow-lg ease-linear transition-all duration-150"
                         type="button"
                       >
                         <i className="fab fa-facebook-f"></i>
@@ -98,7 +98,7 @@ export default function CardEmployee() {
                         <i className="fab fa-google"></i>
                       </button>
                       <button
-                        className="bg-lightBlue-400 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1 hover:shadow-lg ease-linear transition-all duration-150"
+                        className="bg-sky-400 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1 hover:shadow-lg ease-linear transition-all duration-150"
                         type="button"
                       >
                         <i className="fab fa-twitter"></i>
@@ -142,7 +142,7 @@ export default function CardEmployee() {
                         <i className="fab fa-google"></i>
                       </button>
                       <button
-                        className="bg-lightBlue-400 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1 hover:shadow-lg ease-linear transition-all duration-150"
+                        className="bg-sky-400 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1 hover:shadow-lg ease-linear transition-all duration-150"
                         type="button"
                       >
                         <i className="fab fa-twitter"></i>

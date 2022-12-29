@@ -32,14 +32,14 @@ export default function CardLanding() {
             <div className="mt-12">
               <Link
                 to="/shop"
-                className="get-started text-white font-bold px-6 py-4 text-pop-up-top rounded outline-none focus:outline-none mr-1 mb-1   bg-blueGray-700 active:bg-lightBlue-600 uppercase text-sm shadow hover:shadow-lg ease-linear transition-all duration-150"
+                className="get-started text-white font-bold px-6 py-4 text-pop-up-top rounded outline-none focus:outline-none mr-1 mb-1   bg-blueGray-700 active:bg-sky-600 uppercase text-sm shadow hover:shadow-lg ease-linear transition-all duration-150"
               >
                 Our projects
                 {/** go to gallary */}
               </Link>
               <Link
                 to="/book"
-                className="github-star ml-1 text-white font-bold px-6 py-4 rounded outline-none focus:outline-none mr-1 mb-1 bg-lightBlue-500 active:bg-blueGray-600 uppercase text-sm shadow hover:shadow-lg ease-linear transition-all duration-150"
+                className="github-star ml-1 text-white font-bold px-6 py-4 rounded outline-none focus:outline-none mr-1 mb-1 bg-sky-500 active:bg-blueGray-600 uppercase text-sm shadow hover:shadow-lg ease-linear transition-all duration-150"
                 // target="_blank"
               >
                 book
