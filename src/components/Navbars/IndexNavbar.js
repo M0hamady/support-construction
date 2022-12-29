@@ -14,7 +14,7 @@ export default function Navbar(props) {
           <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
             <Link
               to="/"
-              className="text-slate-700 text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase"
+              className="text-blueGray-700 text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase"
             >
               Support construction
             </Link>
@@ -36,10 +36,10 @@ export default function Navbar(props) {
             <ul className="flex flex-col lg:flex-row list-none mr-auto">
               <li className="flex items-center text-black">
                 <a
-                  className="hover:text-slate-500 text-slate-700 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
+                  className="hover:text-blueGray-500 text-blueGray-700 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
                   href="https://www.facebook.com/supportconstructioneg"
                 >
-                  <i className="text-slate-400 far fa-file-alt text-lg leading-lg mr-2" />{" "}
+                  <i className="text-blueGray-400 far fa-file-alt text-lg leading-lg mr-2" />{" "}
                   Docs
                 </a>
               </li>
@@ -50,33 +50,33 @@ export default function Navbar(props) {
               </li>
               <li className="flex items-center">
                 <a
-                  className="hover:text-slate-500 text-slate-700 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
+                  className="hover:text-blueGray-500 text-blueGray-700 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
                   href="https://www.facebook.com/supportconstructioneg"
                   target="_blank"
                 >
-                  <i className="text-slate-400 fab fa-facebook text-lg leading-lg " />
+                  <i className="text-blueGray-400 fab fa-facebook text-lg leading-lg " />
                   <span className="lg:hidden inline-block ml-2">Share</span>
                 </a>
               </li>
 
               <li className="flex items-center">
                 <a
-                  className="hover:text-slate-500 text-slate-700 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
+                  className="hover:text-blueGray-500 text-blueGray-700 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
                   href="https://www.facebook.com/supportconstructioneg"
                   target="_blank"
                 >
-                  <i className="text-slate-400 fab fa-twitter text-lg leading-lg " />
+                  <i className="text-blueGray-400 fab fa-twitter text-lg leading-lg " />
                   <span className="lg:hidden inline-block ml-2">Tweet</span>
                 </a>
               </li>
 
               <li className="flex items-center">
                 <a
-                  className="hover:text-slate-500 text-slate-700 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
+                  className="hover:text-blueGray-500 text-blueGray-700 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
                   href="https://www.facebook.com/supportconstructioneg"
                   target="_blank"
                 >
-                  <i className="text-slate-400 fab fa-github text-lg leading-lg " />
+                  <i className="text-blueGray-400 fab fa-github text-lg leading-lg " />
                   <span className="lg:hidden inline-block ml-2">Star</span>
                 </a>
               </li>

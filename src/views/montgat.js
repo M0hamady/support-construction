@@ -48,7 +48,7 @@ export default function montgat() {
                   <h1 className="text-white font-semibold text-5xl">
                     Support Construction{" "}
                   </h1>
-                  <p className="mt-4 text-lg text-slate-200">
+                  <p className="mt-4 text-lg text-blueGray-200">
                     One of our most distinguishing characteristics is our
                     commitment to society. Accordingly, we are committed to
                     Corporate Responsibility, best practices in Quality and the
@@ -75,7 +75,7 @@ export default function montgat() {
               y="0"
             >
               <polygon
-                className="text-slate-200 fill-current"
+                className="text-blueGray-200 fill-current"
                 points="2560 0 2560 100 0 100"
               ></polygon>
             </svg>
@@ -86,7 +86,7 @@ export default function montgat() {
         {allQesm.map((qesm) => {
           console.log(filter_by_qesm(qesm));
           let color =
-            allQesm.indexOf(qesm) + (1 % 1) === 0 ? "slate" : "white";
+            allQesm.indexOf(qesm) + (1 % 1) === 0 ? "blueGray" : "white";
           console.log(color);
           return (
             <MontagatComponen
@@ -109,4 +109,4 @@ export default function montgat() {
   );
 }
 //  <MontagatComponen groubName="قسم الحلويات" montagat={montagat_7elw} sec_colo='white'/>
-//  <MontagatComponen groubName="قسم المخبوز" montagat={montagat_m5boz} sec_colo='slate'/>
+//  <MontagatComponen groubName="قسم المخبوز" montagat={montagat_m5boz} sec_colo='blueGray'/>

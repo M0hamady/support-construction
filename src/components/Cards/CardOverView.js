@@ -4,7 +4,7 @@ import CardOverViewAndImg from "./CardOverViewHistory";
 
 export default function CardOverViewAndItenDescription() {
   return (
-    <section className="mt-48 md:mt-40 pb-0 relative bg-slate-100 justify-right">
+    <section className="mt-48 md:mt-40 pb-0 relative bg-blueGray-100 justify-right">
       <div
         className="-mt-20 top-0 bottom-auto left-0 right-0 w-full absolute h-20"
         style={{ transform: "translateZ(0)" }}
@@ -19,7 +19,7 @@ export default function CardOverViewAndItenDescription() {
           y="0"
         >
           <polygon
-            className="text-slate-100 fill-current"
+            className="text-blueGray-100 fill-current"
             points="2560 0 2560 100 0 100"
           ></polygon>
         </svg>
@@ -30,7 +30,7 @@ export default function CardOverViewAndItenDescription() {
           // style={{ flexDirection: "row-reverse" }}
         >
           <div className="w-12/12 md:w-6/12 lg:w-4/12 px-12 md:px-4 mr-auto ml-auto -mt-32">
-            <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg bg-sky-500">
+            <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg bg-lightBlue-500">
               <img
                 alt="..."
                 // src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=80"
@@ -46,7 +46,7 @@ export default function CardOverViewAndItenDescription() {
                 >
                   <polygon
                     points="-30,95 583,95 583,65"
-                    className="text-sky-500 fill-current"
+                    className="text-lightBlue-500 fill-current"
                   ></polygon>
                 </svg>
                 <h4 className="text-xl font-bold text-white">
@@ -71,7 +71,7 @@ export default function CardOverViewAndItenDescription() {
                     <h6 className="text-xl text-center mb-1 font-semibold">
                       supporting your construct{" "}
                     </h6>
-                    <p className="mb-4 text-center text-slate-500">
+                    <p className="mb-4 text-center text-blueGray-500">
                       To help our employees advance in their careers, we
                       endeavour to create an environment in which they can
                       develop their employability and enhance their skills
@@ -81,11 +81,11 @@ export default function CardOverViewAndItenDescription() {
                 </div>
                 <div className="relative flex flex-col min-w-0">
                   {/*<div className="px-4 py-5 flex-auto">
-                    <div className="text-slate-500 p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-white">
+                    <div className="text-blueGray-500 p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-white">
                       <i className="fas fa-drafting-compass"></i>
                     </div>
                     <h6 className="text-xl mb-1 font-semibold">supporting your construct</h6>
-                    <p className="mb-4 text-slate-500">
+                    <p className="mb-4 text-blueGray-500">
                      WE also working on reorganize your home with our designer as you hope.
                     </p>
   </div>*/}
@@ -94,11 +94,11 @@ export default function CardOverViewAndItenDescription() {
               <div className="w-full md:w-6/12 px-4">
                 {/*<div className="relative flex flex-col min-w-0 mt-4">
                   <div className="px-4 py-5 flex-auto">
-                    <div className="text-slate-500 p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-white">
+                    <div className="text-blueGray-500 p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-white">
                       <i className="fas fa-newspaper"></i>
                     </div>
                     <h6 className="text-xl mb-1 font-semibold">تورتات</h6>
-                    <p className="mb-4 text-slate-500">
+                    <p className="mb-4 text-blueGray-500">
                       This extension also comes with 3 sample pages. They are
                       fully coded so you can start working instantly.
                     </p>
@@ -109,7 +109,7 @@ export default function CardOverViewAndItenDescription() {
                     <h6 className="text-xl text-center mb-1 font-semibold">
                       2021
                     </h6>
-                    <p className="mb-4 text-center text-slate-500">
+                    <p className="mb-4 text-center text-blueGray-500">
                       2021 was a remarkable year in many respects. The Support
                       Construction group returned to its growth momentum, as
                       evidenced by its excellent results, and achieved or
@@ -129,13 +129,13 @@ export default function CardOverViewAndItenDescription() {
           // style={{ flexDirection: "row-reverse" }}
         >
           <div className="w-full md:w-4/12 px-12 md:px-4 ml-auto mr-auto mt-48">
-            <div className="text-slate-500 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-white">
+            <div className="text-blueGray-500 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-white">
               <i className="fas fa-sitemap text-xl"></i>
             </div>
             <h3 className="text-3xl mb-2 font-semibold leading-normal">
               Support Construction
             </h3>
-            <p className="text-lg font-light leading-relaxed mt-4 mb-4 text-slate-600">
+            <p className="text-lg font-light leading-relaxed mt-4 mb-4 text-blueGray-600">
               Tailored solutions for complexe requirements – welcome to your
               partner for international construction projects! The expert for
               large international construction projects is a subsidiary of
@@ -144,34 +144,34 @@ export default function CardOverViewAndItenDescription() {
               strength.rate your home like in your dream. you can dream with us.
             </p>
             <div className="block pb-6">
-              <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-slate-500 bg-white uppercase last:mr-0 mr-2 mt-2">
+              <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-white uppercase last:mr-0 mr-2 mt-2">
                 Decorations
               </span>
-              <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-slate-500 bg-white uppercase last:mr-0 mr-2 mt-2">
+              <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-white uppercase last:mr-0 mr-2 mt-2">
                 Plumbing
               </span>
-              <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-slate-500 bg-white uppercase last:mr-0 mr-2 mt-2">
+              <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-white uppercase last:mr-0 mr-2 mt-2">
                 electricity
               </span>
-              <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-slate-500 bg-white uppercase last:mr-0 mr-2 mt-2">
+              <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-white uppercase last:mr-0 mr-2 mt-2">
                 smart electricity
               </span>
-              <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-slate-500 bg-white uppercase last:mr-0 mr-2 mt-2">
+              <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-white uppercase last:mr-0 mr-2 mt-2">
                 lighting
               </span>
-              <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-slate-500 bg-white uppercase last:mr-0 mr-2 mt-2">
+              <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-white uppercase last:mr-0 mr-2 mt-2">
                 Swimming pool
               </span>
-              <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-slate-500 bg-white uppercase last:mr-0 mr-2 mt-2">
+              <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-white uppercase last:mr-0 mr-2 mt-2">
                 gardens
               </span>
-              <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-slate-500 bg-white uppercase last:mr-0 mr-2 mt-2">
+              <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-white uppercase last:mr-0 mr-2 mt-2">
                 Marbling
               </span>
             </div>
             <Link
               to={"/shop"}
-              className="font-bold text-slate-700 hover:text-slate-500 ease-linear transition-all duration-150"
+              className="font-bold text-blueGray-700 hover:text-blueGray-500 ease-linear transition-all duration-150"
             >
               Support construction{" "}
               <i className="fa fa-angle-double-right ml-1 leading-relaxed"></i>
@@ -231,7 +231,7 @@ export default function CardOverViewAndItenDescription() {
                   </div>
                 </Link>
                 <Link to={"/shop"}>
-                  <div className="bg-sky-500 shadow-lg rounded-lg text-center p-8 mt-8">
+                  <div className="bg-lightBlue-500 shadow-lg rounded-lg text-center p-8 mt-8">
                     <img
                       alt="..."
                       className="shadow-md rounded-full max-w-full w-16 mx-auto p-2 bg-white"
@@ -246,7 +246,7 @@ export default function CardOverViewAndItenDescription() {
                   // href="https://www.creative-tim.com/learning-lab/tailwind/nextjs/alerts/notus?ref=vtw-index"
                   target="_blank"
                 >
-                  <div className="bg-slate-700 shadow-lg rounded-lg text-center p-8 mt-8">
+                  <div className="bg-blueGray-700 shadow-lg rounded-lg text-center p-8 mt-8">
                     <img
                       alt="..."
                       className="shadow-md rounded-full max-w-full w-16 mx-auto p-2 bg-white"
@@ -309,48 +309,48 @@ export default function CardOverViewAndItenDescription() {
           </div>
 
           <div className="w-full md:w-4/12 px-12 md:px-4 ml-auto mr-auto mt-48">
-            <div className="text-slate-500 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-white">
+            <div className="text-blueGray-500 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-white">
               <i className="fas fa-drafting-compass text-xl"></i>
             </div>
             <h3 className="text-3xl mb-2 font-semibold leading-normal">
               حلويات الحلويات
             </h3>
-            <p className="text-lg font-light leading-relaxed mt-4 mb-4 text-slate-600">
+            <p className="text-lg font-light leading-relaxed mt-4 mb-4 text-blueGray-600">
               مرحبا بك في قسم الهدايا اليك بعض منتاجاتنا التي نفتخر بها ونسعي
               الي ان يكون مزاقها الافضل بين الافضل قم بزيارت القسم واستمتع معنا
             </p>
-            <p className="text-lg font-light leading-relaxed mt-4 mb-4 text-slate-600">
+            <p className="text-lg font-light leading-relaxed mt-4 mb-4 text-blueGray-600">
               نحن نفوم بوضع تفاصيل كل هدية معك لتصل الي القلب وتستمتع بها العين
             </p>
             <div className="block pb-6">
-              <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-slate-500 bg-white uppercase last:mr-0 mr-2 mt-2">
+              <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-white uppercase last:mr-0 mr-2 mt-2">
                 هدايا قيمة
               </span>
-              <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-slate-500 bg-white uppercase last:mr-0 mr-2 mt-2">
+              <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-white uppercase last:mr-0 mr-2 mt-2">
                 هدايا مناسبات
               </span>
-              <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-slate-500 bg-white uppercase last:mr-0 mr-2 mt-2">
+              <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-white uppercase last:mr-0 mr-2 mt-2">
                 هدايا مولود
               </span>
-              <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-slate-500 bg-white uppercase last:mr-0 mr-2 mt-2">
+              <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-white uppercase last:mr-0 mr-2 mt-2">
                 هدايا اعياد ميلاد
               </span>
-              <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-slate-500 bg-white uppercase last:mr-0 mr-2 mt-2">
+              <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-white uppercase last:mr-0 mr-2 mt-2">
                 هدايا اصدقاء
               </span>
-              <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-slate-500 bg-white uppercase last:mr-0 mr-2 mt-2">
+              <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-white uppercase last:mr-0 mr-2 mt-2">
                 هدايا رؤساء الاعمال
               </span>
-              <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-slate-500 bg-white uppercase last:mr-0 mr-2 mt-2">
+              <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-white uppercase last:mr-0 mr-2 mt-2">
                 هدايا عائلية
               </span>
-              <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-slate-500 bg-white uppercase last:mr-0 mr-2 mt-2">
+              <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-white uppercase last:mr-0 mr-2 mt-2">
                 هدايا تحفيزية للمرؤسين
               </span>
             </div>
             <Link
               to={"/shop"}
-              className="font-bold text-slate-700 hover:text-slate-500 ease-linear transition-all duration-150"
+              className="font-bold text-blueGray-700 hover:text-blueGray-500 ease-linear transition-all duration-150"
             >
               تصفح المزيد{" "}
               <i className="fa fa-angle-double-right ml-1 leading-relaxed"></i>
@@ -363,11 +363,11 @@ export default function CardOverViewAndItenDescription() {
         <div className="items-center flex flex-wrap">
           <div className="w-full md:w-5/12 ml-auto px-12 md:px-4">
             <div className="md:pr-12">
-              <div className="text-slate-500 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-white">
+              <div className="text-blueGray-500 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-white">
                 <i className="fas fa-file-alt text-xl"></i>
               </div>
               <h3 className="text-3xl font-semibold">Support construction</h3>
-              <p className="mt-4 text-lg leading-relaxed text-slate-500">
+              <p className="mt-4 text-lg leading-relaxed text-blueGray-500">
                 Saying the construction industry is large would be a gross
                 understatement. As one of the oldest industries to date,
                 construction has skyrocketed over the last thousands of
@@ -401,7 +401,7 @@ export default function CardOverViewAndItenDescription() {
           <h2 className="font-semibold text-4xl">
               Support construction
           </h2>
-          <p className="text-lg leading-relaxed mt-4 mb-4 text-slate-500">
+          <p className="text-lg leading-relaxed mt-4 mb-4 text-blueGray-500">
             Support Construction —a leader in design-build construction
             projects in Egypt. Civil engineering | buildings
             | transport infrastructure.

@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 export default function CardOverViewHistory() {
   return (
     <section
-      className="block relative z-1 bg-slate-600 "
+      className="block relative z-1 bg-blueGray-600 "
       style={{ marginTop: "150px" }}
     >
       <div className="container mx-auto">

@@ -24,7 +24,7 @@ export default function HeaderStats() {
   return (
     <>
       {/* Header */}
-      <div className="relative bg-sky-600 md:pt-32 pb-32 pt-12">
+      <div className="relative bg-lightBlue-600 md:pt-32 pb-32 pt-12">
         <div className="px-2 md:px-10 mx-auto w-full">
           <div>
             {/* Card stats */}
@@ -93,7 +93,7 @@ export default function HeaderStats() {
                     statPercentColor="text-emerald-500"
                     statDescripiron="Since last month"
                     statIconName="fas fa-users"
-                    statIconColor="bg-sky-500"
+                    statIconColor="bg-lightBlue-500"
                   />
                 </Link>
               </div>
@@ -109,7 +109,7 @@ export default function HeaderStats() {
                   statPercentColor="text-emerald-500"
                   statDescripiron="Since last month"
                   statIconName="fas fa-users"
-                  statIconColor="bg-sky-500"
+                  statIconColor="bg-lightBlue-500"
                 />
               </div>
               <div
@@ -125,7 +125,7 @@ export default function HeaderStats() {
                     statPercentColor="text-emerald-500"
                     statDescripiron="Since last month"
                     statIconName="fas fa-users"
-                    statIconColor="bg-sky-500"
+                    statIconColor="bg-lightBlue-500"
                   />
                 </Link>
               </div>
@@ -142,7 +142,7 @@ export default function HeaderStats() {
                     statPercentColor="text-emerald-500"
                     statDescripiron="Since last month"
                     statIconName="fas fa-users"
-                    statIconColor="bg-sky-500"
+                    statIconColor="bg-lightBlue-500"
                   />
                 </Link>
               </div>
