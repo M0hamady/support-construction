@@ -8,14 +8,14 @@ import { Link } from "react-router-dom";
 
 export default function CardTable({ color, orders, table_name }) {
   
-  function getSuccesPerc(order) {
-    let allSuc = 0;
-    order.component.map((comp) => {
-      comp.isready ? (allSuc += 1) : allSuc;
-    });
-    let percentageSuc = (allSuc / order.component.length) * 100;
-    return Math.round(percentageSuc);
-  }
+  // function getSuccesPerc(order) {
+  //   let allSuc = 0;
+  //   order.component.map((comp) => {
+  //     comp.isready ? (allSuc += 1) : allSuc;
+  //   });
+  //   let percentageSuc = (allSuc / order.component.length) * 100;
+  //   return Math.round(percentageSuc);
+  // }
 
   return (
     <>
