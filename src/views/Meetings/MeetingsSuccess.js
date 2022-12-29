@@ -1,7 +1,5 @@
 import React from "react";
 // components
-import CardSettings from "components/Cards/CardSettings.js";
-import CardProfile from "components/Cards/CardProfile.js";
 import CardTable from "components/Cards/CardTable.js";
 import { Meetings_success } from "data/DataVisitors";
 import { AllVisitors } from "data/DataVisitors";
@@ -9,7 +7,7 @@ import { AllVisitors } from "data/DataVisitors";
 export default function Meetings_suc() {
   const data = AllVisitors();
 
-  const data_suc = Meetings_success(allVisitors());
+  const data_suc = Meetings_success(AllVisitors());
   return (
     <>
       <div className="flex flex-wrap">

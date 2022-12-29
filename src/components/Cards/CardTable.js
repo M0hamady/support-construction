@@ -112,6 +112,7 @@ export default function CardTable({ color, orders, table_name }) {
               {orders.length
                 ? orders.map((order) => {
                     return (
+                      <link to={'/order/' + order.id}>
                       <tr key={order.id} onClick={() => to_ex_order(order.id)}>
                         <th className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left flex items-center">
                           <span
@@ -175,6 +176,7 @@ export default function CardTable({ color, orders, table_name }) {
                           <TableDropdown />
                         </td>
                       </tr>
+                      </link>
                     );
                   })
                 : "no ordeers"}

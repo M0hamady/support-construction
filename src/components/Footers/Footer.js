@@ -36,14 +36,13 @@ export default function Footer() {
                 >
                   <i className="fab fa-twitter"></i>
                 </button>
-                <button
+                <Link
                   className="bg-white text-lightBlue-600 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
                   type="button"
-                  onClick={()=>location.href ='https://www.facebook.com/supportconstructioneg'}
                   href="https://www.facebook.com/supportconstructioneg"
                 >
                   <i className="fab fa-facebook-square"></i>
-                </button>
+                </Link>
                 <button
                   className="bg-white text-pink-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
                   type="button"
