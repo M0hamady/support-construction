@@ -3,7 +3,6 @@ import React from "react";
 // components
 
 import CardStats from "components/Cards/CardStats.js";
-import { allVisitors } from "data/DataVisitors";
 import TodayMeetings from "data/DataVisitors";
 import { TodayMeetings_accepted } from "data/DataVisitors";
 import { TodayMeetings_success } from "data/DataVisitors";
@@ -11,9 +10,10 @@ import { NeedsAction } from "data/DataVisitors";
 import { Meetings_accepted } from "data/DataVisitors";
 import { Meetings_success } from "data/DataVisitors";
 import { Link } from "react-router-dom";
+import { AllVisitors } from "data/DataVisitors";
 
 export default function HeaderStats() {
-  const data = allVisitors();
+  const data = AllVisitors();
   const todayMeatings = TodayMeetings(data);
   console.log(data);
   const todayMeetings_accept = TodayMeetings_accepted(data);

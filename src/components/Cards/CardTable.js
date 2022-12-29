@@ -2,16 +2,15 @@ import React from "react";
 import PropTypes from "prop-types";
 
 // components
-import img1 from "assets/img/bootstrap.jpg";
-import img2 from "assets/img/angular.jpg";
-import img3 from "assets/img/bootstrap.jpg";
+
 import TableDropdown from "components/Dropdowns/TableDropdown.js";
 import { Link } from "react-router-dom";
-function to_ex_order(order) {
-  location.href = `/order/${order}`;
-  console.log(order, 5555555555);
-}
+
 export default function CardTable({ color, orders, table_name }) {
+  function to_ex_order(order) {
+    location.href = `/order/${order}`;
+    console.log(order, 5555555555);
+  }
   function getSuccesPerc(order) {
     let allSuc = 0;
     order.component.map((comp) => {
@@ -135,16 +134,22 @@ export default function CardTable({ color, orders, table_name }) {
                           <i
                             className={`fas fa-circle text-orange-500 mr-2 `}
                           ></i>
-                          {order.is_success  ? (
-                            <button class="fas fa-solid fa-check text-xl" style={{color:"#0ee3ae"}}/>
+                          {order.is_success ? (
+                            <button
+                              class="fas fa-solid fa-check text-xl"
+                              style={{ color: "#0ee3ae" }}
+                            />
                           ) : (
-                            <button class="fas fa-solid fa-xmark text-xl text-"  />
+                            <button class="fas fa-solid fa-xmark text-xl text-" />
                           )}
                         </td>
                         <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 duration-150">
                           <div className="flex flex-wrap justify-center ">
-                            {order.is_accepted  ? (
-                              <button class="fas fa-solid fa-check text-xl" style={{color:"#0ee3ae"}}/>
+                            {order.is_accepted ? (
+                              <button
+                                class="fas fa-solid fa-check text-xl"
+                                style={{ color: "#0ee3ae" }}
+                              />
                             ) : (
                               <button class="fas fa-solid fa-xmark text-xl" />
                             )}
@@ -173,7 +178,6 @@ export default function CardTable({ color, orders, table_name }) {
                     );
                   })
                 : "no ordeers"}
-              
             </tbody>
           </table>
         </div>

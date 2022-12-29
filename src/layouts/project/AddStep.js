@@ -38,7 +38,6 @@ export default function AddStep() {
         document.getElementById("add").style.display = "none";
         document.getElementById("project").style.display = "block";
         document.getElementById("next").style.display = "block";
-        setCoste(0);
         setName(" ");
         console.log(response.data.projectid);
         setidproj(response.data.projectid);

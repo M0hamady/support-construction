@@ -5,10 +5,10 @@ import React from "react";
 import CardSettings from "components/Cards/CardSettings.js";
 import CardProfile from "components/Cards/CardProfile.js";
 import CardTable from "components/Cards/CardTable.js";
-import { allVisitors } from "data/DataVisitors";
+import { AllVisitors } from "data/DataVisitors";
 
 export default function Settings() {
-  const data = allVisitors();
+  const data = AllVisitors();
 
   return (
     <>

@@ -4,13 +4,14 @@ import Navbar from "components/Navbars/AuthNavbar.js";
 import Footer from "components/Footers/Footer.js";
 import { Link, useParams } from "react-router-dom";
 import { GetExactMontag } from "data/DataMontagat";
-import { exact_Meet } from "data/DataVisitors";
+import { AllVisitors } from "data/DataVisitors";
+import { Exact_Meet } from "data/DataVisitors";
 
 export default function Montag() {
-   const data = allVisitors();
+   const data = AllVisitors();
 
   const id =parseInt( useParams().id)
-  const meeting =exact_Meet(data,id)
+  const meeting =Exact_Meet(data,id)
 
   const montag =GetExactMontag(id)  
   console.log(montag,55555555,id);

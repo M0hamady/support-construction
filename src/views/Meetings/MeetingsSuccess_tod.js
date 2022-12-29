@@ -3,11 +3,11 @@ import React from "react";
 import CardSettings from "components/Cards/CardSettings.js";
 import CardProfile from "components/Cards/CardProfile.js";
 import CardTable from "components/Cards/CardTable.js";
-import { allVisitors } from "data/DataVisitors";
 import { TodayMeetings_success } from "data/DataVisitors";
+import { AllVisitors } from "data/DataVisitors";
 
 export default function Meetings_suc_tod() {
-  const data = allVisitors();
+  const data = AllVisitors();
   const data_accpted = TodayMeetings_success(data);
   return (
     <>

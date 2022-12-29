@@ -2,12 +2,12 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { url } from "./DataMontagat";
 
-export const allVisitors = () => {
+export const AllVisitors = () => {
   // console.log(today);
   const [meetings, setMeetings] = useState([]);
   let config = {
     method: "get",
-    url: url +":8000/meeting/",
+    url: url + ":8000/meeting/",
     headers: {},
   };
   useEffect(() => {
@@ -132,7 +132,7 @@ export function NeedsAction(data) {
   return newDAta;
 }
 
-export function exact_Meet(data, id) {
+export function Exact_Meet(data, id) {
   const [newDAta, setNewDAta] = useState({});
   useEffect(() => {
     data.forEach((element) => {
@@ -144,13 +144,13 @@ export function exact_Meet(data, id) {
 
   return newDAta;
 }
-export const change_accepted_stat = (id, val) => {
+export const Change_accepted_stat = (id, val) => {
   // console.log(today);
   let data = new FormData();
   data.append("is_accepted", val);
   let config = {
     method: "put",
-    url: url +`:8000/meeting/${id}/`,
+    url: url + `:8000/meeting/${id}/`,
     headers: {
       ...data.getHeaders,
     },
@@ -164,14 +164,14 @@ export const change_accepted_stat = (id, val) => {
       console.log(error);
     });
 };
-export const change_success_stat = (id, val) => {
+export const Change_success_stat = (id, val) => {
   console.log(val);
   console.log(id);
   let data = new FormData();
   data.append("succeded", val);
   let config = {
     method: "put",
-    url: url +`:8000/meeting/${id}/`,
+    url: url + `:8000/meeting/${id}/`,
     headers: {
       ...data.getHeaders,
     },
@@ -194,7 +194,7 @@ export function AddPartment(number_of_step, id) {
   data.append("id", id);
   let config = {
     method: "post",
-    url: url +`:8000/project/`,
+    url: url + `:8000/project/`,
     headers: {
       ...data.getHeaders,
     },
@@ -210,12 +210,12 @@ export function AddPartment(number_of_step, id) {
     });
 }
 
-export const meet_project = (id) => {
+export const Meet_project = (id) => {
   // const [meetings, setMeetings] = useState([]);
   let proj = "";
   let config = {
     method: "get",
-    url: url +`:8000/meeting/num/${id}/`,
+    url: url + `:8000/meeting/num/${id}/`,
     headers: {},
   };
   axios(config)

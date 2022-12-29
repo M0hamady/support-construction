@@ -13,7 +13,7 @@ import CardContact from "components/Cards/CardContact";
 import CardShe3ar from "components/Cards/CardShe3ar";
 import CardGallary from "components/Cards/CardGallary";
 
-export default function montgat() {
+export default function Montgat() {
   const [itemsdata, setItemsdata] = useState(montagat);
   const allQesm = [...new Set(itemsdata.map((i) => i.qesm))];
   const filter_by_qesm = (categor) => {

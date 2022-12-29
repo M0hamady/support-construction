@@ -1,12 +1,11 @@
 import React from "react";
 // components
-import CardSettings from "components/Cards/CardSettings.js";
-import CardProfile from "components/Cards/CardProfile.js";
 import CardTable from "components/Cards/CardTable.js";
-import { allVisitors, Meetings_accepted } from "data/DataVisitors";
+import { Meetings_accepted } from "data/DataVisitors";
+import { AllVisitors } from "data/DataVisitors";
 
 export default function Meetings_accepte() {
-  const data = allVisitors();
+  const data = AllVisitors();
   const data_accpted = Meetings_accepted(data);
   return (
     <>

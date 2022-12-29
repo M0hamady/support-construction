@@ -22,7 +22,7 @@ export function ProjectData(id) {
   // console.log(state);
   return state;
 }
-export const allprojects = () => {
+export const Allprojects = () => {
   const [state, setState] = useState([]);
   let config = {
     method: "get",
@@ -47,7 +47,7 @@ export const allprojects = () => {
 
   return state;
 };
-export const allproject_steps = (id) => {
+export const Allproject_steps = (id) => {
   // get all steps by id of project
   const [state, setState] = useState([]);
   let config = {

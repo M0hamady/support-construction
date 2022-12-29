@@ -3,14 +3,14 @@ import Card_project from "components/Cards/Card_project";
 import { Card_project_img } from "components/Cards/Card_project";
 import { Card_project_moshatarayat } from "components/Cards/Card_project_moshtarayt";
 import Card_user from "components/Cards/Card_user";
-import { allproject_steps } from "data/DataProject";
+import { Allproject_steps } from "data/DataProject";
 import React from "react";
 import { useParams } from "react-router";
 import { Link } from "react-router-dom";
 
 export default function Project() {
   const id = useParams().id;
-  const steps = allproject_steps(id);
+  const steps = Allproject_steps(id);
   console.log(steps);
   return (
     <div className="container py-0">

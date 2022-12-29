@@ -2,17 +2,12 @@ import React, { useEffect } from "react";
 
 // components
 
-import CardTable from "components/Cards/CardTable.js";
-import { ordersData2 } from "data/DatatOrders";
-import { ordersData } from "data/DatatOrders";
-import { ordersData3 } from "data/DatatOrders";
-import { allVisitors } from "data/DataVisitors";
-import { allprojects } from "data/DataProject";
 import { Link } from "react-router-dom";
-import { allproject_steps } from "data/DataProject";
-const d = () => allproject_steps(10).length;
+import { Allproject_steps } from "data/DataProject";
+import { Allprojects } from "data/DataProject";
+const d = () => Allproject_steps(10).length;
 export default function Tables() {
-  const projects = allprojects();
+  const projects = Allprojects();
   console.log(projects, 55545454);
   const all_proj = () => {
     return projects.map((project) => {

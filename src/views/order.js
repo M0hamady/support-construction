@@ -3,28 +3,25 @@ import React, { useState } from "react";
 import Navbar from "components/Navbars/AuthNavbar.js";
 import Footer from "components/Footers/Footer.js";
 import { Link, useParams } from "react-router-dom";
-import { Oreder_detail } from "data/DatatOrders";
-import { is_order_ready } from "data/DatatOrders";
-import { allVisitors } from "data/DataVisitors";
-import { exact_Meet } from "data/DataVisitors";
-import { change_success_stat } from "data/DataVisitors";
-import { change_accepted_stat } from "data/DataVisitors";
+import { Change_success_stat } from "data/DataVisitors";
 import { AddPartment } from "data/DataVisitors";
-import { meet_project } from "data/DataVisitors";
 import { ProjectData } from "data/DataProject";
+import { AllVisitors } from "data/DataVisitors";
+import { Exact_Meet } from "data/DataVisitors";
+import { Change_accepted_stat } from "data/DataVisitors";
 // import { emerald } from "tailwindcss/colors";
 
 export default function Order({ order_num, price, locat, date, component }) {
   const id = useParams().id;
-  const data = allVisitors();
-  const meeting = exact_Meet(data, id);
+  const data = AllVisitors();
+  const meeting = Exact_Meet(data, id);
   const project = (val) => ProjectData(val).name;
   function changeTounsUcced(state) {
-    change_success_stat(id.toString(), state);
+    Change_success_stat(id.toString(), state);
     window.location.reload();
   }
   function changeTouaccepted(state) {
-    change_accepted_stat(id.toString(), state);
+    Change_accepted_stat(id.toString(), state);
     window.location.reload();
   }
   const [steps, setSteps] = useState(0);
