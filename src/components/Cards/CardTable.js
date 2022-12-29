@@ -7,10 +7,7 @@ import TableDropdown from "components/Dropdowns/TableDropdown.js";
 import { Link } from "react-router-dom";
 
 export default function CardTable({ color, orders, table_name }) {
-  function to_ex_order(order) {
-    location.href = `/order/${order}`;
-    console.log(order, 5555555555);
-  }
+  
   function getSuccesPerc(order) {
     let allSuc = 0;
     order.component.map((comp) => {
