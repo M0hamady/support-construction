@@ -8,23 +8,23 @@ export default function CardCardWtihTitleAndDesc() {
               style={{ flexDirection: "row-reverse", marginBottom:'100px' }}
             >
               <div className="w-full md:w-5/12 px-4 mr-auto ml-auto">
-                <div className="text-blueGray-500 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-white">
+                <div className="text-slate-500 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-white">
                   <i className="fas fa-user-friends text-xl"></i>
                 </div>
                 <h3 className="text-3xl mb-2 font-semibold leading-normal">
                   ان تكون ضيف وتتجول علي موقعنا فخر
                 </h3>
-                <p className="text-lg font-light leading-relaxed mt-4 mb-4 text-blueGray-600">
+                <p className="text-lg font-light leading-relaxed mt-4 mb-4 text-slate-600">
                   دعني استغل الفرصة وارحب بك كضيف ل موقع عربي يقدم لك عرض سخي
                   جدا فنحن العرب نحب الضيافة وكرم الضيافة سيمتنا التي لا تغيب
                   عنا كل نهار
                 </p>
-                <p className="text-md  font-bold leading-relaxed mt-1 mb-4 text-blueGray-600">
+                <p className="text-md  font-bold leading-relaxed mt-1 mb-4 text-slate-600">
                   اول منتج تختارة يكون مجاني تمام انتقي بعناية اهلا بك
                 </p>
                 <Link
                   to="/shop"
-                  className=" bg-white shadow p-2 rounded  font-bold text-blueGray-700 mt-8"
+                  className=" bg-white shadow p-2 rounded  font-bold text-slate-700 mt-8"
                 >
                   تصفح منتجاتنا!
                 </Link>

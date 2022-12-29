@@ -7,7 +7,7 @@ export default function CardEmployee() {
             <div className="flex flex-wrap justify-center text-center mb-24">
               <div className="w-full lg:w-6/12 px-4">
                 <h2 className="text-4xl font-semibold">ها هم خبرائنا</h2>
-                <p className="text-lg leading-relaxed m-4 text-blueGray-500">
+                <p className="text-lg leading-relaxed m-4 text-slate-500">
                   بعد كل ما قدمتة مجموعه العمل يمكننا ان نقول عنهم خبراء بكل ثقة
                   وذالك نتج عن اراء الضيوف قم بالتجربة واكتشف بنفسك
                 </p>
@@ -23,7 +23,7 @@ export default function CardEmployee() {
                   />
                   <div className="pt-6 text-center">
                     <h5 className="text-xl font-bold">احمد زكريا</h5>
-                    <p className="mt-1 text-sm text-blueGray-400 uppercase font-semibold">
+                    <p className="mt-1 text-sm text-slate-400 uppercase font-semibold">
                       مدير المشروع
                     </p>
                     <div className="mt-6">
@@ -58,7 +58,7 @@ export default function CardEmployee() {
                   />
                   <div className="pt-6 text-center">
                     <h5 className="text-xl font-bold">مرام محمدي</h5>
-                    <p className="mt-1 text-sm text-blueGray-400 uppercase font-semibold">
+                    <p className="mt-1 text-sm text-slate-400 uppercase font-semibold">
                       مدير التسويق
                     </p>
                     <div className="mt-6">
@@ -87,7 +87,7 @@ export default function CardEmployee() {
                   />
                   <div className="pt-6 text-center">
                     <h5 className="text-xl font-bold">مريم محمد</h5>
-                    <p className="mt-1 text-sm text-blueGray-400 uppercase font-semibold">
+                    <p className="mt-1 text-sm text-slate-400 uppercase font-semibold">
                       مدير المطبخ
                     </p>
                     <div className="mt-6">
@@ -104,7 +104,7 @@ export default function CardEmployee() {
                         <i className="fab fa-twitter"></i>
                       </button>
                       <button
-                        className="bg-blueGray-700 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1 hover:shadow-lg ease-linear transition-all duration-150"
+                        className="bg-slate-700 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1 hover:shadow-lg ease-linear transition-all duration-150"
                         type="button"
                       >
                         <i className="fab fa-instagram"></i>
@@ -122,7 +122,7 @@ export default function CardEmployee() {
                   />
                   <div className="pt-6 text-center">
                     <h5 className="text-xl font-bold ">جبر الحسيني</h5>
-                    <p className="mt-1 text-sm text-blueGray-400 uppercase font-semibold">
+                    <p className="mt-1 text-sm text-slate-400 uppercase font-semibold">
                       مسؤل السلامة العامة
                     </p>
                     <div
@@ -148,7 +148,7 @@ export default function CardEmployee() {
                         <i className="fab fa-twitter"></i>
                       </button>
                       <button
-                        className="bg-blueGray-700 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1 hover:shadow-lg ease-linear transition-all duration-150"
+                        className="bg-slate-700 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1 hover:shadow-lg ease-linear transition-all duration-150"
                         type="button"
                       >
                         <i className="fab fa-instagram"></i>

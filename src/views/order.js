@@ -66,13 +66,13 @@ export default function Order({ order_num, price, locat, date, component }) {
               y="0"
             >
               <polygon
-                className="text-blueGray-200 fill-current"
+                className="text-slate-200 fill-current"
                 points="2560 0 2560 100 0 100"
               ></polygon>
             </svg>
           </div>
         </section>
-        <section className="relative  bg-blueGray-200">
+        <section className="relative  bg-slate-200">
           <div className="container mx-auto px-4">
             <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-2 shadow-xl rounded-lg ">
               <div className="px-2 text-center">
@@ -113,21 +113,21 @@ export default function Order({ order_num, price, locat, date, component }) {
                   >
                     <div className="flex justify-center py-4 lg:pt-4 pt-8">
                       <div className="mr-4 p-3 text-center">
-                        <span className="text-x w100 font-bold block uppercase tracking-wide text-blueGray-600">
+                        <span className="text-x w100 font-bold block uppercase tracking-wide text-slate-600">
                           Date Of create
                         </span>
                         <span
-                          className=" text-blueGray bold-400 w100"
+                          className=" text-slate bold-400 w100"
                           style={{ fontSize: "12px" }}
                         >
                           {meeting.created_at}
                         </span>
                       </div>
                       <div className="mr-4 p-3 text-center">
-                        <span className="text-x w100 font-bold block uppercase tracking-wide text-blueGray-600 ">
+                        <span className="text-x w100 font-bold block uppercase tracking-wide text-slate-600 ">
                           {meeting.is_accepted ? "accepted" : "need acception"}
                         </span>
-                        <span className="text-sm text-blueGray-400">
+                        <span className="text-sm text-slate-400">
                           {meeting.is_accepted ? (
                             <button
                               className="fas fa-solid fa-check text-xl"
@@ -145,10 +145,10 @@ export default function Order({ order_num, price, locat, date, component }) {
                         </span>
                       </div>
                       <div className="lg:mr-4 p-3 text-center">
-                        <span className="text-x w100 font-bold block uppercase tracking-wide text-blueGray-600">
+                        <span className="text-x w100 font-bold block uppercase tracking-wide text-slate-600">
                           {meeting.is_success ? "succeded" : "un success"}
                         </span>
-                        <span className="text-sm text-blueGray-400">
+                        <span className="text-sm text-slate-400">
                           {meeting.is_success ? (
                             <button
                               className="fas fa-solid fa-check  text-xl"
@@ -169,7 +169,7 @@ export default function Order({ order_num, price, locat, date, component }) {
                   </div>
                 </div>
                 <div className="text-center mt-0">
-                  <h3 className="text-4xl font-semibold leading-normal mb-1 text-blueGray-700 ">
+                  <h3 className="text-4xl font-semibold leading-normal mb-1 text-slate-700 ">
                     <small>Meating with {meeting.name} </small>
                   </h3>
                   <i className="fas fa-regular fa-calendar-days"></i>
@@ -186,12 +186,12 @@ export default function Order({ order_num, price, locat, date, component }) {
                     {meeting.number}
                     <i className="fas fa-solid fa-phone ml-2 text-xl "></i>
                   </a>
-                  <div className="text-sm  leading-normal mt-0 mb-2 text-blueGray-400 font-bold uppercase">
-                    <i className="fas fa-map-marker-alt mr-2 text-lg text-blueGray-400"></i>{" "}
+                  <div className="text-sm  leading-normal mt-0 mb-2 text-slate-400 font-bold uppercase">
+                    <i className="fas fa-map-marker-alt mr-2 text-lg text-slate-400"></i>{" "}
                     {meeting.location}
                   </div>
-                  <div className="mb-2 text-blueGray-600 mt-0">
-                    <i className="fas fa-briefcase mr-2 text-lg text-blueGray-400"></i>
+                  <div className="mb-2 text-slate-600 mt-0">
+                    <i className="fas fa-briefcase mr-2 text-lg text-slate-400"></i>
                     Support Construction
                   </div>
 
@@ -237,12 +237,12 @@ export default function Order({ order_num, price, locat, date, component }) {
                 <button
                   // to={"/admin/tables"}
                   onClick={() => show_step()}
-                  className="bg-blueGray-600 p-2 rounded mt-1 text-white"
+                  className="bg-slate-600 p-2 rounded mt-1 text-white"
                 >
                   Create project
                   <i className="fas ml-2 fa-solid fa-building"></i>
                 </button>
-                <div className="mt-10 py-10 border-t border-blueGray-200 text-center">
+                <div className="mt-10 py-10 border-t border-slate-200 text-center">
                   <h2 className="font-bold ">
                     {" "}
                     Create project with some steps
@@ -265,7 +265,7 @@ export default function Order({ order_num, price, locat, date, component }) {
                   </button>
                   <div className="flex flex-wrap justify-center">
                     <div className="w-full lg:w-9/12 px-4">
-                      <p className="mb-4 text-lg leading-relaxed text-blueGray-700">
+                      <p className="mb-4 text-lg leading-relaxed text-slate-700">
                         {/**
                       future part for description
                       

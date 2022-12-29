@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export default function CardOverviewAnImageWithDescrAndpoints() {
   return (
-    <section className="pb-16 bg-blueGray-200 relative pt-32">
+    <section className="pb-16 bg-slate-200 relative pt-32">
       <div
         className="-mt-20 top-0 bottom-auto left-0 right-0 w-full absolute h-20"
         style={{ transform: "translateZ(0)" }}
@@ -18,7 +18,7 @@ export default function CardOverviewAnImageWithDescrAndpoints() {
           y="0"
         >
           <polygon
-            className="text-blueGray-200 fill-current"
+            className="text-slate-200 fill-current"
             points="2560 0 2560 100 0 100"
           ></polygon>
         </svg>
@@ -34,7 +34,7 @@ export default function CardOverviewAnImageWithDescrAndpoints() {
               <h1>Ahmed elkorashi</h1>
             </p>
             <h3 className="font-semibold text-3xl"></h3>
-            <p className="text-blueGray-500 text-lg leading-relaxed mt-4 mb-4">
+            <p className="text-slate-500 text-lg leading-relaxed mt-4 mb-4">
               I am part of the company which has contributed in the development
               of a country with 38 million people.
             </p>
@@ -48,7 +48,7 @@ export default function CardOverviewAnImageWithDescrAndpoints() {
               </Link>
               <Link
                 to={"/shop"}
-                className="github-star sm:ml-1 text-white font-bold px-6 py-4 rounded outline-none focus:outline-none mr-1 mb-1 bg-blueGray-700 active:bg-blueGray-600 uppercase text-sm shadow hover:shadow-lg"
+                className="github-star sm:ml-1 text-white font-bold px-6 py-4 rounded outline-none focus:outline-none mr-1 mb-1 bg-slate-700 active:bg-slate-600 uppercase text-sm shadow hover:shadow-lg"
               >
                 <i className="fas fa-phone text-lg mr-1"></i>
                 <span> Contatc</span>

@@ -35,10 +35,10 @@ export default function Card_project({
               </div>
             </div>
           </div>
-          <p className="text-sm text-blueGray-400 mt-1">
+          <p className="text-sm text-slate-400 mt-1">
             <span className="whitespace-nowrap">{responsible}</span>
           </p>
-          <p className="text-sm text-blueGray-400 mt-1">
+          <p className="text-sm text-slate-400 mt-1">
             <span className={statPercentColor + " mr-2 uppercase"}>
               Costs: {state_cost} LE{" "}
             </span>
@@ -63,7 +63,7 @@ export function Card_project_img({
         <div className="flex-auto p-2">
           <div className="flex flex-wrap">
             <div className="relative w-full pr-2 max-w-full flex-grow flex-1">
-              <span className="font-semibold text-xl pr-4 text-blueGray-700">
+              <span className="font-semibold text-xl pr-4 text-slate-700">
                 {statTitle}
               </span>
             </div>
@@ -79,7 +79,7 @@ export function Card_project_img({
             </div>
           </div>
 
-          <p className="text-sm text-blueGray-400 mt-1 ">
+          <p className="text-sm text-slate-400 mt-1 ">
             <span className={statPercentColor + " mr-4 pr-4 uppercase"}>
               {state_img}{" "}
             </span>

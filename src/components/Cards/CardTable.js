@@ -36,7 +36,7 @@ export default function CardTable({ color, orders, table_name }) {
               <h3
                 className={
                   "font-semibold text-lg " +
-                  (color === "light" ? "text-blueGray-700" : "text-white")
+                  (color === "light" ? "text-slate-700" : "text-white")
                 }
               >
                 {table_name ? table_name : "table_name"}
@@ -53,7 +53,7 @@ export default function CardTable({ color, orders, table_name }) {
                   className={
                     "px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left " +
                     (color === "light"
-                      ? "bg-blueGray-50 text-blueGray-500 border-blueGray-100"
+                      ? "bg-slate-50 text-slate-500 border-slate-100"
                       : "bg-sky-800 text-sky-300 border-sky-700")
                   }
                 >
@@ -63,7 +63,7 @@ export default function CardTable({ color, orders, table_name }) {
                   className={
                     "px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left " +
                     (color === "light"
-                      ? "bg-blueGray-50 text-blueGray-500 border-blueGray-100"
+                      ? "bg-slate-50 text-slate-500 border-slate-100"
                       : "bg-sky-800 text-sky-300 border-sky-700")
                   }
                 >
@@ -73,7 +73,7 @@ export default function CardTable({ color, orders, table_name }) {
                   className={
                     "px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left " +
                     (color === "light"
-                      ? "bg-blueGray-50 text-blueGray-500 border-blueGray-100"
+                      ? "bg-slate-50 text-slate-500 border-slate-100"
                       : "bg-sky-800 text-sky-300 border-sky-700")
                   }
                 >
@@ -83,7 +83,7 @@ export default function CardTable({ color, orders, table_name }) {
                   className={
                     "px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left " +
                     (color === "light"
-                      ? "bg-blueGray-50 text-blueGray-500 border-blueGray-100"
+                      ? "bg-slate-50 text-slate-500 border-slate-100"
                       : "bg-sky-800 text-sky-300 border-sky-700")
                   }
                 >
@@ -93,7 +93,7 @@ export default function CardTable({ color, orders, table_name }) {
                   className={
                     "px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left " +
                     (color === "light"
-                      ? "bg-blueGray-50 text-blueGray-500 border-blueGray-100"
+                      ? "bg-slate-50 text-slate-500 border-slate-100"
                       : "bg-sky-800 text-sky-300 border-sky-700")
                   }
                 >
@@ -103,7 +103,7 @@ export default function CardTable({ color, orders, table_name }) {
                   className={
                     "px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left " +
                     (color === "light"
-                      ? "bg-blueGray-50 text-blueGray-500 border-blueGray-100"
+                      ? "bg-slate-50 text-slate-500 border-slate-100"
                       : "bg-sky-800 text-sky-300 border-sky-700")
                   }
                 ></th>
@@ -119,7 +119,7 @@ export default function CardTable({ color, orders, table_name }) {
                             className={
                               "ml-3 font-bold " +
                               +(color === "light"
-                                ? "text-blueGray-600"
+                                ? "text-slate-600"
                                 : "text-white")
                             }
                           >

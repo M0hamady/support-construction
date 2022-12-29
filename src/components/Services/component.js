@@ -146,7 +146,7 @@ export const all_worker = () => {
             }}
           />
           <h3
-            className="font-bold bg-blueGray-600 uppercase p-2 m-2 text-white rounded  text-black-500 text-center  "
+            className="font-bold bg-slate-600 uppercase p-2 m-2 text-white rounded  text-black-500 text-center  "
             style={{ fontSize: "12px", minWidth: "120px", height: "30px" }}
           >
             name: <strong> {user.name}</strong>

@@ -10,7 +10,7 @@ export default function MontagatComponen({groubName,montagat,sec_colo}) {
         //   style={{ flexDirection: "row-reverse" }}
       >
         <div className="w-full  px-4 mr-auto ml-auto">
-          <div className="text-blueGray-500 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-white">
+          <div className="text-slate-500 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-white">
             <i className="fas fa-user-friends text-xl"></i>
           </div>
           <h3 className="text-3xl mb-2 font-semibold leading-normal">{groubName.length ? groubName : 'no name'}</h3>
@@ -42,7 +42,7 @@ export default function MontagatComponen({groubName,montagat,sec_colo}) {
                           {montag.price} LE
                         </h4>*/}
                         <p
-                          className="mt-1 text-sm text-blueGray-400 uppercase font-semibold"
+                          className="mt-1 text-sm text-slate-400 uppercase font-semibold"
                           style={{ maxWidth: "95%", margin: "auto" }}
                         >
                           {montag.discription}
