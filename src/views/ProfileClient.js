@@ -3,7 +3,7 @@ import React from "react";
 import Navbar from "components/Navbars/IndexNavbar";
 import Footer from "components/Footers/Footer.js";
 
-export default function Profile() {
+export default function ProfileClient() {
   return (
     <>
       <Navbar transparent />
@@ -69,7 +69,7 @@ export default function Profile() {
                     <div className="flex justify-center py-4 lg:pt-4 pt-8">
                       <div className="mr-4 p-3 text-center">
                         <span className="text-xl font-bold block uppercase tracking-wide text-slate-600">
-                          22
+                          1
                         </span>
                         <span className="text-sm text-slate-400">
                           {/** */} projects
@@ -77,18 +77,18 @@ export default function Profile() {
                       </div>
                       <div className="mr-4 p-3 text-center">
                         <span className="text-xl font-bold block uppercase tracking-wide text-slate-600">
-                          10
+                          {/**step name link to project */} 5/20
                         </span>
                         <span className="text-sm text-slate-400">
-                          {/** */} finished projects
+                          {/** link to project*/} last step
                         </span>
                       </div>
                       <div className="lg:mr-4 p-3 text-center">
                         <span className="text-xl font-bold block uppercase tracking-wide text-slate-600">
-                          89
+                          {/**project pudjet link to project*/} 45000 LE
                         </span>
                         <span className="text-sm text-slate-400">
-                          {/** */} current projects
+                          {/** */} last project pudjet
                         </span>
                       </div>
                     </div>
@@ -103,16 +103,21 @@ export default function Profile() {
                     Los Angeles, California
                   </div>
                   <div className="mb-2 text-slate-600 mt-10">
-                    <i className="fas fa-briefcase mr-2 text-lg text-slate-400"></i>
-                    Solution Manager - Creative Tim Officer
+                    <i
+                      className="fas fa-briefcase mr-2 text-xs text-slate-200"
+                      style={{ letterSpacing: "1.5px" }}
+                    >
+                      {" "}
+                      Solution Manager - Creative Tim Officer
+                    </i>
                   </div>
                   <div className="mb-2 text-slate-600">
-                    <i className="fas fa-university mr-2 text-lg text-slate-400"></i>
-                    University of Computer Science
+                    <i className="fas fa-money mr-2 text-lg text-slate-400"></i>
+                    تكلفة:{"5000 ج"} دفع: {"2400 ج"} باقي: {"2600ج"}
                   </div>
                   <div className="mb-2 text-slate-600">
                     <i className="fas fa-phone mr-2 text-lg text-slate-400"></i>
-                    <a  type="tel">01555099233</a>
+                    <a type="tel">01555099233</a>
                   </div>
                 </div>
                 <div className="mt-10 py-10 border-t border-slate-200 text-center">

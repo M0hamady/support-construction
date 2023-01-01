@@ -1,7 +1,31 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
+import { url } from "data/DataMontagat";
 
-export default function Login() {
+async function loginUser(credentials) {
+  return fetch(url +":8000/project/generate-token/", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(credentials),
+  }).then((data) => data.json())
+}
+
+export default function Login({ setToken }) {
+  const [username, setUserName] = useState();
+  const [password, setPassword] = useState();
+  const handleSubmit = async (e) => {
+    const token = await loginUser({
+      username,
+      password,
+    })
+    ;
+    console.log(token);
+    setToken(token);
+
+  };
   return (
     <>
       <div className="container mx-auto px-4 h-full">
@@ -50,12 +74,13 @@ export default function Login() {
                       className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
                       htmlFor="grid-password"
                     >
-                      Email
+                      Username
                     </label>
                     <input
-                      type="email"
+                      type="text"
                       className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
-                      placeholder="Email"
+                      placeholder="User_name"
+                      onChange={(e) => setUserName(e.target.value)}
                     />
                   </div>
 
@@ -70,6 +95,7 @@ export default function Login() {
                       type="password"
                       className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
                       placeholder="Password"
+                      onChange={(e) => setPassword(e.target.value)}
                     />
                   </div>
                   <div>
@@ -89,6 +115,7 @@ export default function Login() {
                     <button
                       className="bg-blueGray-800 text-white active:bg-blueGray-600 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 w-full ease-linear transition-all duration-150"
                       type="button"
+                      onClick={() => handleSubmit()}
                     >
                       Sign In
                     </button>
@@ -118,3 +145,6 @@ export default function Login() {
     </>
   );
 }
+Login.propTypes = {
+  setToken: PropTypes.func.isRequired,
+};

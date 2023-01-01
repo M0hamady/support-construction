@@ -26,10 +26,11 @@ import Usermoshtrayat from "layouts/moshtrayat/UserMoshtra";
 import UpdateMoshtrayt from "layouts/moshtrayat/UpdateMoshatr";
 import AddStep from "layouts/project/AddStep";
 import UpdateStep from "layouts/project/UpdateStep";
+import ProfileClient from "views/ProfileClient";
 
 ReactDOM.render(
-  <BrowserRouter >
-    <Switch >
+  <BrowserRouter>
+    <Switch>
       {/* add routes with layouts */}
       <Route path="/admin" component={Admin} />
       <Route path="/auth" component={Auth} />
@@ -38,12 +39,18 @@ ReactDOM.render(
       <Route path="/book" exact component={Landing} />{" "}
       {/** site to take an appointment */}
       <Route path="/profile" exact component={Profile} /> {/** users profile*/}
+      <Route path="/profile-client" exact component={ProfileClient} />{" "}
+      {/** users profile*/}
       <Route path="/shop" exact component={Shop} />
       <Route path="/montag/:id" exact component={Montag} />
       <Route path="/project/:id" exact component={Project} /> {/** */}
       <Route path="/order/:id" exact component={Order} /> {/**each meeting  */}
       <Route path="/mosh/:id" exact component={Usermoshtrayat} />
-      <Route path="/moshtrayat/create/:id" exact component={Create_moshtrayat} />
+      <Route
+        path="/moshtrayat/create/:id"
+        exact
+        component={Create_moshtrayat}
+      />
       <Route path="/step/create/:id" exact component={AddStep} />
       <Route path="/step/update/:id" exact component={UpdateStep} />
       <Route path="/moshtrayat/update/:id" exact component={UpdateMoshtrayt} />

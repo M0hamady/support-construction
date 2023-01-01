@@ -13,7 +13,7 @@
     "canvas-particle-network": "^1.5.0",
     "chart.js": "2.9.4",
     "grun": "^0.2.0",
-    "gulp": "^3.9.1",
+    "gulp": "^4.0.2",
     "gulp-append-prepend": "1.0.8",
     "postcss": "^8.4.20",
     "react": "17.0.1",
@@ -21,7 +21,7 @@
     "react-request": "^3.2.0",
     "react-router": "5.2.0",
     "react-router-dom": "5.2.0",
-    "react-scripts": "^5.0.1",
+    "react-scripts": "^4.0.3",
     "tailwind": "^4.0.0",
     "tailwindcss": "^3.2.4"
   },
@@ -59,6 +59,6 @@
   },
   "engines": {
     "node": "14.15.5",
-    "npm": "8.1.2"
+    "npm": "8.7.0"
   }
 }

@@ -1,9 +1,9 @@
 import React from "react";
-import { Switch, Route, Redirect } from "react-router-dom";
+import { Switch, Route, Redirect, Link } from "react-router-dom";
 
 // components
 
-import AdminNavbar from "components/Navbars/AdminNavbar.js";
+import AdminNavbar from "components/Navbars/IndexNavbar";
 import Sidebar from "components/Sidebar/Sidebar.js";
 import HeaderStats from "components/Headers/HeaderStats.js";
 import FooterAdmin from "components/Footers/FooterAdmin.js";
@@ -14,17 +14,23 @@ import Dashboard from "views/admin/Dashboard.js";
 import Maps from "views/admin/Maps.js";
 import Settings from "views/admin/Settings.js";
 import Tables from "views/admin/Tables.js";
-import Services from "views/admin/services";
-import Create_moshtrayat from "./moshtrayat/Create_moshtrayat";
-import UpdateMoshatr from "./moshtrayat/UpdateMoshatr";
-import Usermoshtrayat from "./moshtrayat/UserMoshtra";
+
 import Meetings_accepte from "views/Meetings/MeetingsAccepted";
 import Meetings_suc from "views/Meetings/MeetingsSuccess";
 import ToodMeet from "views/Meetings/TodayMeet";
 import Meetings_accepte_tod from "views/Meetings/MeetingsAcceptedtod";
 import Meetings_suc_tod from "views/Meetings/MeetingsSuccess_tod";
+import Login from "views/auth/Login";
+import useToken from "data/useToken";
+import Redirectlogin from "views/auth/Redirectlogin";
 
 export default function Admin() {
+  const { token, setToken } = useToken();
+
+  if (token == undefined) {
+    console.log(5555555555555);
+    return <Redirectlogin setToken={setToken} />;
+  }
   return (
     <>
       <Sidebar />
@@ -49,8 +55,16 @@ export default function Admin() {
               component={Meetings_suc}
             />
             <Route path="/admin/todaymeatings" exact component={ToodMeet} />
-            <Route path="/admin/todaymeatingsAcc" exact component={Meetings_accepte_tod} />
-            <Route path="/admin/todaymeatingsSuc" exact component={Meetings_suc_tod} />
+            <Route
+              path="/admin/todaymeatingsAcc"
+              exact
+              component={Meetings_accepte_tod}
+            />
+            <Route
+              path="/admin/todaymeatingsSuc"
+              exact
+              component={Meetings_suc_tod}
+            />
             {/*/ <Route path="/admin/moshtrayat/all/user" exact component={UpdateMoshatr} />
             // <Route path="/admin/moshtrayat/all/projct/" exact component={UpdateMoshatr} />
             // <Route path="/admin/tables" exact component={Tables} />
