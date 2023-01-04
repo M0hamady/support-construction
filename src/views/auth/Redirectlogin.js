@@ -1,8 +1,9 @@
+import axios from "axios";
 import FooterSmall from "components/Footers/FooterSmall";
 import Navbar from "components/Navbars/AdminNavbar";
 import { url } from "data/DataMontagat";
 import useToken from "data/useToken";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Login from "./Login";
 
 export default function Redirectlogin({ setToken }) {
@@ -31,12 +32,10 @@ export function Is_admin() {
   const [result, setResult] = useState(false);
   const { token, setToken } = useToken();
   let data = new FormData();
-  if (token == undefined) {
-    return <Redirectlogin  setToken={setToken}/>
-  }
+  
   data.append("token", token);
   let config = {
-    method: "post",
+    method: "put",
     url: url + ":8000/is-admin/",
     headers: {
       ...data.getHeaders,
@@ -47,13 +46,12 @@ export function Is_admin() {
     axios(config)
       .then(function (response) {
         console.log(JSON.stringify(response.data));
-        setResult(response.data.is_admin)
-
+        setResult(response.data.is_admin);
       })
       .catch(function (error) {
         console.log(error);
       });
   }, []);
   // check if user is admin
-  return result
+  return result;
 }

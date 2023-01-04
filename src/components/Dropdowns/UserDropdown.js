@@ -1,5 +1,7 @@
 import React from "react";
 import { createPopper } from "@popperjs/core";
+import { Is_admin } from "views/auth/Redirectlogin";
+import useToken from "data/useToken";
 
 const UserDropdown = () => {
   // dropdown props
@@ -15,6 +17,8 @@ const UserDropdown = () => {
   const closeDropdownPopover = () => {
     setDropdownPopoverShow(false);
   };
+  const { token, setToken } = useToken();
+  const CheckLogin = () => (token == undefined ? true : false);
   return (
     <>
       <a
@@ -28,11 +32,15 @@ const UserDropdown = () => {
       >
         <div className="items-center flex">
           <span className="w-12 h-12 text-sm text-white bg-slate-200 inline-flex items-center justify-center rounded-full">
-            <img
-              alt="..."
-              className="w-full rounded-full align-middle border-none shadow-lg"
-              src={require("assets/img/team-1-800x800.jpg").default}
-            />
+            {CheckLogin ? (
+              <i className="fas fa-home"></i>
+            ) : (
+              <img
+                alt="..."
+                className="w-full rounded-full align-middle border-none shadow-lg"
+                src={require("assets/img/team-1-800x800.jpg").default}
+              />
+            )}
           </span>
         </div>
       </a>
@@ -50,7 +58,7 @@ const UserDropdown = () => {
           }
           onClick={(e) => e.preventDefault()}
         >
-          Action
+          Home
         </a>
         <a
           href="#pablo"
@@ -59,7 +67,7 @@ const UserDropdown = () => {
           }
           onClick={(e) => e.preventDefault()}
         >
-          Another action
+          About us
         </a>
         <a
           href="#pablo"
@@ -68,7 +76,7 @@ const UserDropdown = () => {
           }
           onClick={(e) => e.preventDefault()}
         >
-          Something else here
+          Contact
         </a>
         <div className="h-0 my-2 border border-solid border-slate-100" />
         <a
@@ -78,7 +86,7 @@ const UserDropdown = () => {
           }
           onClick={(e) => e.preventDefault()}
         >
-          Seprated link
+          <i className="fas fa-phone"> {' '} 01151199558</i>
         </a>
       </div>
     </>

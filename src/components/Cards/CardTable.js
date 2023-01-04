@@ -7,7 +7,6 @@ import TableDropdown from "components/Dropdowns/TableDropdown.js";
 import { Link } from "react-router-dom";
 
 export default function CardTable({ color, orders, table_name }) {
-  
   // function getSuccesPerc(order) {
   //   let allSuc = 0;
   //   order.component.map((comp) => {
@@ -109,71 +108,71 @@ export default function CardTable({ color, orders, table_name }) {
               {orders.length
                 ? orders.map((order) => {
                     return (
-                      <link to={'/order/' + order.id}>
-                      <tr key={order.id}>
-                        <th className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left flex items-center">
-                          <span
-                            className={
-                              "ml-3 font-bold " +
-                              +(color === "light"
-                                ? "text-blueGray-600"
-                                : "text-white")
-                            }
-                          >
-                            <Link to={`/order/${order.id}`}>{order.name}</Link>
-                          </span>
-                        </th>
-                        <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                          <Link to={`/order/${order.id}`}>
-                            {order.created_at}
-                          </Link>
-                        </td>
-                        <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                          <i
-                            className={`fas fa-circle text-orange-500 mr-2 `}
-                          ></i>
-                          {order.is_success ? (
-                            <button
-                              class="fas fa-solid fa-check text-xl"
-                              style={{ color: "#0ee3ae" }}
-                            />
-                          ) : (
-                            <button class="fas fa-solid fa-xmark text-xl text-" />
-                          )}
-                        </td>
-                        <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 duration-150">
-                          <div className="flex flex-wrap justify-center ">
-                            {order.is_accepted ? (
+                      <Link key={Math.random()} to={"/order/" + order.id}>
+                        <tr>
+                          <th className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left flex items-center">
+                            <span
+                              className={
+                                "ml-3 font-bold " +
+                                +(color === "light"
+                                  ? "text-blueGray-600"
+                                  : "text-white")
+                              }
+                            >
+                             
+                                {order.name}
+                            </span>
+                          </th>
+                          <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+                           
+                              {order.created_at}
+                          </td>
+                          <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+                            <i
+                              className={`fas fa-circle text-orange-500 mr-2 `}
+                            ></i>
+                            {order.is_success ? (
                               <button
-                                class="fas fa-solid fa-check text-xl"
+                                className="fas fa-solid fa-check text-xl"
                                 style={{ color: "#0ee3ae" }}
                               />
                             ) : (
-                              <button class="fas fa-solid fa-xmark text-xl" />
+                              <button className="fas fa-solid fa-xmark text-xl text-" />
                             )}
-                          </div>
-                        </td>
-                        <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                          <div className="flex items-center">
-                            <span className="mr-2">%</span>
-                            <div className="relative w-full">
-                              <div className="overflow-hidden h-2 text-xs flex rounded bg-red-200">
-                                <div
-                                  style={{
-                                    width: `50%`,
-                                    transition: "1s",
-                                  }}
-                                  className={`shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-orange-500`}
-                                ></div>
+                          </td>
+                          <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 duration-150">
+                            <div className="flex flex-wrap justify-center ">
+                              {order.is_accepted ? (
+                                <button
+                                  className="fas fa-solid fa-check text-xl"
+                                  style={{ color: "#0ee3ae" }}
+                                />
+                              ) : (
+                                <button className="fas fa-solid fa-xmark text-xl" />
+                              )}
+                            </div>
+                          </td>
+                          <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+                            <div className="flex items-center">
+                              <span className="mr-2">%</span>
+                              <div className="relative w-full">
+                                <div className="overflow-hidden h-2 text-xs flex rounded bg-red-200">
+                                  <div
+                                    style={{
+                                      width: `50%`,
+                                      transition: "1s",
+                                    }}
+                                    className={`shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-orange-500`}
+                                  ></div>
+                                </div>
                               </div>
                             </div>
-                          </div>
-                        </td>
-                        <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-right">
-                          <TableDropdown />
-                        </td>
-                      </tr>
-                      </link>
+                          </td>
+                          <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-right">
+                            <TableDropdown />
+                          </td>
+                        </tr>
+                      </Link>
                     );
                   })
                 : "no ordeers"}

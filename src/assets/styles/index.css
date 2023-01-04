@@ -626,3 +626,44 @@ button {
             transform-origin: top;
   }
 }
+
+.message_container {
+  filter: drop-shadow(0 0 8px cyan);
+  margin: 10px;
+  border-radius: 5px;
+}
+.message_container .message {
+  background: #000;
+  --aug-border: 2px;
+  --aug-border-bg: cyan;
+  border: 2px;
+  border-color: cyan;
+  width: calc(100% - 20px);
+  max-width: 640px;
+  margin: 0 auto;
+  overflow: hidden;
+  transition: all 0.5s;
+  border-radius: 5px;
+
+}
+.message_container .message .title {
+  display: inline-block;
+  padding: 0.5em 2em;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  text-align: center;
+  text-transform: uppercase;
+  --aug-inset: 0.25em;
+  --aug-inset-bg: #ff0;
+  background-color: #ff0;
+  --aug-br: 0.75em;
+}
+.message_container .message p {
+  color: #fff;
+  padding: 1em;
+  margin: 0;
+  display: block;
+  line-height: 1.4em;
+  text-align: justify;
+  max-height: 10em;
+}

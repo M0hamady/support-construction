@@ -23,19 +23,17 @@ export const AllVisitors = () => {
   return meetings;
 };
 export function AddVisitor(ip) {
+  let data = new FormData();
+  data.append("ip", ip);
+  let config = {
+    method: "post",
+    url: url +":8000/",
+    headers: {
+      ...data.getHeaders,
+    },
+    data: data,
+  }
   useEffect(() => {
-    console.log(ip, 44444);
-    let data = new FormData();
-    data.append("ip", ip);
-    let config = {
-      method: "post",
-      url: "http://127.0.0.1:8000/",
-      headers: {
-        ...data.getHeaders,
-      },
-      data: data,
-    };
-
     axios(config)
       .then(function (response) {
         console.log(JSON.stringify(response.data));

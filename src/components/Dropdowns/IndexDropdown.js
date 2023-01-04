@@ -20,7 +20,7 @@ const IndexDropdown = () => {
   };
   const { token, setToken } = useToken();
   const CheckLogin = () => (token == undefined ? true : false);
-
+  console.log(Is_admin());
   return (
     <>
       <a
@@ -57,24 +57,51 @@ const IndexDropdown = () => {
           </Link>
         ) : (
           <>
-            <Link
-              to="/admin/dashboard"
-              className="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-slate-700"
-            >
-              Dashboard
-            </Link>
-            <Link
-              to="/admin/dashboard"
-              className="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-slate-700"
-            >
-              logout
-            </Link>
-            <Link
-              to="/profile"
-              className="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-slate-700"
-            >
-              profile
-            </Link>
+            {Is_admin() ? (
+              <>
+                {" "}
+                <Link
+                  to="/admin/dashboard"
+                  className="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-slate-700"
+                >
+                  Dashboard
+                </Link>
+                <Link
+                  to="/admin/dashboard"
+                  className="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-slate-700"
+                >
+                  logout
+                </Link>
+                <Link
+                  to="/profile"
+                  className="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-slate-700"
+                >
+                  profile
+                </Link>
+              </>
+            ) : (
+              <>
+                <Link
+                  to="/admin/dashboard"
+                  className="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-slate-700"
+                >
+                  Home
+                </Link>
+                <Link
+                  to="/admin/dashboard"
+                  className="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-slate-700"
+                >
+                  logout
+                </Link>
+                <Link
+                  to="/profile"
+                  className="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-slate-700"
+                >
+                  profile
+                </Link>
+              </>
+            )}
+
             {/* <Link
               to="/admin/settings"
               className="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-slate-700"

@@ -9,6 +9,7 @@ import { AllVisitors } from "data/DataVisitors";
 
 export default function Settings() {
   const data = AllVisitors();
+  console.log(55555555555,data);
 
   return (
     <>
