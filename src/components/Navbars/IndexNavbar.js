@@ -1,12 +1,15 @@
 /*eslint-disable*/
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 // components
-
 import IndexDropdown from "components/Dropdowns/IndexDropdown.js";
+import { BasicData } from "data/UseContext";
 
 export default function Navbar(props) {
   const [navbarOpen, setNavbarOpen] = React.useState(false);
+  const {name ,changName} = useContext(BasicData);
+  changName('hbhb')
+
   return (
     <>
       <nav className="top-0 fixed z-50 w-full flex flex-wrap items-center justify-between px-2 py-3 navbar-expand-lg bg-white shadow">
@@ -16,7 +19,7 @@ export default function Navbar(props) {
               to="/"
               className="text-blueGray-700 text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase"
             >
-              Support construction
+              Support construction {name}
             </Link>
             <button
               className="cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
@@ -81,9 +84,7 @@ export default function Navbar(props) {
                 </a>
               </li>
 
-              <li className="flex items-center">
-                
-              </li>
+              <li className="flex items-center"></li>
             </ul>
           </div>
         </div>

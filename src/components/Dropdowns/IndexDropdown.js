@@ -1,11 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { createPopper } from "@popperjs/core";
 import useToken from "data/useToken";
 import { Is_admin } from "views/auth/Redirectlogin";
+import { BasicData } from "data/UseContext";
 
 const IndexDropdown = () => {
   // dropdown props
+  // chsck login
   const [dropdownPopoverShow, setDropdownPopoverShow] = React.useState(false);
   const btnDropdownRef = React.createRef();
   const popoverDropdownRef = React.createRef();
@@ -18,6 +20,7 @@ const IndexDropdown = () => {
   const closeDropdownPopover = () => {
     setDropdownPopoverShow(false);
   };
+  const { tokenS } = useContext(BasicData);
   const { token, setToken } = useToken();
   const CheckLogin = () => (token == undefined ? true : false);
   console.log(Is_admin());
@@ -32,7 +35,7 @@ const IndexDropdown = () => {
           dropdownPopoverShow ? closeDropdownPopover() : openDropdownPopover();
         }}
       >
-        <i class="fas fa-light fa-bars"></i>
+        <i className="fas fa-light fa-bars"></i>
       </a>
       <div
         ref={popoverDropdownRef}
@@ -82,13 +85,13 @@ const IndexDropdown = () => {
             ) : (
               <>
                 <Link
-                  to="/admin/dashboard"
+                  to="/user"
                   className="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-slate-700"
                 >
                   Home
                 </Link>
                 <Link
-                  to="/admin/dashboard"
+                  to="/admin/User"
                   className="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-slate-700"
                 >
                   logout

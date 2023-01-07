@@ -1,6 +1,8 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { BasicData } from "./UseContext";
 
 export default function useToken() {
+  const { tokenS, changtoken,chanislogin } = useContext(BasicData);
   const getToken = () => {
     const tokenString = sessionStorage.getItem("token");
     const userToken = JSON.parse(tokenString);
@@ -10,7 +12,10 @@ export default function useToken() {
   const saveToken = (userToken) => {
     sessionStorage.setItem("token", JSON.stringify(userToken));
     setToken(userToken.token);
+    
   };
+  changtoken(token);
+  // chanislogin(true);
   return {
     setToken: saveToken,
     token,

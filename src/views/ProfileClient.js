@@ -4,6 +4,17 @@ import Navbar from "components/Navbars/IndexNavbar";
 import Footer from "components/Footers/Footer.js";
 
 export default function ProfileClient() {
+    // length of projects 
+  // finished 
+  // current
+  // location
+  // name
+  //  client or emplye name
+  // graduayin
+  // number
+  // current step all steps
+  // budjet of last broject
+  // mony state
   return (
     <>
       <Navbar transparent />

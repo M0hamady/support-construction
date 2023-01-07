@@ -1,7 +1,7 @@
 /*eslint-disable*/
 import React from "react";
 
-import IndexNavbar from "components/Navbars/IndexNavbar.js";
+import IndexNavbar from "components/Navbars/IndexNavbar";
 import Footer from "components/Footers/Footer.js";
 import CardLanding from "components/Cards/CardLanding";
 import CardOverView from "components/Cards/CardOverView";

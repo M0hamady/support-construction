@@ -4,7 +4,7 @@ import { montagat, montagat_7elw, montagat_m5boz } from "../data/DataMontagat";
 
 // components
 
-import Navbar from "components/Navbars/AuthNavbar.js";
+import Navbar from "components/Navbars/IndexNavbar";
 import Footer from "components/Footers/Footer.js";
 import MontagatComponen from "components/montagat/MontagatComponen";
 import CardEmployee from "components/Cards/CardEmployee";

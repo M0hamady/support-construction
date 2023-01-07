@@ -2,11 +2,13 @@ import axios from "axios";
 import FooterSmall from "components/Footers/FooterSmall";
 import Navbar from "components/Navbars/AdminNavbar";
 import { url } from "data/DataMontagat";
+import { BasicData } from "data/UseContext";
 import useToken from "data/useToken";
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import Login from "./Login";
+// create context
 
-export default function Redirectlogin({ setToken }) {
+export default function Redirectlogin() {
   return (
     <div>
       <Navbar transparent />
@@ -19,7 +21,7 @@ export default function Redirectlogin({ setToken }) {
                 "url(" + require("assets/img/register_bg_2.png").default + ")",
             }}
           ></div>
-          <Login setToken={setToken} />
+          <Login />
 
           <FooterSmall absolute />
         </section>
@@ -31,8 +33,9 @@ export default function Redirectlogin({ setToken }) {
 export function Is_admin() {
   const [result, setResult] = useState(false);
   const { token, setToken } = useToken();
+  const { is_admin, changis_admin ,chanislogin} = useContext(BasicData);
   let data = new FormData();
-  
+
   data.append("token", token);
   let config = {
     method: "put",
@@ -47,6 +50,8 @@ export function Is_admin() {
       .then(function (response) {
         console.log(JSON.stringify(response.data));
         setResult(response.data.is_admin);
+        changis_admin(result);
+        
       })
       .catch(function (error) {
         console.log(error);

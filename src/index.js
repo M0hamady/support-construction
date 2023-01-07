@@ -27,37 +27,53 @@ import UpdateMoshtrayt from "layouts/moshtrayat/UpdateMoshatr";
 import AddStep from "layouts/project/AddStep";
 import UpdateStep from "layouts/project/UpdateStep";
 import ProfileClient from "views/ProfileClient";
+import { UseContext } from "data/UseContext";
+import DashboardUser from "views/UserDashboard/Main";
 
 ReactDOM.render(
   <BrowserRouter>
-    <Switch>
-      {/* add routes with layouts */}
-      <Route path="/admin" component={Admin} />
-      <Route path="/auth" component={Auth} />
-      {/** <Route path="/project/moshtrayat/:id" exact component={moshtrayat} />*/}
-      {/* add routes without layouts */}
-      <Route path="/book" exact component={Landing} />{" "}
-      {/** site to take an appointment */}
-      <Route path="/profile" exact component={Profile} /> {/** users profile*/}
-      <Route path="/profile-client" exact component={ProfileClient} />{" "}
-      {/** users profile*/}
-      <Route path="/shop" exact component={Shop} />
-      <Route path="/montag/:id" exact component={Montag} />
-      <Route path="/project/:id" exact component={Project} /> {/** */}
-      <Route path="/order/:id" exact component={Order} /> {/**each meeting  */}
-      <Route path="/mosh/:id" exact component={Usermoshtrayat} />
-      <Route
-        path="/moshtrayat/create/:id"
-        exact
-        component={Create_moshtrayat}
-      />
-      <Route path="/step/create/:id" exact component={AddStep} />
-      <Route path="/step/update/:id" exact component={UpdateStep} />
-      <Route path="/moshtrayat/update/:id" exact component={UpdateMoshtrayt} />
-      <Route path="/" exact component={Index} />
-      {/* add redirect for first page */}
-      <Redirect from="*" to="/" />
-    </Switch>
+    <UseContext>
+      <Switch>
+        {/* add routes with layouts */}
+        <Route path="/admin" component={Admin} />
+        <Route path="/auth" component={Auth} />
+        <Route path="/user" component={DashboardUser} />
+        <Route path="/user/project" component={DashboardUser} />
+        <Route path="/user/money" component={DashboardUser} />
+        <Route path="/user/designe" component={DashboardUser} />
+        {/** <Route path="/project/moshtrayat/:id" exact component={moshtrayat} />*/}
+        {/* add routes without layouts */}
+        <Route path="/book" exact component={Landing} />{" "}
+        {/** site to take an appointment */}
+        <Route path="/profile" exact component={Profile} />{" "}
+        {/** users profile*/}
+        <Route path="/profile-client" exact component={ProfileClient} />{" "}
+        {/** users profile*/}
+        <Route path="/shop" exact component={Shop} />
+        <Route path="/montag/:id" exact component={Montag} />
+        <Route path="/project/:id" exact component={Project} /> {/** */}
+        <Route path="/order/:id" exact component={Order} />{" "}
+        {/**each meeting  */}
+        <Route path="/mosh/:id" exact component={Usermoshtrayat} />
+        <Route
+          path="/moshtrayat/create/:id"
+          exact
+          component={Create_moshtrayat}
+        />
+        {/**
+        <Route path="/dash/user" exact component={DashboardUser} /> */}
+        <Route path="/step/create/:id" exact component={AddStep} />
+        <Route path="/step/update/:id" exact component={UpdateStep} />
+        <Route
+          path="/moshtrayat/update/:id"
+          exact
+          component={UpdateMoshtrayt}
+        />
+        <Route path="/" exact component={Index} />
+        {/* add redirect for first page */}
+        <Redirect from="*" to="/" />
+      </Switch>
+    </UseContext>
   </BrowserRouter>,
   document.getElementById("root")
 );

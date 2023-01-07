@@ -1,8 +1,9 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useContext, useState } from "react";
+import { Link, useHistory } from "react-router-dom";
 import PropTypes from "prop-types";
 import { url } from "data/DataMontagat";
 import useToken from "data/useToken";
+import { BasicData } from "data/UseContext";
 
 async function loginUser(credentials) {
   return fetch(url + ":8000/project/generate-token/", {
@@ -14,17 +15,36 @@ async function loginUser(credentials) {
   }).then((data) => data.json());
 }
 
-export default function Login({ setToken }) {
+export default function Login() {
+  const history = useHistory();
+  const { token, setToken } = useToken();
   const [username, setUserName] = useState();
   const [password, setPassword] = useState();
-  
+  const { tokenS, changtoken, chanislogin, is_login } = useContext(BasicData);
+  const [err, seterr] = useState("");
   const handleSubmit = async (e) => {
     const token = await loginUser({
       username,
       password,
     });
-    console.log(token);
+    console.log(tokenS, 6565656565);
     setToken(token);
+    changtoken(token);
+    if (tokenS !== "false") {
+      chanislogin(true);
+      console.log(45454545454);
+    }
+
+    if (is_login == false) {
+      console.log(tokenS, 999999);
+      seterr("check password or username.");
+      setPassword("");
+      setUserName("");
+    } else {
+      console.log(true, 48484848484);
+      // chanislogin(true);
+      history.push("/");
+    }
   };
   return (
     <>
@@ -68,6 +88,9 @@ export default function Login({ setToken }) {
                 <div className="text-blueGray-400 text-center mb-3 font-bold">
                   <small>Or sign in with credentials</small>
                 </div>
+                <div className="err-handle rounded shadow" role="alert">
+                  {err}
+                </div>
                 <form>
                   <div className="relative w-full mb-3">
                     <label
@@ -81,6 +104,7 @@ export default function Login({ setToken }) {
                       className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
                       placeholder="User_name"
                       onChange={(e) => setUserName(e.target.value)}
+                      value={username}
                     />
                   </div>
 
@@ -96,6 +120,7 @@ export default function Login({ setToken }) {
                       className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
                       placeholder="Password"
                       onChange={(e) => setPassword(e.target.value)}
+                      value={password}
                     />
                   </div>
                   <div>
@@ -146,6 +171,5 @@ export default function Login({ setToken }) {
   );
 }
 Login.propTypes = {
-  setToken: PropTypes.func.isRequired,
+  // setToken: PropTypes.func.isRequired,
 };
-

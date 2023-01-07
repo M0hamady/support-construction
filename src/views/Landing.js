@@ -1,16 +1,16 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 
 // components
 
-import Navbar from "components/Navbars/AuthNavbar.js";
+import Navbar from "components/Navbars/IndexNavbar";
 import Footer from "components/Footers/Footer.js";
 import { AddVisitor } from "data/DataVisitors";
 import Reverse from "components/Dropdowns/Appointment/Reverse";
-import useToken from "data/useToken";
 import Login from "./auth/Login";
 import FooterSmall from "components/Footers/FooterSmall";
 import Redirectlogin from "./auth/Redirectlogin";
+import { BasicData } from "data/UseContext";
 
 export default function Landing() {
   // console.log(55555);
@@ -19,10 +19,17 @@ export default function Landing() {
   // console.log()
   // console.log(AddVisitor())
   const allvisits = AddVisitor(ip);
-  const { token, setToken } = useToken();
+  const { is_login, tokenS, chanislogin } = useContext(BasicData);
+  console.log(is_login, 5555555555555, tokenS);
 
-  if (token == undefined) {
-    return <Redirectlogin setToken={setToken} />;
+  // chanislogin(tokenS !== "false" || undefined ? true : false);
+  if (tokenS !== "false" && tokenS !== undefined) {
+    chanislogin(true);
+    console.log(is_login, 545454545);
+  }
+  console.log(is_login, 5555555555555, tokenS);
+  if (is_login == false) {
+    return <Redirectlogin />;
   }
 
   // console.log(allvisits,5495)

@@ -1,15 +1,19 @@
 import useToken from "data/useToken";
 import React, { useState } from "react";
+import { useHistory } from "react-router";
 import Database_connections from "./Database_connections";
+import Login from "./Login";
 import Redirectlogin from "./Redirectlogin";
 
 export default function Register() {
+  const history = useHistory();
   const [name, setname] = useState("");
   const [pass1, setPass1] = useState("");
   // const [pass2, setPass2] = useState("");
   const [email, setEmail] = useState("");
   const [fName, setFName] = useState("");
   const [lName, setLName] = useState("");
+  const [err_name, seterr_name] = useState('')
   const { token, setToken } = useToken();
    
   function register() {
@@ -21,6 +25,12 @@ export default function Register() {
       lName,
       email
     );
+    if (connect == false){
+        seterr_name('هناك مشكلة ببيناتك جرب اسم اخر ')
+    }
+    else{
+      history.push("/shop")
+    }
   }
   return (
     <div id="registerC">
@@ -40,6 +50,7 @@ export default function Register() {
               <div className="flex-auto px-4 lg:px-10 py-10 pt-0">
                 <div className="text-blueGray-400 text-center mb-3 font-bold">
                   <small>simple signup</small>
+                  <label>{err_name}</label>
                 </div>
                 <div className="relative w-full mb-3">
                   <label
@@ -54,6 +65,7 @@ export default function Register() {
                     placeholder="Name"
                     onChange={(e) => setname(e.target.value)}
                   />
+                  
                 </div>
 
                 <div className="relative w-full mb-3">

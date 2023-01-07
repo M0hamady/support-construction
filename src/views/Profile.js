@@ -4,6 +4,15 @@ import Navbar from "components/Navbars/IndexNavbar";
 import Footer from "components/Footers/Footer.js";
 
 export default function Profile() {
+  // length of projects 
+  // finished 
+  // current
+  // location
+  // name
+  //  client or emplye name
+  // graduayin
+  // number
+  // 
   return (
     <>
       <Navbar transparent />
