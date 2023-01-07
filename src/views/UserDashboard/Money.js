@@ -1,10 +1,10 @@
 import React from "react";
-import { Switch, Route, Redirect } from "react-router";
-import Beside from "./Component/Beside";
 import Body from "./Component/Body";
 import Header from "./Component/Header";
+import Money from "./Component/Money";
 
-export default function main() {
+
+export default function Money_user() {
   return (
     <div className="main-dash-user w-screen h-screen bg-gradient-to-tr from-blue-200 via-indigo-200 to-pink-200">
       <div className="side-user shadow rounded bg-gradient-to-tr from-blue-200 via-indigo-200 to-pink-200 ">
@@ -14,7 +14,7 @@ export default function main() {
           <h6>@mohammedy 2023</h6>
         </div>
       </div>
-      <Beside />
+      <Money />
     </div>
   );
 }

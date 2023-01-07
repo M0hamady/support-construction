@@ -822,16 +822,92 @@ grid-template-rows: repeat(20, auto);
   justify-content: space-evenly;
   align-items: center;
 }
+.Beside-content-item-full {
+  /* background-color: #1fe4f5; */
+  grid-row: 15/60;
+  grid-column: 2/40;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 1px solid #000;
+
+}
+.worker-container {
+  display: flex;
+  flex-direction: row;
+  overflow-y: auto;
+  min-width:300px ;
+  justify-content: center;
+  max-width: 950px;
+  height: 85px;
+  /* background-color: #000; */
+}
+.worker-container .remargr:first-child {
+  margin-left: 300px;
+}
+.worker-container .remargr1:first-child {
+  margin-left: 150px;
+}
+.worker {
+  display: flex;
+  flex-direction: column;
+  min-width: 120px;
+  width: 150px;
+  height: 80px;
+  /* background-color: #000; */
+  justify-content: center;
+  align-items: center;
+  /* padding: 1px 3px; */
+  border-right: 1px dotted rgb(65, 63, 63);
+  margin: 1px 5px;
+}
 .beside-content-item-right {
   display: flex;
   /* background-color: #000  ; */
   grid-row: 1/60;
   grid-column: 11/40;
 }
+.besid-content-item-moshtra {
+  /* background-color: #000; */
+  height: 50%;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  overflow:auto ;
+}
+.moshtra-container {
+  position: relative;
+  width: 100px;
+  height: 110px;
+  text-align: center;
+  /* background-color: #1fe4f5; */
+  padding: 8px;
+  margin-right: 40px;
+  margin-bottom: 10px;
+  
+
+}
+.moshtra-container::after {
+  position: absolute;
+  width:35px ;
+  height: 60px;
+  content: '--->';
+  margin: 0px;
+  color: rgb(129, 129, 129);
+  transform: translateX(50px) translateY(-55px);
+  /* border-top: 1px dotted #000; */
+
+  /* background-color: #000; */
+}
 @media  screen and (max-width : 49em) {
   .Beside-content-item {
     margin-top: -20%;
 
+  }
+  .besid-content-item-moshtra  {
+    height: 400px;
+    width: 350px;
   }
   .beside-content-item-left {
     grid-row: 1/61;
@@ -848,6 +924,10 @@ grid-template-rows: repeat(20, auto);
   }.beside-content-item-right iframe {
     width: 110px;
     height: 90px;
+  }
+  .worker-container {
+
+    width: 320px;
   }
 }
 
@@ -874,6 +954,10 @@ grid-template-rows: repeat(20, auto);
     align-items: center;
     margin-top: -20px;
   }
+  .worker-container {
+    width: 500px;
+  
+    }
 
 }
 @media  screen and (min-width : 60em ) {
@@ -889,6 +973,10 @@ grid-template-rows: repeat(20, auto);
     width: 900px;
 
   }
+  .worker-container {
+    width: 900px;
+  
+    }
   
 }
 .via-indigo-200 {

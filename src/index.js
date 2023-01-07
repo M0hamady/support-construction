@@ -29,6 +29,10 @@ import UpdateStep from "layouts/project/UpdateStep";
 import ProfileClient from "views/ProfileClient";
 import { UseContext } from "data/UseContext";
 import DashboardUser from "views/UserDashboard/Main";
+import Project_user from "views/UserDashboard/Project";
+import Money_user from "views/UserDashboard/Money";
+import Moshtrayat_user from "views/UserDashboard/Moshtrayat";
+import Designes from "views/UserDashboard/Designes";
 
 ReactDOM.render(
   <BrowserRouter>
@@ -37,10 +41,11 @@ ReactDOM.render(
         {/* add routes with layouts */}
         <Route path="/admin" component={Admin} />
         <Route path="/auth" component={Auth} />
-        <Route path="/user" component={DashboardUser} />
-        <Route path="/user/project" component={DashboardUser} />
-        <Route path="/user/money" component={DashboardUser} />
-        <Route path="/user/designe" component={DashboardUser} />
+        <Route path="/user/dash" component={DashboardUser} />
+        <Route path="/user/project" component={Project_user} />
+        <Route path="/user/money" component={Money_user} />
+        <Route path="/user/designe" component={Designes} />
+        <Route path="/user/moshtrayat" component={Moshtrayat_user} />
         {/** <Route path="/project/moshtrayat/:id" exact component={moshtrayat} />*/}
         {/* add routes without layouts */}
         <Route path="/book" exact component={Landing} />{" "}
