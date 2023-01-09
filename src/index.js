@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
 
@@ -33,6 +33,7 @@ import Project_user from "views/UserDashboard/Project";
 import Money_user from "views/UserDashboard/Money";
 import Moshtrayat_user from "views/UserDashboard/Moshtrayat";
 import Designes from "views/UserDashboard/Designes";
+import { BasicData } from "data/UseContext";
 
 ReactDOM.render(
   <BrowserRouter>

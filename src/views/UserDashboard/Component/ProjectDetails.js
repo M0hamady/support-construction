@@ -14,7 +14,7 @@ export default function ProjectDetails() {
                 <i className="fas fa-phone"></i>
               </a>
             </div>
-            <div className="worker shadow rounded">
+            <div className="worker shadow rounded ">
               <small>manager</small>
               <small>ah elkorashy</small>
               <a href={`tel`}>
@@ -48,8 +48,8 @@ export default function ProjectDetails() {
       <div className="Beside-content-item">
         <div className="Beside-content-item-full">
           <i className="fas fa-handshake "> meettings</i>
-          <div className="worker-container">
-            <div className="worker shadow rounded">
+          <div className="worker-container ">
+            <div className="worker shadow remargr rounded">
               <h5>At: </h5>
               <h5>2022/5/16</h5>
             </div>
@@ -68,7 +68,7 @@ export default function ProjectDetails() {
         <div className="Beside-content-item-full">
           <i className="fas fa-money "> payments</i>
           <div className="worker-container">
-            <div className="worker shadow rounded">
+            <div className="worker shadow rounded remargr">
               <h5>at: 2022/5/16</h5>
               <h5> 6500 LE</h5>
             </div>
@@ -88,7 +88,7 @@ export default function ProjectDetails() {
         <div className="Beside-content-item-full">
           <i className="fas fa-paperclip "> steps</i>
           <div className="worker-container">
-            <div className="worker shadow rounded">
+            <div className="worker shadow rounded remargr">
               <h5>All steps:</h5>
               <h5> 16</h5>
             </div>

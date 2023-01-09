@@ -7,7 +7,7 @@ export default function Moshtrayat() {
         <div className="Beside-content-item-full">
           <i className="fas fa-paperclip"> steps</i>
           <div className="worker-container remargr">
-            <div className="worker shadow rounded">
+            <div className="worker shadow rounded remargr2">
               <h5>start 15/5/2022</h5>
               <h5>end 15/5/2022</h5>
               <h5>costs 60 LE</h5>
@@ -46,7 +46,6 @@ export default function Moshtrayat() {
           </div>
         </div>
       </div>
-      <i className="fas fa-cart-shopping"> your basket</i>
       <div className="besid-content-item-moshtra">
         <div className="moshtra-container rounded shadow">
           <h5>ماسورة</h5>

@@ -15,7 +15,8 @@ export default function Order({ order_num, price, locat, date, component }) {
   const id = useParams().id;
   const data = AllVisitors();
   const meeting = Exact_Meet(data, id);
-  const project = (val) => ProjectData(val).name;
+  console.log(meeting);
+  // const project = (val) => ProjectData(val).name;
   function changeTounsUcced(state) {
     Change_success_stat(id.toString(), state);
     window.location.reload();
@@ -82,10 +83,6 @@ export default function Order({ order_num, price, locat, date, component }) {
                         className="shadow-xl rounded-full h-auto align-middle border-none absolute -m-16 -ml-20 lg:-ml-16 max-w-200-px"
                       />
           </div> */}
-
-                    {meeting.order != null
-                      ? project(meeting.order)
-                      : "meeting.order"}
                   </div>
                   <div className="w-full lg:w-4/12 px-4  lg:order-3 lg:text-right lg:self-center">
                     <div className="py-0 px-3 mt-5 sm:mt-0">
@@ -192,49 +189,12 @@ export default function Order({ order_num, price, locat, date, component }) {
                     Support Construction
                   </div>
 
-                  <div className="block pb-6">
-                    {/*  {component ? (
-                      component.map((comp) => {
-                        return (
-                          <div
-                            key={Math.round(
-                              Math.random() * 100 * Math.random() * 100
-                            )}
-                            className="inline-block mr-2"
-                          >
-                            <span
-                              className={`text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-white bg-${
-                                comp.isready ? "emerald" : "orange"
-                              }-500 uppercase  mt-2`}
-                            >
-                              {comp.name}
-                            </span>
-                          </div>
-                        );
-                      })
-                    ) : (
-                      <>
-                        {" "}
-                        <button
-                          className=" text-white w-10 py-1 px-2 text-xs hover:shadow  mt-2 rounded-full pr-4 px-1"
-                          style={{
-                            background: "rgba(249, 115, 22)",
-                            marginRight: "-20px",
-                          }}
-                        >
-                          X
-                        </button>
-                        <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-white bg-orange-500 uppercase  mt-2">
-                          no component
-                        </span>
-                      </>
-                        )} */}
-                  </div>
+                  <div className="block pb-6"></div>
                 </div>
                 <button
                   // to={"/admin/tables"}
                   onClick={() => show_step()}
-                  className="bg-slate-600 p-2 rounded mt-1 text-white"
+                  className="bg-gray-600 p-2 rounded mt-1 text-black shadow"
                 >
                   Create project
                   <i className="fas ml-2 fa-solid fa-building"></i>
@@ -253,7 +213,7 @@ export default function Order({ order_num, price, locat, date, component }) {
                   />
 
                   <button
-                    className="btn btn-brimary"
+                    className="btn btn-brimary text-black"
                     style={{ visibility: "hidden" }}
                     id="num-Step2"
                     onClick={() => createPartment()}

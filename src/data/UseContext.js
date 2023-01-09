@@ -1,4 +1,4 @@
-import React, { createContext, useState } from "react";
+import React, { createContext, useContext, useState } from "react";
 // create context
 const BasicData = createContext();
 
@@ -30,13 +30,18 @@ const UseContext = ({ children }) => {
   const changtoken = (name) => {
     setToken(name);
   };
-//   console.log(tokenS, 1111111111111);
+  //   console.log(tokenS, 1111111111111);
   const [is_login, setIsLogin] = useState(false);
-  
+
   const chanislogin = (res) => {
     setIsLogin(res);
   };
-//   console.log(tokenS, is_login, 44444444444444444444444);
+  const [data_user, setdata_user] = useState({});
+  const setData_user = (e) => {
+    setdata_user(e);
+  };
+
+  //   console.log(tokenS, is_login, 44444444444444444444444);
   return (
     <BasicData.Provider
       value={{
@@ -48,6 +53,8 @@ const UseContext = ({ children }) => {
         chanislogin,
         is_admin,
         changis_admin,
+        data_user,
+        setData_user,
       }}
     >
       {children}

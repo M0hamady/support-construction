@@ -1,18 +1,39 @@
-import React from "react";
+import React, { useContext, useEffect, useState } from "react";
 
 import Navbar from "components/Navbars/IndexNavbar";
 import Footer from "components/Footers/Footer.js";
-
+import { BasicData } from "data/UseContext";
+import { url } from "data/DataMontagat";
+async function gwt_user_data(credentials) {
+  return fetch(url + ":8000/user/", {
+    method: "PUT",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(credentials),
+  }).then((data) => data.json());
+}
 export default function Profile() {
-  // length of projects 
-  // finished 
-  // current
-  // location
-  // name
-  //  client or emplye name
-  // graduayin
-  // number
-  // 
+  const { tokenS, setData_user } = useContext(BasicData);
+  const [data_catched, setdata_catched] = useState({});
+  const [userInf, setUserinf] = useState({});
+  const token = "token " + tokenS;
+  // console.log(token, "last data");
+  const go_get_data = async (e) => {
+    const tokena = await gwt_user_data({
+      token,
+    });
+    setData_user(tokena);
+    setdata_catched(tokena);
+  };
+  const [change, setchange] = useState(0);
+  useEffect(() => {
+    const use_inf = go_get_data();
+    // console.log(data_catched);
+    setchange(1);
+    setUserinf(use_inf.info);
+    return () => {};
+  }, [change]);
   return (
     <>
       <Navbar transparent />
@@ -105,11 +126,11 @@ export default function Profile() {
                 </div>
                 <div className="text-center mt-12">
                   <h3 className="text-4xl font-semibold leading-normal mb-2 text-slate-700 mb-2">
-                    Jenna Stones
+                    555
                   </h3>
                   <div className="text-sm leading-normal mt-0 mb-2 text-slate-400 font-bold uppercase">
                     <i className="fas fa-map-marker-alt mr-2 text-lg text-slate-400"></i>{" "}
-                    Los Angeles, California
+                    {data_catched.location}
                   </div>
                   <div className="mb-2 text-slate-600 mt-10">
                     <i className="fas fa-briefcase mr-2 text-lg text-slate-400"></i>
@@ -121,7 +142,7 @@ export default function Profile() {
                   </div>
                   <div className="mb-2 text-slate-600">
                     <i className="fas fa-phone mr-2 text-lg text-slate-400"></i>
-                    <a  type="tel">01555099233</a>
+                    <a type="tel">01555099233</a>
                   </div>
                 </div>
                 <div className="mt-10 py-10 border-t border-slate-200 text-center">

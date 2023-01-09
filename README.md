@@ -112,8 +112,8 @@ notus-react
 ├── src
 │   ├── assets
 │   │   ├── img
-│   │   │   ├── github.svg
-│   │   │   └── google.svg
+│   │   │   └── Dynamics
+│   │   │ 
 │   │   └── styles
 │   │       ├── index.css
 │   │       └── tailwind.css
@@ -126,8 +126,21 @@ notus-react
 │   │   │   ├── CardSettings.js
 │   │   │   ├── CardSocialTraffic.js
 │   │   │   ├── CardStats.js
-│   │   │   └── CardTable.js
+│   │   │   ├── Card_project.js
+│   │   │   ├── Card_user.js
+│   │   │   ├── CardBarChar.js
+│   │   │   ├── CardEmplyee.js
+│   │   │   ├── CardGallary.js
+│   │   │   ├── CardLanding.js
+│   │   │   ├── CardLineChart.js
+│   │   │   ├── CardOrder.js
+│   │   │   ├── CardOrderOverView.js
+│   │   │   ├── Cardshe3ar.js
+│   │   │   ├── CardTank.js
+│   │   │   └── SLider.js
 │   │   ├── Dropdowns
+│   │   │   ├── Appointment
+│   │   │   │              └─Reverse.js
 │   │   │   ├── IndexDropdown.js
 │   │   │   ├── NotificationDropdown.js
 │   │   │   ├── PagesDropdown.js
@@ -141,10 +154,14 @@ notus-react
 │   │   │   └── HeaderStats.js
 │   │   ├── Maps
 │   │   │   └── MapExample.js
+│   │   ├── montagat
+│   │   │   └── MontagatComponent.js
 │   │   ├── Navbars
 │   │   │   ├── AdminNavbar.js
 │   │   │   ├── AuthNavbar.js
 │   │   │   └── IndexNavbar.js
+│    │  ├── order
+│    │  │   └── FirstStep.js  
 │   │   └── Sidebar
 │   │       └── Sidebar.js
 │   ├── index.js
