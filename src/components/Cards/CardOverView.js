@@ -1,7 +1,23 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import CardOverViewAndImg from "./CardOverViewHistory";
-
+import img1 from "assets/img/construc1.png";
+import img2 from "assets/img/58052.jpg";
+import img3 from "assets/img/Ahmed.jpeg";
+import img4 from "assets/img/4891584.jpg";
+import img5 from "assets/img/5174679.jpg";
+import img6 from "assets/img/19340.jpg";
+import img7 from "assets/img/19318.jpg";
+import img8 from "assets/img/construc1.png";
+import img9 from "assets/img/construc1.png";
+import img10 from "assets/img/construc1.png";
+import img11 from "assets/img/construc1.png";
+import img12 from "assets/img/construc1.png";
+import img13 from "assets/img/construc1.png";
+import img14 from "assets/img/construc1.png";
+import img15 from "assets/img/construc1.png";
+import img16 from "assets/img/construc1.png";
+import img17 from "assets/img/construc1.png";
 export default function CardOverViewAndItenDescription() {
   return (
     <section className="mt-48 md:mt-40 pb-0 relative bg-blueGray-100 justify-right">
@@ -34,7 +50,7 @@ export default function CardOverViewAndItenDescription() {
               <img
                 alt="..."
                 // src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=80"
-                src={require("assets/img/construc1.png").default}
+                src={img1}
                 className="w-full align-middle rounded-t-lg"
               />
               <blockquote className="relative p-8 mb-2">
@@ -64,7 +80,6 @@ export default function CardOverViewAndItenDescription() {
           {/**  need for tem pic in good reselution  */}
           <div className="w-full md:w-6/12 px-4">
             <div className="flex flex-wrap">
-            
               <div className="w-full md:w-6/12 px-4">
                 <div className="relative flex flex-col mt-4">
                   <div className="px-4 py-5 flex-auto text-left">
@@ -182,32 +197,32 @@ export default function CardOverViewAndItenDescription() {
             <div className="relative flex flex-col min-w-0 w-full mb-6 mt-48 md:mt-0">
               <img
                 alt="..."
-                src={require("assets/img/58052.jpg").default}
+                src={img2}
                 className="w-full align-middle rounded absolute shadow-lg max-w-100-px z-3 left-145-px -top-29-px"
               />
               <img
                 alt="..."
-                src={require("assets/img/Ahmed.jpeg").default}
+                src={img3}
                 className="w-full align-middle rounded-lg absolute shadow-lg -top-160-px left-260-px max-w-210-px"
               />
               <img
                 alt="..."
-                src={require("assets/img/4891584.jpg").default}
+                src={img4}
                 className="w-full align-middle rounded-lg absolute shadow-lg max-w-180-px -top-225-px left-40-px z-2"
               />
               <img
                 alt="..."
-                src={require("assets/img/5174679.jpg").default}
+                src={img5}
                 className="w-full align-middle rounded-lg absolute shadow-2xl max-w-200-px -left-50-px top-25-px"
               />
               <img
                 alt="..."
-                src={require("assets/img/19340.jpg").default}
+                src={img6}
                 className="w-full align-middle rounded absolute shadow-lg max-w-580-px -left-20-px top-210-px"
               />
               <img
                 alt="..."
-                src={require("assets/img/19318.jpg").default}
+                src={img7}
                 className="w-full align-middle rounded absolute shadow-xl max-w-120-px left-195-px top-95-px"
               />
             </div>
@@ -398,13 +413,10 @@ export default function CardOverViewAndItenDescription() {
 
       <div className="justify-center text-center flex flex-wrap mt-24">
         <div className="w-full md:w-6/12 px-12 md:px-4">
-          <h2 className="font-semibold text-4xl">
-              Support construction
-          </h2>
+          <h2 className="font-semibold text-4xl">Support construction</h2>
           <p className="text-lg leading-relaxed mt-4 mb-4 text-blueGray-500">
-            Support Construction —a leader in design-build construction
-            projects in Egypt. Civil engineering | buildings
-            | transport infrastructure.
+            Support Construction —a leader in design-build construction projects
+            in Egypt. Civil engineering | buildings | transport infrastructure.
           </p>
         </div>
       </div>

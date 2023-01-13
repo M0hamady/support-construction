@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import img from 'assets/img/construc1.png'
 export default function CardLanding() {
   return (
     <section
@@ -25,9 +26,8 @@ export default function CardLanding() {
               >
                 Support constuction{"\n "}
               </a>
-               —a leader in design-build construction
-              projects in Egypt. Civil engineering |
-              buildings | transport infrastructure.
+              —a leader in design-build construction projects in Egypt. Civil
+              engineering | buildings | transport infrastructure.
             </p>
             <div className="mt-12">
               <Link
@@ -53,8 +53,8 @@ export default function CardLanding() {
         className="absolute top-0 b-auto right-0 pt-16 sm:w-6/12 mt-48 sm:mt-5 w-10/12 max-h-860px while-mobile text-focus-in "
         style={{
           marginTop: "30px",
-        }}
-        src={require("assets/img/construc1.png").default}
+        }}cl
+        src={img}
         alt="..."
       />
     </section>
