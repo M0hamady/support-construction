@@ -37,13 +37,12 @@ export default function Login() {
       console.log(45454545454);
     }
 
-    // if (is_login == false) {
-    //   console.log(tokenS, 999999);
-    //   seterr("check password or username.");
-    //   setPassword("");
-    //   setUserName("");
-    // } 
-    else {
+    if (is_login == false) {
+      console.log(tokenS, 999999);
+      seterr("check password or username.");
+      setPassword("");
+      setUserName("");
+    } else {
       console.log(true, 48484848484);
       // chanislogin(true);
       history.push("/");
