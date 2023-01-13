@@ -88,4 +88,5 @@ export const GetExactMontag = (id) => {
   // console.log(mont);
   return mont[id - 1];
 };
-export const url = "http://192.168.1.104";
+// export const url = "http://192.168.1.104";
+export const url = "http://192.168.43.209";

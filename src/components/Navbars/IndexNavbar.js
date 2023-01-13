@@ -7,8 +7,8 @@ import { BasicData } from "data/UseContext";
 
 export default function Navbar(props) {
   const [navbarOpen, setNavbarOpen] = React.useState(false);
-  const {name ,changName} = useContext(BasicData);
-  changName('hbhb')
+  const { name, changName } = useContext(BasicData);
+  changName("hbhb");
 
   return (
     <>
@@ -43,43 +43,50 @@ export default function Navbar(props) {
                   href="https://www.facebook.com/supportconstructioneg"
                 >
                   <i className="text-blueGray-400 far fa-file-alt text-lg leading-lg mr-2" />{" "}
-                  Docs
+                  {/*Docs*/}
                 </a>
               </li>
             </ul>
             <ul className="flex flex-col lg:flex-row list-none lg:ml-auto">
               <li className="flex items-center ">
-                <IndexDropdown />
+                <IndexDropdown /> {/** relation with an other component */}
               </li>
               <li className="flex items-center">
+                {/** link relation with face book */}
                 <a
                   className="hover:text-blueGray-500 text-blueGray-700 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
                   href="https://www.facebook.com/supportconstructioneg"
                   target="_blank"
                 >
                   <i className="text-blueGray-400 fab fa-facebook text-lg leading-lg " />
-                  <span className="lg:hidden inline-block ml-2">Share</span>
+                  <span className="lg:hidden inline-block ml-2"></span>
                 </a>
               </li>
 
               <li className="flex items-center">
-                <a
+                {/**   <a
                   className="hover:text-blueGray-500 text-blueGray-700 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
                   href="https://www.facebook.com/supportconstructioneg"
                   target="_blank"
                 >
+              link relation with tweet in fut 
+
                   <i className="text-blueGray-400 fab fa-twitter text-lg leading-lg " />
+
                   <span className="lg:hidden inline-block ml-2">Tweet</span>
+                  book 
+
                 </a>
+                */}
               </li>
 
               <li className="flex items-center">
                 <a
                   className="hover:text-blueGray-500 text-blueGray-700 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
-                  href="https://www.facebook.com/supportconstructioneg"
+                  href = "tel:01003234531"
                   target="_blank"
                 >
-                  <i className="text-blueGray-400 fab fa-github text-lg leading-lg " />
+                  <i className="text-blueGray-400 fas  fa-phone text-lg leading-lg " />
                   <span className="lg:hidden inline-block ml-2">Star</span>
                 </a>
               </li>

@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 
 // components
 
@@ -14,7 +14,7 @@ import { BasicData } from "data/UseContext";
 
 export default function Landing() {
   // console.log(55555);
-
+  const history = useHistory();
   const ip = window.location.host;
   // console.log()
   // console.log(AddVisitor())
@@ -29,7 +29,7 @@ export default function Landing() {
   }
   console.log(is_login, 5555555555555, tokenS);
   if (is_login == false) {
-    return <Redirectlogin />;
+    return history.push("/auth/login");
   }
 
   // console.log(allvisits,5495)

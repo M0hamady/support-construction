@@ -4,6 +4,7 @@ import Navbar from "components/Navbars/IndexNavbar";
 import Footer from "components/Footers/Footer.js";
 import { BasicData } from "data/UseContext";
 import { url } from "data/DataMontagat";
+import { useHistory } from "react-router";
 async function gwt_user_data(credentials) {
   return fetch(url + ":8000/user/", {
     method: "PUT",
@@ -11,9 +12,12 @@ async function gwt_user_data(credentials) {
       "Content-Type": "application/json",
     },
     body: JSON.stringify(credentials),
-  }).then((data) => data.json());
+  })
+    .then((data) => data.json())
+    // .catch(() => history.push("/auth"));
 }
 export default function Profile() {
+  const history = useHistory();
   const { tokenS, setData_user } = useContext(BasicData);
   const [data_catched, setdata_catched] = useState({});
   const [userInf, setUserinf] = useState({});
@@ -34,6 +38,9 @@ export default function Profile() {
     setUserinf(use_inf.info);
     return () => {};
   }, [change]);
+  if (tokenS == 'false'){
+    history.push("/auth")
+  }
   return (
     <>
       <Navbar transparent />

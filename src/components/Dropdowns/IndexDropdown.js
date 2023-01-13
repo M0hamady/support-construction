@@ -76,6 +76,18 @@ const IndexDropdown = () => {
                   logout
                 </Link>
                 <Link
+                  to="/admin/meatings"
+                  className="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-slate-700"
+                >
+                  meeting
+                </Link>
+                <Link
+                  to="/admin/projects"
+                  className="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-slate-700"
+                >
+                  meeting
+                </Link>
+                <Link
                   to="/profile"
                   className="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-slate-700"
                 >
