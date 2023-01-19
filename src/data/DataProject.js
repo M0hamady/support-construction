@@ -11,7 +11,7 @@ export function ProjectData(id) {
   let state = { name: null };
   let config = {
     method: "get",
-    url: url + `:8000/meeting/num/${id}/`,
+    url: url + `meeting/num/${id}/`,
     headers: {
       Authorization: "Token " + token,
     },
@@ -35,7 +35,7 @@ export const Allprojects = () => {
   const [state, setState] = useState([]);
   let config = {
     method: "get",
-    url: url + ":8000/project/",
+    url: url + "project/",
     headers: {
       Authorization: "Token " + token,
     },
@@ -64,7 +64,7 @@ export const Allproject_steps = (id) => {
   const [state, setState] = useState([]);
   let config = {
     method: "get",
-    url: url + `:8000/project/step/${id}/`,
+    url: url + `project/step/${id}/`,
     headers: {
       Authorization: "Token " + token,
     },

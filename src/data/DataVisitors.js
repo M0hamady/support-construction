@@ -7,7 +7,7 @@ export const AllVisitors = () => {
   const [meetings, setMeetings] = useState([]);
   let config = {
     method: "get",
-    url: url + ":8000/meeting/",
+    url: url + "meeting/",
     headers: {},
   };
   useEffect(() => {
@@ -27,7 +27,7 @@ export function AddVisitor(ip) {
   data.append("ip", ip);
   let config = {
     method: "post",
-    url: url + ":8000/",
+    url: url + "",
     headers: {
       ...data.getHeaders,
     },
@@ -48,7 +48,7 @@ export default function TodayMeetings(data) {
   let newDAta = [];
   const current = new Date();
   const month = "" + parseInt(current.getMonth()) + 1;
-  const day = ""+parseInt(current.getDate());
+  const day = "" + parseInt(current.getDate());
   const today = current.getFullYear() + "-" + month + "-" + day;
   console.log(data, "to filter", today);
   data.forEach((element) => {
@@ -145,7 +145,7 @@ export const Change_accepted_stat = (id, val) => {
   data.append("is_accepted", val);
   let config = {
     method: "put",
-    url: url + `:8000/meeting/${id}/`,
+    url: url + `meeting/${id}/`,
     headers: {
       ...data.getHeaders,
     },
@@ -166,7 +166,7 @@ export const Change_success_stat = (id, val) => {
   data.append("succeded", val);
   let config = {
     method: "put",
-    url: url + `:8000/meeting/${id}/`,
+    url: url + `meeting/${id}/`,
     headers: {
       ...data.getHeaders,
     },
@@ -189,7 +189,7 @@ export function AddPartment(number_of_step, id) {
   data.append("id", id);
   let config = {
     method: "post",
-    url: url + `:8000/project/`,
+    url: url + `project/`,
     headers: {
       ...data.getHeaders,
     },
@@ -210,7 +210,7 @@ export const Meet_project = (id) => {
   let proj = "";
   let config = {
     method: "get",
-    url: url + `:8000/meeting/num/${id}/`,
+    url: url + `meeting/num/${id}/`,
     headers: {},
   };
   axios(config)

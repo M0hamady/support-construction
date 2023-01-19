@@ -13,7 +13,7 @@ export function AddMeeting(ip, name, time, date, location, number) {
 
   let config = {
     method: "post",
-    url: url + ":8000/meeting/",
+    url: url + "meeting/",
     headers: {
       ...data.getHeaders,
     },
