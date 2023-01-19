@@ -31,7 +31,7 @@ export function ProjectData(id) {
 export const Allprojects = () => {
 
   const { token, setToken } = useToken();
-  console.log(token, 54545454545);
+  // console.log(token, 54545454545);
   const [state, setState] = useState([]);
   let config = {
     method: "get",

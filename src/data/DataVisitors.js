@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { url } from "./DataMontagat";
+import useToken from "./useToken";
 
 export const AllVisitors = () => {
   // console.log(today);
@@ -180,22 +181,26 @@ export const Change_success_stat = (id, val) => {
       console.log("error");
     });
 };
-
-export function AddPartment(number_of_step, id) {
+export function AddPartment( number_of_step, id,token ) {
   let data = new FormData();
   data.append("number", number_of_step);
   data.append("name", " website name test relation");
   data.append("address", "api address");
   data.append("id", id);
+  data.append("owner", token);
+  console.log(token,55,id,number_of_step);
+  // data.append('Authorization',{"Token":  token})
   let config = {
     method: "post",
     url: url + `project/`,
     headers: {
+      Authorization: "Token " + token,
       ...data.getHeaders,
     },
     data: data,
   };
 
+  console.log(1);
   axios(config)
     .then(function (response) {
       console.log(JSON.stringify(response.data));

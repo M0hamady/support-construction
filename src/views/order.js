@@ -9,9 +9,11 @@ import { ProjectData } from "data/DataProject";
 import { AllVisitors } from "data/DataVisitors";
 import { Exact_Meet } from "data/DataVisitors";
 import { Change_accepted_stat } from "data/DataVisitors";
+import useToken from "data/useToken";
 // import { emerald } from "tailwindcss/colors";
 
 export default function Order({ order_num, price, locat, date, component }) {
+  const { token, setToken } = useToken();
   const id = useParams().id;
   const data = AllVisitors();
   const meeting = Exact_Meet(data, id);
@@ -31,7 +33,8 @@ export default function Order({ order_num, price, locat, date, component }) {
     document.getElementById("num-Step2").style.visibility = "visible";
   }
   function createPartment() {
-    AddPartment(steps, id);
+    console.log('clicked');
+    AddPartment(steps, id,token);
   }
   return (
     <>
