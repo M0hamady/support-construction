@@ -26,7 +26,7 @@ export default function AddStep() {
     // data.append("cost", cost);
     let config = {
       method: "post",
-      url: url + `:8000/project/addstep/${id}/`,
+      url: url + `project/addstep/${id}/`,
       headers: {
         ...data.getHeaders,
       },

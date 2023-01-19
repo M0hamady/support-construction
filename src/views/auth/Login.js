@@ -6,7 +6,7 @@ import useToken from "data/useToken";
 import { BasicData } from "data/UseContext";
 
 async function loginUser(credentials) {
-  return fetch(url + ":8000/project/generate-token/", {
+  return fetch(url + "project/generate-token/", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",

@@ -22,7 +22,7 @@ export default function Reverse() {
     data.append("cost", cost);
     let config = {
       method: "post",
-      url: url  + `:8000/project/moshtrayat/${id}/`,
+      url: url  + `project/moshtrayat/${id}/`,
       headers: {
         ...data.getHeaders,
       },

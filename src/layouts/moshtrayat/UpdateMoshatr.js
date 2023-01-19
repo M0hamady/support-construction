@@ -21,7 +21,7 @@ export default function UpdateMoshtrayt() {
   let data = new FormData();
   let config = {
     method: "put",
-    url: url + `:8000/project/moshtrayat/${id}/`,
+    url: url + `project/moshtrayat/${id}/`,
     headers: {
       ...data.getHeaders,
     },

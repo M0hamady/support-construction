@@ -22,7 +22,7 @@ export default function UpdateStep() {
   let data = new FormData();
   let config = {
     method: "get",
-    url: url + `:8000/project/astep/${id}/`,
+    url: url + `project/astep/${id}/`,
     headers: {
       ...data.getHeaders,
     },

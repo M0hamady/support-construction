@@ -39,7 +39,7 @@ export function Is_admin() {
   data.append("token", token);
   let config = {
     method: "put",
-    url: url + ":8000/is-admin/",
+    url: url + "is-admin/",
     headers: {
       ...data.getHeaders,
     },

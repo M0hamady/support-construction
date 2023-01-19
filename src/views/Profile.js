@@ -6,7 +6,7 @@ import { BasicData } from "data/UseContext";
 import { url } from "data/DataMontagat";
 import { useHistory } from "react-router";
 async function gwt_user_data(credentials) {
-  return fetch(url + ":8000/user/", {
+  return fetch(url + "user/", {
     method: "PUT",
     headers: {
       "Content-Type": "application/json",

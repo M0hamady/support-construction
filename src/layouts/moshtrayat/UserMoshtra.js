@@ -10,7 +10,7 @@ export default function UpdateMoshtrayt() {
   // console.log(id);
   let config = {
     method: "get",
-    url: url + `:8000/project/${id}/`,
+    url: url + `project/${id}/`,
     headers: {},
   };
 
