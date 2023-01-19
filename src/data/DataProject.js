@@ -48,6 +48,7 @@ export const Allprojects = () => {
         console.log(response.data, "from axios");
         setState(response.data);
         console.log("done state");
+        console.log(response.data);
       })
       .catch(function (error) {
         console.log(error);

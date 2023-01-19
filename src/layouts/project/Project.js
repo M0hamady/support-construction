@@ -11,7 +11,7 @@ import { Link } from "react-router-dom";
 export default function Project() {
   const id = useParams().id;
   const steps = Allproject_steps(id);
-  console.log(steps);
+  // console.log(steps);
   return (
     <div className="container py-0">
       <div className="row flex text-center text-black mb-2 justify-center ">
