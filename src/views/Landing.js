@@ -29,7 +29,7 @@ export default function Landing() {
   }
   console.log(is_login, 5555555555555, tokenS);
   if (is_login == false) {
-    return history.push("/auth/login");
+    return <Login />;
   }
 
   // console.log(allvisits,5495)

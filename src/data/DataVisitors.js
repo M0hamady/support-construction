@@ -47,20 +47,9 @@ export function AddVisitor(ip) {
 export default function TodayMeetings(data) {
   let newDAta = [];
   const current = new Date();
-  const month =
-    parseInt(current.getMonth()) + 1 < 10
-      ? `0${parseInt(current.getUTCMonth()) + 1}`
-      : parseInt(current.getUTCMonth()) + 1;
-  const day =
-    parseInt(current.getDate()) + 1 < 10
-      ? `0${parseInt(current.getDate()) }`
-      : parseInt(current.getDate()) + 1;
-  const today =
-    current.getFullYear() +
-    "-" +
-   month +
-    "-" +
-   day;
+  const month = "" + parseInt(current.getMonth()) + 1;
+  const day = ""+parseInt(current.getDate());
+  const today = current.getFullYear() + "-" + month + "-" + day;
   console.log(data, "to filter", today);
   data.forEach((element) => {
     if (element.meet_at == today) {

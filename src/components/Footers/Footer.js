@@ -30,26 +30,25 @@ export default function Footer() {
               <h4 className="text-3xl font-semibold">Contact us</h4>
               <h5 className="text-lg mt-0 mb-2 text-blueGray-600">.</h5>
               <div className="mt-6 lg:mb-0 mb-6">
-                <button
+                <a
                   className="bg-white text-lightBlue-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
                   type="button"
                 >
-                  <i className="fab fa-twitter"></i>
-                </button>
-                <Link
+                  <i className="fab fa-twitter ml-3 mt-3"></i>
+                </a>
+                <a
                   className="bg-white text-lightBlue-600 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
                   type="button"
                   href="https://www.facebook.com/supportconstructioneg"
                 >
-                  <i className="fab fa-facebook-square"></i>
-                </Link>
-                <button
-                  className="bg-white text-pink-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
+                  <i className="fab fa-facebook ml-3 mt-3"></i>
+                </a>
+                <a
+                  className="bg-white text-pink-400 shadow-lg font-normal h-10 w-10 items-center rounded-full outline-none focus:outline-none mr-2"
                   type="button"
                 >
-                  <i className="fab fa-dribbble"></i>
-                </button>
-               
+                  <i className="fab fa-dribbble ml-3 mt-3"></i>
+                </a>
               </div>
             </div>
             <div className="w-full lg:w-6/12 px-4">
@@ -83,16 +82,11 @@ export default function Footer() {
                         Github
                       </a>
                     </li>
-                    <li>
-                     
-                    </li>
+                    <li></li>
                   </ul>
                 </div>
                 <div className="w-full lg:w-4/12 px-4">
-                  
                   <ul className="list-unstyled">
-                    
-                   
                     <li>
                       <a
                         className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
