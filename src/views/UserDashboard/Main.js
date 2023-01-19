@@ -1,5 +1,5 @@
-import useToken from "data/useToken";
-import { useHistory } from "react-router";
+import UseToken from "data/useToken";
+import { useHistory as Usehistory } from "react-router";
 import React from "react";
 import { Switch, Route, Redirect } from "react-router";
 import Beside from "./Component/Beside";
@@ -7,9 +7,9 @@ import Body from "./Component/Body";
 import Header from "./Component/Header";
 
 export default function main() {
-  const { token, setToken } = useToken();
+  const { token, setToken } = UseToken();
   const CheckLogin = () => (token == undefined ? true : false);
-  const history = useHistory();
+  const history = Usehistory();
   if (CheckLogin()) {
     history.push("/auth");
   }
