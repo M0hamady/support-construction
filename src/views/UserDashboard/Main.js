@@ -19,7 +19,7 @@ export default function main() {
         <Header />
         <Body />
         <div className="side-user-footer">
-          <h6>@mohammedy 2023</h6>
+          <h6>@mohammedy  c 2023</h6>
         </div>
       </div>
       <Beside />
