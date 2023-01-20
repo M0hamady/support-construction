@@ -198,7 +198,7 @@ ul.timeline:before {
 li.timeline-item {
     margin: 20px 0 20px 20px;
     background: radial-gradient(#1fe4f5, #3fbafe);
-    width: 60%;
+    width: 95%;
 }
 li.timeline-item i {
   color: darkslategray;
