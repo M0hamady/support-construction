@@ -55,7 +55,7 @@ export default function UpdateStep() {
     // data.append("cost", cost);
     let config = {
       method: "put",
-      url: url + `/project/astep/${id}/`,
+      url: url + `project/astep/${id}/`,
       headers: {
         ...data.getHeaders,
       },
