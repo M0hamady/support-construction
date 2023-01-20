@@ -2,8 +2,6 @@ import useToken from "data/useToken";
 import React, { useState } from "react";
 import { useHistory } from "react-router";
 import Database_connections from "./Database_connections";
-import Login from "./Login";
-import Redirectlogin from "./Redirectlogin";
 
 export default function Register() {
   const history = useHistory();
@@ -14,7 +12,6 @@ export default function Register() {
   const [fName, setFName] = useState("");
   const [lName, setLName] = useState("");
   const [err_name, seterr_name] = useState('')
-  const { token, setToken } = useToken();
    
   function register() {
     const connect = Database_connections(

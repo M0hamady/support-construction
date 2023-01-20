@@ -21,7 +21,7 @@ export default function Database_connections(
   data.append("email", email);
   var config = {
     method: "post",
-    url: url + ":8000/register/",
+    url: url + "register/",
     headers: {
       ...data.getHeaders,
     },

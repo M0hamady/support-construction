@@ -1,6 +1,5 @@
 import React, { useContext, useState } from "react";
 import { Link, useHistory } from "react-router-dom";
-import PropTypes from "prop-types";
 import { url } from "data/DataMontagat";
 import useToken from "data/useToken";
 import { BasicData } from "data/UseContext";
