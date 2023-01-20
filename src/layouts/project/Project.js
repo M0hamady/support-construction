@@ -143,7 +143,7 @@ export default function Project() {
                       <Link
                         to={`/step/update/${step.id}`}
                         className={
-                          " p-3 mr-1 text-center inline-flex items-center justify-center w-4 h-4 shadow-lg rounded-full "
+                          " p-4 text-center inline-flex items-center justify-center w-4 h-4 shadow-lg rounded-full "
                         }
                         style={{
                           backgroundColor: `${
@@ -151,7 +151,7 @@ export default function Project() {
                           }`,
                         }}
                       >
-                        <i className="fas fa-solid fa-user-pen">test</i>
+                        <i className="fas fa-solid fa-user-pen "></i>
                       </Link>
                       <Link
                         to={`/moshtrayat/create/${step.id}`}
@@ -188,8 +188,8 @@ export default function Project() {
                       <Card_project_img
                         statTitle="images"
                         statDescripiron="Since last month"
-                        statIconName="fas fa fa-image"
-                        statIconColor="bg-red-500"
+                        statIconName="fas fa fa-image   "
+                        statIconColor="bg-red-500 "
                       />
                     </div>
                     <div className="mt-4 w-full">

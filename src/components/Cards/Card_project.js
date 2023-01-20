@@ -24,14 +24,17 @@ export default function Card_project({
                 <span class="fas fa  fa-calendar-days pr-2 shadow"></span>
               </span>
             </div>
-            <div className="relative w-auto pl-2 flex-initial">
+            <div className="relative w-auto pl-2 flex">
               <div
                 className={
-                  "text-white p-2 text-center inline-flex items-center justify-center w-4 h-4 shadow-lg rounded-full " +
+                  "text-white p-2 text-center flex items-center justify-center w-4 h-4 shadow-lg rounded-full " +
                   statIconColor
                 }
               >
-                <i className={statIconName}></i>
+                <i
+                  className={statIconName }
+                  
+                ></i>
               </div>
             </div>
           </div>
@@ -70,11 +73,11 @@ export function Card_project_img({
             <div className="relative w-auto pl-2 flex-initial">
               <div
                 className={
-                  "text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 shadow-lg rounded-full " +
+                  "text-white p-3 text-center flex items-center justify-center w-12 h-12 shadow-lg rounded-full " +
                   statIconColor
                 }
               >
-                <i className={statIconName}></i>
+                <i className={statIconName } style ={{marginTop:'-80px' }}></i>
               </div>
             </div>
           </div>
