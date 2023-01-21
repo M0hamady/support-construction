@@ -76,7 +76,7 @@ const IndexDropdown = () => {
                   logout
                 </Link>
                 <Link
-                  to="/admin/meatings"
+                  to=""
                   className="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-slate-700"
                 >
                   meeting
