@@ -89,4 +89,5 @@ export const GetExactMontag = (id) => {
   return mont[id - 1];
 };
 // export const url = "http://127.0.0.1:8000/";
+export const local = "http://127.0.0.1:8000/";
 export const url = "https://octopus-app-8uosp.ondigitalocean.app/";

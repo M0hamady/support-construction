@@ -1,7 +1,27 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import img from 'assets/img/construc1.png'
+import img from "assets/img/construc1.png";
+import axios from "axios";
+import { local } from "data/DataMontagat";
+import { url } from "data/DataMontagat";
 export default function CardLanding() {
+  const [data, setdata] = useState({});
+  useEffect(() => {
+    let config = {
+      method: "get",
+      url: url + "website/",
+      headers: {},
+    };
+    axios(config)
+      .then(function (response) {
+        console.log(JSON.stringify(response.data));
+        setdata(response.data[0]);
+        console.log(data);
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+  }, [1000]);
   return (
     <section
       className="header relative pt-16  items-center flex h-screen max-h-860-px text-right particle-canvas  "
@@ -15,7 +35,7 @@ export default function CardLanding() {
         <div className="w-full md:w-8/12 lg:w-6/12 xl:w-6/12 px-4">
           <div className="pt-32 sm:pt-0">
             <h2 className="font-semibold text-4xl text-white opacity-100 focus-in-expand ">
-              Support Construction
+              {data.title_welcome ? data.title_welcome : "Support construction"}
             </h2>
             <p className="mt-4 text-lg leading-relaxed text-white opacity-90 font-bold focus-in-expand ">
               Welcome to our site. {"\n "}
@@ -24,10 +44,12 @@ export default function CardLanding() {
                 className="text-blueGray-600"
                 // target="_blank"
               >
-                Support constuction{"\n "}
+                {data.title_welcome ? data.title_welcome : "thanx for you"}
+                {"\n "}
               </a>
-              —a leader in design-build construction projects in Egypt. Civil
-              engineering | buildings | transport infrastructure.
+              {data.description_welcome
+                ? data.description_welcome
+                : "wekcome to our site"}
             </p>
             <div className="mt-12">
               <Link
@@ -53,8 +75,9 @@ export default function CardLanding() {
         className="absolute top-0 b-auto right-0 pt-16 sm:w-6/12 mt-48 sm:mt-5 w-10/12 max-h-860px while-mobile text-focus-in "
         style={{
           marginTop: "30px",
-        }}cl
-        src={img}
+        }}
+        cl
+        src={data.pic_welcom}
         alt="..."
       />
     </section>
