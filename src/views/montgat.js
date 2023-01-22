@@ -1,6 +1,11 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { montagat, montagat_7elw, montagat_m5boz } from "../data/DataMontagat";
+import {
+  montagat,
+  montagat_7elw,
+  montagat_m5boz,
+  url,
+} from "../data/DataMontagat";
 
 // components
 
@@ -12,9 +17,27 @@ import CardTank from "components/Cards/CardTank";
 import CardContact from "components/Cards/CardContact";
 import CardShe3ar from "components/Cards/CardShe3ar";
 import CardGallary from "components/Cards/CardGallary";
+import axios from "axios";
 
 export default function Montgat() {
   const [itemsdata, setItemsdata] = useState(montagat);
+
+  var config = {
+    method: "get",
+    url: url + "/website/montgat/",
+    headers: {},
+  };
+
+  useEffect(() => {
+    axios(config)
+      .then(function (response) {
+        console.log(JSON.stringify(response.data));
+        setItemsdata(response.data);
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+  }, [500]);
   const allQesm = [...new Set(itemsdata.map((i) => i.qesm))];
   const filter_by_qesm = (categor) => {
     let newArr = [];
@@ -28,10 +51,10 @@ export default function Montgat() {
     <>
       <Navbar transparent />
       <main>
-      {/**kenburns-top for animation */}
+        {/**kenburns-top for animation */}
         <div className="relative pt-16 pb-32 flex flex-wrap content-center items-center justify-center min-h-screen-75 ">
           <div
-            className="absolute top-0 w-full h-full bg-center bg-cover " 
+            className="absolute top-0 w-full h-full bg-center bg-cover "
             style={{
               backgroundImage:
                 "url('https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1267&q=80')",

@@ -5,42 +5,49 @@ import Footer from "components/Footers/Footer.js";
 import { BasicData } from "data/UseContext";
 import { url } from "data/DataMontagat";
 import { useHistory } from "react-router";
-async function gwt_user_data(credentials) {
-  return fetch(url + "user/", {
-    method: "PUT",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(credentials),
-  })
-    .then((data) => data.json())
-    // .catch(() => history.push("/auth"));
-}
+import axios from "axios";
+import useToken from "data/useToken";
+import { Link } from "react-router-dom";
+
 export default function Profile() {
   const history = useHistory();
-  const { tokenS, setData_user } = useContext(BasicData);
-  const [data_catched, setdata_catched] = useState({});
-  const [userInf, setUserinf] = useState({});
-  const token = "token " + tokenS;
-  // console.log(token, "last data");
-  const go_get_data = async (e) => {
-    const tokena = await gwt_user_data({
-      token,
-    });
-    setData_user(tokena);
-    setdata_catched(tokena);
-  };
-  const [change, setchange] = useState(0);
-  useEffect(() => {
-    const use_inf = go_get_data();
-    // console.log(data_catched);
-    setchange(1);
-    setUserinf(use_inf.info);
-    return () => {};
-  }, [change]);
-  if (tokenS == 'false'){
-    history.push("/auth")
+  const [username, setusername] = useState("working on it")
+  const [location, setlocation] = useState("working on it")
+  const [phone, setphone] = useState("working on it")
+  const [email, setemail] = useState("working on it")
+  const [datejoined, setdatejoined] = useState("working on it")
+  const { token, setToken } = useToken();
+  let x = 1;
+  if (token == "false" || undefined) {
+    history.push("/auth");
+  } else {
+    useEffect(() => {
+      let data = new FormData();
+      data.append("token", "Token " + token);
+      let config = {
+        method: "put",
+        url: url +"user/",
+        headers: {
+          ...data.getHeaders,
+        },
+        data: data,
+      };
+      axios(config)
+        .then(function (response) {
+          console.log(response.data);
+          setusername(response.data.info[0].username)
+          setemail(response.data.info[0].email)
+          setdatejoined(response.data.info[0].date_joined.slice(0,10)+" : " + response.data.info[0].date_joined.slice(11,16) )
+          setlocation(response.data.location)
+          setphone (response.data.phone)
+         
+        })
+        .catch(function (error) {
+          console.log(error);
+        });
+    }, [50]);
   }
+
   return (
     <>
       <Navbar transparent />
@@ -94,12 +101,13 @@ export default function Profile() {
                   </div>
                   <div className="w-full lg:w-4/12 px-4 lg:order-3 lg:text-right lg:self-center">
                     <div className="py-6 px-3 mt-32 sm:mt-0">
-                      <button
-                        className="bg-sky-500 active:bg-sky-600 uppercase text-white font-bold hover:shadow-md shadow text-xs px-4 py-2 rounded outline-none focus:outline-none sm:mr-2 mb-1 ease-linear transition-all duration-150"
+                      <Link
+                        className="bg-sky-500 active:bg-sky-600 uppercase text-gray font-bold hover:shadow-md shadow text-xs px-4 py-2 rounded outline-none focus:outline-none sm:mr-2 mb-1 ease-linear transition-all duration-150"
                         type="button"
+                        to = {'/shop'}
                       >
                         Connect
-                      </button>
+                      </Link>
                     </div>
                   </div>
                   <div className="w-full lg:w-4/12 px-4 lg:order-1">
@@ -133,23 +141,22 @@ export default function Profile() {
                 </div>
                 <div className="text-center mt-12">
                   <h3 className="text-4xl font-semibold leading-normal mb-2 text-slate-700 mb-2">
-                    555
+                    {username}
                   </h3>
                   <div className="text-sm leading-normal mt-0 mb-2 text-slate-400 font-bold uppercase">
                     <i className="fas fa-map-marker-alt mr-2 text-lg text-slate-400"></i>{" "}
-                    {data_catched.location}
+                    {location}
                   </div>
                   <div className="mb-2 text-slate-600 mt-10">
                     <i className="fas fa-briefcase mr-2 text-lg text-slate-400"></i>
-                    Solution Manager - Creative Tim Officer
+                    {email}
                   </div>
                   <div className="mb-2 text-slate-600">
-                    <i className="fas fa-university mr-2 text-lg text-slate-400"></i>
-                    University of Computer Science
+                    <i className="fas fa-university mr-2 text-lg text-slate-400"> {" "}since</i>
+                    {datejoined}
                   </div>
                   <div className="mb-2 text-slate-600">
-                    <i className="fas fa-phone mr-2 text-lg text-slate-400"></i>
-                    <a type="tel">01555099233</a>
+                    <a style={{border : "0"}} type="tel"><i className="fas fa-phone mr-2 text-lg text-slate-400">{" "}{phone}</i></a>
                   </div>
                 </div>
                 <div className="mt-10 py-10 border-t border-slate-200 text-center">
