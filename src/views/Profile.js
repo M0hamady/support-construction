@@ -1,4 +1,4 @@
-import React, {  useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import Navbar from "components/Navbars/IndexNavbar";
 import Footer from "components/Footers/Footer.js";
@@ -11,42 +11,44 @@ import { Link } from "react-router-dom";
 
 export default function Profile() {
   const history = useHistory();
-  const [username, setusername] = useState("working on it")
-  const [location, setlocation] = useState("working on it")
-  const [phone, setphone] = useState("working on it")
-  const [email, setemail] = useState("working on it")
-  const [datejoined, setdatejoined] = useState("working on it")
+  const [username, setusername] = useState("working on it");
+  const [location, setlocation] = useState("working on it");
+  const [phone, setphone] = useState("working on it");
+  const [email, setemail] = useState("working on it");
+  const [datejoined, setdatejoined] = useState("working on it");
   const { token, setToken } = useToken();
   let x = 1;
   if (token == "false" || undefined) {
     history.push("/auth");
-  } else {
-    useEffect(() => {
-      let data = new FormData();
-      data.append("token", "Token " + token);
-      let config = {
-        method: "put",
-        url: url +"user/",
-        headers: {
-          ...data.getHeaders,
-        },
-        data: data,
-      };
-      axios(config)
-        .then(function (response) {
-          console.log(response.data);
-          setusername(response.data.info[0].username)
-          setemail(response.data.info[0].email)
-          setdatejoined(response.data.info[0].date_joined.slice(0,10)+" : " + response.data.info[0].date_joined.slice(11,16) )
-          setlocation(response.data.location)
-          setphone (response.data.phone)
-         
-        })
-        .catch(function (error) {
-          console.log(error);
-        });
-    }, [50]);
   }
+  useEffect(() => {
+    let data = new FormData();
+    data.append("token", "Token " + token);
+    let config = {
+      method: "put",
+      url: url + "user/",
+      headers: {
+        ...data.getHeaders,
+      },
+      data: data,
+    };
+    axios(config)
+      .then(function (response) {
+        console.log(response.data);
+        setusername(response.data.info[0].username);
+        setemail(response.data.info[0].email);
+        setdatejoined(
+          response.data.info[0].date_joined.slice(0, 10) +
+            " : " +
+            response.data.info[0].date_joined.slice(11, 16)
+        );
+        setlocation(response.data.location);
+        setphone(response.data.phone);
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+  }, [50]);
 
   return (
     <>
@@ -104,7 +106,7 @@ export default function Profile() {
                       <Link
                         className="bg-sky-500 active:bg-sky-600 uppercase text-gray font-bold hover:shadow-md shadow text-xs px-4 py-2 rounded outline-none focus:outline-none sm:mr-2 mb-1 ease-linear transition-all duration-150"
                         type="button"
-                        to = {'/shop'}
+                        to={"/shop"}
                       >
                         Connect
                       </Link>
@@ -152,11 +154,19 @@ export default function Profile() {
                     {email}
                   </div>
                   <div className="mb-2 text-slate-600">
-                    <i className="fas fa-university mr-2 text-lg text-slate-400"> {" "}since</i>
+                    <i className="fas fa-university mr-2 text-lg text-slate-400">
+                      {" "}
+                      since
+                    </i>
                     {datejoined}
                   </div>
                   <div className="mb-2 text-slate-600">
-                    <a style={{border : "0"}} type="tel"><i className="fas fa-phone mr-2 text-lg text-slate-400">{" "}{phone}</i></a>
+                    <a style={{ border: "0" }} type="tel">
+                      <i className="fas fa-phone mr-2 text-lg text-slate-400">
+                        {" "}
+                        {phone}
+                      </i>
+                    </a>
                   </div>
                 </div>
                 <div className="mt-10 py-10 border-t border-slate-200 text-center">
