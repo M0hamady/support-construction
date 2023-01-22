@@ -9,7 +9,7 @@ export default function CardOverviewAnImageWithDescrAndpoints() {
   useEffect(() => {
     let config = {
       method: "get",
-      url: url + "website/",
+      url: url + "website/website",
       headers: {},
     };
     axios(config)
