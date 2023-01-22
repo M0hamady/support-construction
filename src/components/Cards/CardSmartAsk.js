@@ -9,7 +9,7 @@ export default function CardOverviewAnImageWithDescrAndpoints() {
   useEffect(() => {
     let config = {
       method: "get",
-      url: url + "website/website",
+      url: url + "website/website/",
       headers: {},
     };
     axios(config)
@@ -55,7 +55,7 @@ export default function CardOverviewAnImageWithDescrAndpoints() {
             </p>
             <h3 className="font-semibold text-3xl"></h3>
             <p className="text-blueGray-500 text-lg leading-relaxed mt-4 mb-4">
-            {data.manager_description}
+              {data.manager_description}
             </p>
             <div className="sm:block flex flex-col mt-10">
               <Link

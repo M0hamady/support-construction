@@ -12,7 +12,7 @@ export default function CardOverViewAndItenDescription() {
   useEffect(() => {
     let config = {
       method: "get",
-      url: url + "website/website",
+      url: url + "website/website/",
       headers: {},
     };
     axios(config)
