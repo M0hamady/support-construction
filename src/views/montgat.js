@@ -2,8 +2,6 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import {
   montagat,
-  montagat_7elw,
-  montagat_m5boz,
   url,
 } from "../data/DataMontagat";
 
@@ -132,5 +130,3 @@ export default function Montgat() {
     </>
   );
 }
-//  <MontagatComponen groubName="قسم الحلويات" montagat={montagat_7elw} sec_colo='white'/>
-//  <MontagatComponen groubName="قسم المخبوز" montagat={montagat_m5boz} sec_colo='blueGray'/>
