@@ -26,7 +26,7 @@ export default function CardEmployee() {
                 className="shadow-lg rounded-full mx-auto max-w-120-px"
               />
               <div className="pt-6 text-center">
-                <h5 className="text-xl font-bold">احمد زكريا</h5>
+                <h5 className="text-xl font-bold">احمد القرشي</h5>
                 <p className="mt-1 text-sm text-blueGray-400 uppercase font-semibold">
                   مدير المشروع
                 </p>
@@ -61,7 +61,7 @@ export default function CardEmployee() {
                 className="shadow-lg rounded-full mx-auto max-w-120-px"
               />
               <div className="pt-6 text-center">
-                <h5 className="text-xl font-bold">مرام محمدي</h5>
+                <h5 className="text-xl font-bold">احمد منصور</h5>
                 <p className="mt-1 text-sm text-blueGray-400 uppercase font-semibold">
                   مدير التسويق
                 </p>
@@ -90,9 +90,9 @@ export default function CardEmployee() {
                 className="shadow-lg rounded-full mx-auto max-w-120-px"
               />
               <div className="pt-6 text-center">
-                <h5 className="text-xl font-bold">مريم محمد</h5>
+                <h5 className="text-xl font-bold">احمد ماليات</h5>
                 <p className="mt-1 text-sm text-blueGray-400 uppercase font-semibold">
-                  مدير المطبخ
+                  الفرع المالي
                 </p>
                 <div className="mt-6">
                   <button
@@ -125,9 +125,9 @@ export default function CardEmployee() {
                 className="shadow-lg rounded-full mx-auto max-w-120-px "
               />
               <div className="pt-6 text-center">
-                <h5 className="text-xl font-bold ">جبر الحسيني</h5>
+                <h5 className="text-xl font-bold ">زياد القرشي</h5>
                 <p className="mt-1 text-sm text-blueGray-400 uppercase font-semibold">
-                  مسؤل السلامة العامة
+                  مسؤل التطوير
                 </p>
                 <div
                   className="mt-6 "
