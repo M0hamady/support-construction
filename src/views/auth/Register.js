@@ -92,7 +92,7 @@ export default function Register() {
                     type="email"
                     className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
                     placeholder="Name"
-                    onChange={(e) => get_spilling(e.target.value)}
+                    onChange={(e) => setname(e.target.value)}
                   />
                   <label
                     className="block uppercase text-white text-xs font-bold m-1 rounded p-1 bg-red-500"
