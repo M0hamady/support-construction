@@ -49,6 +49,7 @@ export default function Register() {
           document.getElementById("emailErr").innerText =
             error.response.data.email;
         } else {
+          
           document.getElementById("emailErr").innerText = ""
         }
         if (error.response.data.password) {
