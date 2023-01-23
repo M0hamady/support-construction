@@ -21,7 +21,9 @@ const IndexDropdown = () => {
   };
 
   const [state, setstate] = useState(false);
-  sessionStorage.is_login ? setstate == true : false;
+  if (sessionStorage.is_login) {
+    setstate(true);
+  }
   return (
     <>
       <a
