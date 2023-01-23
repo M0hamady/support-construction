@@ -1,5 +1,5 @@
-import React from "react";
-import { Switch, Route, Redirect, Link } from "react-router-dom";
+import React, { useState } from "react";
+import { Switch, Route, Redirect, Link, useHistory } from "react-router-dom";
 
 // components
 
@@ -20,16 +20,12 @@ import Meetings_suc from "views/Meetings/MeetingsSuccess";
 import ToodMeet from "views/Meetings/TodayMeet";
 import Meetings_accepte_tod from "views/Meetings/MeetingsAcceptedtod";
 import Meetings_suc_tod from "views/Meetings/MeetingsSuccess_tod";
-import Login from "views/auth/Login";
-import useToken from "data/useToken";
-import Redirectlogin from "views/auth/Redirectlogin";
 
 export default function Admin() {
-  const { token, setToken } = useToken();
-
-  if (token == undefined) {
-    console.log(5555555555555);
-    return <Redirectlogin setToken={setToken} />;
+  const history = useHistory();
+  console.log(sessionStorage.getItem("token"));
+  if (!sessionStorage.getItem("is_admin")) {
+    history.push("/login");
   }
   return (
     <>

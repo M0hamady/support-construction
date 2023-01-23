@@ -32,7 +32,6 @@ const UseContext = ({ children }) => {
   };
   //   console.log(tokenS, 1111111111111);
   const [is_login, setIsLogin] = useState(false);
-
   const chanislogin = (res) => {
     setIsLogin(res);
   };
@@ -41,7 +40,7 @@ const UseContext = ({ children }) => {
     setdata_user(e);
   };
 
-  //   console.log(tokenS, is_login, 44444444444444444444444);
+    console.log(tokenS, is_login, 44444444444444444444444);
   return (
     <BasicData.Provider
       value={{

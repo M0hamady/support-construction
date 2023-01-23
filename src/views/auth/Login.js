@@ -3,49 +3,42 @@ import { Link, useHistory } from "react-router-dom";
 import { url } from "data/DataMontagat";
 import useToken from "data/useToken";
 import { BasicData } from "data/UseContext";
-
-async function loginUser(credentials) {
-  return fetch(url + "project/generate-token/", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(credentials),
-  }).then((data) => data.json());
-}
-
+import axios from "axios";
+import { local } from "data/DataMontagat";
 
 export default function Login() {
   const history = useHistory();
+  const { tokenS, changtoken, chanislogin } = useContext(BasicData);
   const { token, setToken } = useToken();
   const [username, setUserName] = useState();
   const [password, setPassword] = useState();
-  const { tokenS, changtoken, chanislogin, is_login } = useContext(BasicData);
   const [err, seterr] = useState("");
-  
   const handleSubmit = async (e) => {
-    const token = await loginUser({
-      username,
-      password,
-    });
-    console.log(tokenS, 6565656565);
-    setToken(token);
-    changtoken(token);
-    if (tokenS !== "false") {
-      chanislogin(true);
-      console.log(45454545454);
-    }
-
-    if (is_login == false) {
-      console.log(tokenS, 999999);
-      seterr("check password or username.");
-      setPassword("");
-      setUserName("");
-    } else {
-      console.log(true, 48484848484);
-      // chanislogin(true);
-      history.push("/");
-    }
+    var data = new FormData();
+    data.append("username", username);
+    data.append("password", password);
+    let config = {
+      method: "post",
+      url: local + "project/generate-token/",
+      headers: {
+        ...data.getHeaders,
+      },
+      data: data,
+    };
+    let x = "";
+    axios(config)
+      .then(function (response) {
+        x = response.data.token;
+        console.log(1);
+        setToken(x);
+        console.log(2);
+        history.push("/shop");
+      })
+      .catch(function (error) {
+        seterr("check password or username.");
+        setPassword("");
+        setUserName("");
+      });
   };
   return (
     <>
@@ -59,9 +52,7 @@ export default function Login() {
                     Support Construction
                   </h6>
                 </div>
-                <div className="btn-wrapper text-center">
-                  
-                </div>
+                <div className="btn-wrapper text-center"></div>
                 <hr className="mt-6 border-b-1 border-blueGray-300" />
               </div>
               <div className="flex-auto px-4 lg:px-10 py-10 pt-0">

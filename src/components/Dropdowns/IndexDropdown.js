@@ -1,7 +1,6 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { createPopper } from "@popperjs/core";
-import useToken from "data/useToken";
 import { Is_admin } from "views/auth/Redirectlogin";
 import { BasicData } from "data/UseContext";
 
@@ -20,10 +19,9 @@ const IndexDropdown = () => {
   const closeDropdownPopover = () => {
     setDropdownPopoverShow(false);
   };
-  const { tokenS } = useContext(BasicData);
-  const { token, setToken } = useToken();
-  const CheckLogin = () => (token == undefined ? true : false);
-  console.log(Is_admin());
+
+  const [state, setstate] = useState(false);
+  sessionStorage.is_login ? setstate == true : false;
   return (
     <>
       <a
@@ -51,7 +49,7 @@ const IndexDropdown = () => {
         >
           Authintiaction
         </span>
-        {CheckLogin() ? (
+        {state === false ? (
           <Link
             to="/auth/login"
             className="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-slate-700"
@@ -60,7 +58,7 @@ const IndexDropdown = () => {
           </Link>
         ) : (
           <>
-            {Is_admin() ? (
+            {sessionStorage.is_admin ? (
               <>
                 {" "}
                 <Link
@@ -85,7 +83,7 @@ const IndexDropdown = () => {
                   to="/admin/projects"
                   className="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-slate-700"
                 >
-                  meeting
+                  projects
                 </Link>
                 <Link
                   to="/profile"

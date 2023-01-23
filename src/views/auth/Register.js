@@ -1,3 +1,5 @@
+import axios from "axios";
+import { local } from "data/DataMontagat";
 import useToken from "data/useToken";
 import React, { useState } from "react";
 import { useHistory } from "react-router";
@@ -11,24 +13,53 @@ export default function Register() {
   const [email, setEmail] = useState("");
   const [fName, setFName] = useState("");
   const [lName, setLName] = useState("");
-  const [err_name, seterr_name] = useState('')
-   
-  function register() {
-    const connect = Database_connections(
-      name,
-      pass1,
-      pass1,
-      fName,
-      lName,
-      email
-    );
-    if (connect == false){
-        seterr_name('هناك مشكلة ببيناتك جرب اسم اخر ')
-    }
-    else{
-      history.push("/shop")
-    }
+  const [err_name, seterr_name] = useState("");
+
+  function Database_connections() {
+    let data = new FormData();
+    data.append("username", name);
+    data.append("password", pass1);
+    data.append("password2", pass1);
+    data.append("first_name", fName);
+    data.append("last_name", lName);
+    data.append("email", email);
+    var config = {
+      method: "post",
+      url: "http://127.0.0.1:8000/register/",
+      headers: {
+        ...data.getHeaders,
+      },
+      data: data,
+    };
+    axios(config)
+      .then(function (response) {
+        //   console.log(JSON.stringify(response.data));
+        history.push("auth/login");
+      })
+      .catch(function (error) {
+        console.log(error.response.data);
+        if (error.response.data.username) {
+          document.getElementById("nameErr").innerText =
+            error.response.data.username;
+        }
+        else {
+          document.getElementById("nameErr").innerText = ""
+        }
+        if (error.response.data.email) {
+          document.getElementById("emailErr").innerText =
+            error.response.data.email;
+        } else {
+          document.getElementById("emailErr").innerText = ""
+        }
+        if (error.response.data.password) {
+          document.getElementById("passErr").innerText =
+            error.response.data.password;
+        } else {
+          document.getElementById("passErr").innerText = ""
+        }
+      });
   }
+
   return (
     <div id="registerC">
       <div className="container mx-auto px-4 h-full" id="register">
@@ -56,13 +87,19 @@ export default function Register() {
                   >
                     Name
                   </label>
+
                   <input
                     type="email"
                     className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
                     placeholder="Name"
-                    onChange={(e) => setname(e.target.value)}
+                    onChange={(e) => get_spilling(e.target.value)}
                   />
-                  
+                  <label
+                    className="block uppercase text-white text-xs font-bold m-1 rounded p-1 bg-red-500"
+                    style={{ width: "fit-content" }}
+                    htmlFor="grid-password"
+                    id="nameErr"
+                  ></label>
                 </div>
 
                 <div className="relative w-full mb-3">
@@ -78,6 +115,12 @@ export default function Register() {
                     placeholder="Email"
                     onChange={(e) => setEmail(e.target.value)}
                   />
+                  <label
+                  className="block uppercase text-white text-xs font-bold m-1 rounded p-1 bg-red-500"
+                  style={{ width: "fit-content" }}
+                  htmlFor="grid-password"
+                  id="emailErr"
+                ></label>
                 </div>
                 <div className="flex flex-wrap justify-between text-center">
                   <div className="relative  mb-3">
@@ -122,13 +165,19 @@ export default function Register() {
                     placeholder="Password"
                     onChange={(e) => setPass1(e.target.value)}
                   />
+                  <label
+                  className="block uppercase text-white text-xs font-bold m-1 rounded p-1 bg-red-500"
+                  style={{ width: "fit-content" }}
+                  htmlFor="grid-password"
+                  id="passErr"
+                ></label>
                 </div>
 
                 <div className="text-center mt-6">
                   <button
                     className="bg-blueGray-800 text-white active:bg-blueGray-600 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 w-full ease-linear transition-all duration-150"
                     type="button"
-                    onClick={() => register()}
+                    onClick={() => Database_connections()}
                   >
                     Create Account
                   </button>
