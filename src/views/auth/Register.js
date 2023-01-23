@@ -1,4 +1,5 @@
 import axios from "axios";
+import { url } from "data/DataMontagat";
 import { local } from "data/DataMontagat";
 import useToken from "data/useToken";
 import React, { useState } from "react";
@@ -25,7 +26,7 @@ export default function Register() {
     data.append("email", email);
     var config = {
       method: "post",
-      url: "http://127.0.0.1:8000/register/",
+      url: url + "register/",
       headers: {
         ...data.getHeaders,
       },
@@ -41,22 +42,20 @@ export default function Register() {
         if (error.response.data.username) {
           document.getElementById("nameErr").innerText =
             error.response.data.username;
-        }
-        else {
-          document.getElementById("nameErr").innerText = ""
+        } else {
+          document.getElementById("nameErr").innerText = "";
         }
         if (error.response.data.email) {
           document.getElementById("emailErr").innerText =
             error.response.data.email;
         } else {
-          
-          document.getElementById("emailErr").innerText = ""
+          document.getElementById("emailErr").innerText = "";
         }
         if (error.response.data.password) {
           document.getElementById("passErr").innerText =
             error.response.data.password;
         } else {
-          document.getElementById("passErr").innerText = ""
+          document.getElementById("passErr").innerText = "";
         }
       });
   }
@@ -117,11 +116,11 @@ export default function Register() {
                     onChange={(e) => setEmail(e.target.value)}
                   />
                   <label
-                  className="block uppercase text-white text-xs font-bold m-1 rounded p-1 bg-red-500"
-                  style={{ width: "fit-content" }}
-                  htmlFor="grid-password"
-                  id="emailErr"
-                ></label>
+                    className="block uppercase text-white text-xs font-bold m-1 rounded p-1 bg-red-500"
+                    style={{ width: "fit-content" }}
+                    htmlFor="grid-password"
+                    id="emailErr"
+                  ></label>
                 </div>
                 <div className="flex flex-wrap justify-between text-center">
                   <div className="relative  mb-3">
@@ -167,11 +166,11 @@ export default function Register() {
                     onChange={(e) => setPass1(e.target.value)}
                   />
                   <label
-                  className="block uppercase text-white text-xs font-bold m-1 rounded p-1 bg-red-500"
-                  style={{ width: "fit-content" }}
-                  htmlFor="grid-password"
-                  id="passErr"
-                ></label>
+                    className="block uppercase text-white text-xs font-bold m-1 rounded p-1 bg-red-500"
+                    style={{ width: "fit-content" }}
+                    htmlFor="grid-password"
+                    id="passErr"
+                  ></label>
                 </div>
 
                 <div className="text-center mt-6">

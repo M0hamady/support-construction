@@ -19,7 +19,7 @@ export default function Login() {
     data.append("password", password);
     let config = {
       method: "post",
-      url: local + "project/generate-token/",
+      url: url + "project/generate-token/",
       headers: {
         ...data.getHeaders,
       },
