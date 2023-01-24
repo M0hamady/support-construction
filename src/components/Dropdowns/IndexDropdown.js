@@ -22,7 +22,7 @@ const IndexDropdown = () => {
     localStorage.is_login ? true : false
   );
   const [is_Admin, setisAdmin] = useState(() =>
-    localStorage.is_admin ? true : false
+    localStorage.is_admin ? true : localStorage.is_admin  
   );
 
   return (
@@ -61,7 +61,7 @@ const IndexDropdown = () => {
           </Link>
         ) : (
           <>
-            {is_Admin ? (
+            {!is_Admin ? (
               <>
                 {" "}
                 <Link
