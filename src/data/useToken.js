@@ -6,20 +6,20 @@ import { BasicData } from "./UseContext";
 export default function useToken() {
   const { tokenS, changtoken, chanislogin, is_login } = useContext(BasicData);
   const getToken = () => {
-    const tokenString = sessionStorage.getItem("token");
+    const tokenString = localStorage.getItem("token");
     const userToken = JSON.parse(tokenString);
     return userToken?.token;
   };
   const [token, setToken] = useState(getToken());
   const saveToken = (userToken) => {
-    sessionStorage.setItem("token", JSON.stringify(userToken));
-    sessionStorage.setItem("is_login", true);
+    localStorage.setItem("token", JSON.stringify(userToken));
+    localStorage.setItem("is_login", true);
     let data = new FormData();
     data.append(
       "token",
-      sessionStorage
+      localStorage
         .getItem("token")
-        .slice(1, sessionStorage.getItem("token").length - 1)
+        .slice(1, localStorage.getItem("token").length - 1)
     );
     let config = {
       method: "put",
@@ -32,7 +32,7 @@ export default function useToken() {
     axios(config)
       .then(function (response) {
         console.log(response.data.is_admin, "from is admin session");
-        sessionStorage.setItem("is_admin", response.data.is_admin);
+        localStorage.setItem("is_admin", response.data.is_admin);
       })
       .catch(function (error) {
         console.log(error);

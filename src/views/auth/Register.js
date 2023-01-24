@@ -1,10 +1,8 @@
 import axios from "axios";
 import { url } from "data/DataMontagat";
-import { local } from "data/DataMontagat";
-import useToken from "data/useToken";
 import React, { useState } from "react";
 import { useHistory } from "react-router";
-import Database_connections from "./Database_connections";
+
 
 export default function Register() {
   const history = useHistory();

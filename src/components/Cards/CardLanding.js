@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import img from "assets/img/construc1.png";
 import axios from "axios";
-import { local } from "data/DataMontagat";
 import { url } from "data/DataMontagat";
 export default function CardLanding() {
   const [data, setdata] = useState({});
@@ -14,9 +12,9 @@ export default function CardLanding() {
     };
     axios(config)
       .then(function (response) {
-        console.log(JSON.stringify(response.data));
+        // console.log(JSON.stringify(response.data));
         setdata(response.data[0]);
-        console.log(data);
+        // console.log(data);
       })
       .catch(function (error) {
         console.log(error);

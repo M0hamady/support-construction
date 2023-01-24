@@ -23,8 +23,8 @@ import Meetings_suc_tod from "views/Meetings/MeetingsSuccess_tod";
 
 export default function Admin() {
   const history = useHistory();
-  console.log(sessionStorage.getItem("token"));
-  if (!sessionStorage.getItem("is_admin")) {
+  console.log(localStorage.getItem("token"));
+  if (!localStorage.getItem("is_admin")) {
     history.push("/login");
   }
   return (

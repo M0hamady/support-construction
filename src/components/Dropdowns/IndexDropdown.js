@@ -1,8 +1,6 @@
-import React, { useContext, useState } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { createPopper } from "@popperjs/core";
-import { Is_admin } from "views/auth/Redirectlogin";
-import { BasicData } from "data/UseContext";
 
 const IndexDropdown = () => {
   // dropdown props
@@ -20,10 +18,13 @@ const IndexDropdown = () => {
     setDropdownPopoverShow(false);
   };
 
-  const [state, setstate] = useState(false);
-  if (sessionStorage.is_login) {
-    setstate(true);
-  }
+  const [state, setstate] = useState(() =>
+    localStorage.is_login ? true : false
+  );
+  const [is_Admin, setisAdmin] = useState(() =>
+    localStorage.is_admin ? true : false
+  );
+
   return (
     <>
       <a
@@ -51,7 +52,7 @@ const IndexDropdown = () => {
         >
           Authintiaction
         </span>
-        {state === false ? (
+        {state == false ? (
           <Link
             to="/auth/login"
             className="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-slate-700"
@@ -60,7 +61,7 @@ const IndexDropdown = () => {
           </Link>
         ) : (
           <>
-            {sessionStorage.is_admin ? (
+            {is_Admin ? (
               <>
                 {" "}
                 <Link

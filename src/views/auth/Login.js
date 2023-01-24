@@ -1,18 +1,18 @@
-import React, { useContext, useState } from "react";
+import React, { useState } from "react";
 import { Link, useHistory } from "react-router-dom";
 import { url } from "data/DataMontagat";
 import useToken from "data/useToken";
-import { BasicData } from "data/UseContext";
 import axios from "axios";
-import { local } from "data/DataMontagat";
 
 export default function Login() {
   const history = useHistory();
-  const { tokenS, changtoken, chanislogin } = useContext(BasicData);
   const { token, setToken } = useToken();
   const [username, setUserName] = useState();
   const [password, setPassword] = useState();
   const [err, seterr] = useState("");
+  function suc_login() {
+    history.goBack();
+  }
   const handleSubmit = async (e) => {
     var data = new FormData();
     data.append("username", username);
@@ -25,14 +25,12 @@ export default function Login() {
       },
       data: data,
     };
-    let x = "";
+
     axios(config)
       .then(function (response) {
-        x = response.data.token;
-        console.log(1);
-        setToken(x);
-        console.log(2);
-        history.push("/shop");
+        setToken(response.data.token);
+        console.log("loged in");
+        history.goBack();
       })
       .catch(function (error) {
         seterr("check password or username.");
