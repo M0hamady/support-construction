@@ -5,15 +5,15 @@ import { BasicData } from "./UseContext";
 import useToken from "./useToken";
 
 export function ProjectData(id) {
-  const { token, setToken } = useToken();
-
-  //   const [state, setState] = useState("initialState");
+  const [token, settoken] = useState(
+    () => "Token " + localStorage.token.slice(1, localStorage.token.length - 1)
+  );
   let state = { name: null };
   let config = {
     method: "get",
     url: url + `meeting/num/${id}/`,
     headers: {
-      Authorization: "Token " + token,
+      Authorization: token,
     },
   };
   axios(config)
@@ -29,15 +29,16 @@ export function ProjectData(id) {
   return state;
 }
 export const Allprojects = () => {
-
-  const { token, setToken } = useToken();
-  // console.log(token, 54545454545);
+  const [token, settoken] = useState(
+    () => "Token " + localStorage.token.slice(1, localStorage.token.length - 1)
+  );
+  console.log(token);
   const [state, setState] = useState([]);
   let config = {
     method: "get",
     url: url + "project/",
     headers: {
-      Authorization: "Token " + token,
+      Authorization: token,
     },
   };
   useEffect(() => {
@@ -61,13 +62,15 @@ export const Allprojects = () => {
 };
 export const Allproject_steps = (id) => {
   // get all steps by id of project
-  const { token, setToken } = useToken();
+  const [token, settoken] = useState(
+    () => "Token " + localStorage.token.slice(1, localStorage.token.length - 1)
+  );
   const [state, setState] = useState([]);
   let config = {
     method: "get",
     url: url + `project/step/${id}/`,
     headers: {
-      Authorization: "Token " + token,
+      Authorization: token,
     },
   };
   useEffect(() => {

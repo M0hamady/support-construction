@@ -22,7 +22,7 @@ export default function UpdateStep() {
   let data = new FormData();
   let config = {
     method: "get",
-    url: url + `project/astep/${id}/`,
+    url: `http://127.0.0.1:8000/project/astep/${id}/`,
     headers: {
       ...data.getHeaders,
     },
@@ -44,9 +44,10 @@ export default function UpdateStep() {
 
     return () => {};
   }, [1000]);
-  console.log(start_at, "start");
-  console.log(finished_at, "end");
-  console.log(Name, "end");
+  // console.log(start_at, "start");
+  // console.log(finished_at, "end");
+  // console.log(is_finished, "is_finished");
+  // console.log(Name, "end");
   const confirm = () => {
     data.append("start_at", start_at);
     data.append("name", Name);
@@ -55,7 +56,7 @@ export default function UpdateStep() {
     // data.append("cost", cost);
     let config = {
       method: "put",
-      url: url + `project/astep/${id}/`,
+      url: `http://127.0.0.1:8000/project/astep/${id}/`,
       headers: {
         ...data.getHeaders,
       },
@@ -70,7 +71,7 @@ export default function UpdateStep() {
         setidproj(response.data.projectid);
       })
       .catch(function (error) {
-        console.log(error);
+        console.log("error");
       });
   };
   function addNext() {
