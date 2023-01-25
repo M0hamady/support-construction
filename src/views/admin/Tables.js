@@ -9,6 +9,9 @@ const d = () => Allproject_steps(10).length;
 export default function Tables() {
   const projects = Allprojects();
   console.log(projects, 55545454);
+  if (!islogin && localStorage.is_admin == 'true') {
+    history.push("/auth");
+  }
   const all_proj = () => {
     return projects.map((project) => {
       return (

@@ -22,7 +22,7 @@ export default function UpdateStep() {
   let data = new FormData();
   let config = {
     method: "get",
-    url: `http://127.0.0.1:8000/project/astep/${id}/`,
+    url: url+`project/astep/${id}/`,
     headers: {
       ...data.getHeaders,
     },
@@ -56,7 +56,7 @@ export default function UpdateStep() {
     // data.append("cost", cost);
     let config = {
       method: "put",
-      url: `http://127.0.0.1:8000/project/astep/${id}/`,
+      url: url +`project/astep/${id}/`,
       headers: {
         ...data.getHeaders,
       },

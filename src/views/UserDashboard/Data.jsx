@@ -1,3 +1,4 @@
+import { url } from "data/DataMontagat";
 import React, { useEffect, useState } from "react";
 
 export default function Data() {
@@ -8,7 +9,7 @@ export default function Data() {
     data.append("token", localStorage.token);
     var config = {
       method: "put",
-      url: "http://127.0.0.1:8000/user/",
+      url: url +":8000/user/",
       headers: {
         // Authorization: "Token 8f4acc90b9487a0641b22b17172f07c429c12654",
         ...data.getHeaders(),

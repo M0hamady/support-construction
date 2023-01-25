@@ -9,7 +9,7 @@ export default function main() {
   const { token, setToken } = UseToken();
   const [islogin, setislogin] = useState(localStorage.is_login ? true : false);
   const history = Usehistory();
-  if (!islogin) {
+  if (!islogin && localStorage.is_admin == 'true') {
     history.push("/auth");
   }
   return (

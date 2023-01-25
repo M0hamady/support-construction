@@ -14,9 +14,9 @@ export default function CardOverviewAnImageWithDescrAndpoints() {
     };
     axios(config)
       .then(function (response) {
-        console.log(JSON.stringify(response.data));
+        // console.log(JSON.stringify(response.data));
         setdata(response.data[0]);
-        console.log(data);
+        // console.log(data);
       })
       .catch(function (error) {
         console.log(error);

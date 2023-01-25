@@ -44,7 +44,7 @@ export function Card_project_moshatarayat({
           <div class="flex flex-wrap rounded shadow ">
             {moshtarayat.map((item) => {
               return (
-                <div class="rounded shadow p-4 m-2">
+                <div class="rounded  p-4 m-2 my-right-border" >
                   <Link to={`/mosh/${stepID}`}>
                     <div className="flex justify-between w-full bg-light shadow pl-2 pr-2 rounded-full">
                       <div
@@ -65,7 +65,7 @@ export function Card_project_moshatarayat({
                         class="fas fa-regular  fa-user-pen"
                       ></Link>
                     </div>
-                    <h4 className="font-bold text-center"> {item.name}</h4>
+                    <h4 className="font-bold text-center text-xs pt-1"> {item.name}</h4>
                     <h4 className="font-bold text-center">
                       {" "}
                       {item.cost} <small>LE</small>

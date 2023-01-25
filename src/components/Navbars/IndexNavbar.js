@@ -12,7 +12,7 @@ export default function Navbar(props) {
 
   return (
     <>
-      <nav className="top-0 fixed z-50 w-full flex flex-wrap items-center justify-between px-2 py-3 navbar-expand-lg bg-white shadow">
+      <nav className="top-0 fixed z-50 w-full bg-transparent md:flex-row md:flex-nowrap md:justify-start flex items-center p-4 shadow-lg">
         <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
           <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
             <Link
@@ -21,6 +21,11 @@ export default function Navbar(props) {
             >
               Support construction {/*name*/}
             </Link>
+            <small style={{ textTransform: "uppercase" }}>
+              {localStorage.user_info
+                ? "welcome: " + localStorage.user_info
+                : ""}
+            </small>
             <button
               className="cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
               type="button"
@@ -83,7 +88,7 @@ export default function Navbar(props) {
               <li className="flex items-center">
                 <a
                   className="hover:text-blueGray-500 text-blueGray-700 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
-                  href = "tel:01003234531"
+                  href="tel:01003234531"
                   target="_blank"
                 >
                   <i className="text-blueGray-400 fas  fa-phone text-lg leading-lg " />

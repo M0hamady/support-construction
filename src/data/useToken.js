@@ -29,6 +29,14 @@ export default function useToken() {
       },
       data: data,
     };
+    let config2 = {
+      method: "put",
+      url: url +"user/",
+      headers: {
+        ...data.getHeaders,
+      },
+      data: data,
+    };
     axios(config)
       .then(function (response) {
         console.log(response.data.is_admin, "from is admin session");
@@ -37,6 +45,21 @@ export default function useToken() {
       .catch(function (error) {
         console.log(error);
       });
+    try {
+      axios(config2)
+        .then(function (response) {
+          console.log(
+            response.data.info[0].username,
+            "from is user_info session"
+          );
+          localStorage.setItem("user_info", response.data.info[0].username);
+        })
+        .catch(function (error) {
+          console.log(error);
+        });
+    } catch {
+      console.log("error i get user_info");
+    }
 
     setToken(userToken);
     if (!is_login) {
@@ -44,7 +67,6 @@ export default function useToken() {
       chanislogin(true);
     }
   };
-
   return {
     setToken: saveToken,
     token,

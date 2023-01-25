@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { createPopper } from "@popperjs/core";
 
@@ -22,9 +22,13 @@ const IndexDropdown = () => {
     localStorage.is_login ? true : false
   );
   const [is_Admin, setisAdmin] = useState(() =>
-    localStorage.is_admin ? true : localStorage.is_admin  
+    localStorage.is_admin === "true" ? true : false
   );
 
+  const logout = () => {
+    localStorage.clear();
+    location.reload();
+  };
   return (
     <>
       <a
@@ -61,7 +65,7 @@ const IndexDropdown = () => {
           </Link>
         ) : (
           <>
-            {!is_Admin ? (
+            {is_Admin ? (
               <>
                 {" "}
                 <Link
@@ -71,8 +75,9 @@ const IndexDropdown = () => {
                   Dashboard
                 </Link>
                 <Link
-                  to="/admin/dashboard"
+                  to="/"
                   className="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-slate-700"
+                  onClick={() => logout()}
                 >
                   logout
                 </Link>
@@ -94,6 +99,12 @@ const IndexDropdown = () => {
                 >
                   profile
                 </Link>
+                <Link
+                  to="/profile"
+                  className="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-slate-700"
+                >
+                  clients
+                </Link>
               </>
             ) : (
               <>
@@ -106,6 +117,7 @@ const IndexDropdown = () => {
                 <Link
                   to="/admin/User"
                   className="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-slate-700"
+                  onClick={() => logout()}
                 >
                   logout
                 </Link>
