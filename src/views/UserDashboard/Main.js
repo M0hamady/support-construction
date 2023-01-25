@@ -9,11 +9,11 @@ export default function main() {
   const { token, setToken } = UseToken();
   const [islogin, setislogin] = useState(localStorage.is_login ? true : false);
   const history = Usehistory();
-  if (!islogin && localStorage.is_admin == 'true') {
+  if (!islogin) {
     history.push("/auth");
   }
   return (
-    <div className="main-dash-user w-screen h-screen bg-gradient-to-tr bg-blue-200 ">
+    <div className="main-dash-user w-screen h-screen ">
       <div className="side-user shadow rounded  bg-gradient-to-tr bg-blue-200 ">
         <Header />
         <Body />

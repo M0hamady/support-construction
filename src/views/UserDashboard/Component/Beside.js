@@ -5,7 +5,7 @@ export default function Beside() {
   return (
     <>
       <div className="beside-content">
-        <div className="Beside-content-item bg-gradient-to-tr from-blue-200 via-indigo-200 to-pink-200 shadow">
+        <div className="Beside-content-item bg-gradient-to-tr from-blue-200  shadow">
           <div className="beside-content-item-left">
             <div>
               <strong> المشروع </strong>
