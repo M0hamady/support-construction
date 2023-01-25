@@ -10,9 +10,8 @@ export function Card_project_moshatarayat({
   statIconColor,
   moshtarayat,
   stepID,
-}) 
-{
-  moshtarayat = moshtarayat.length > 5 ?moshtarayat.slice(1,5):moshtarayat
+}) {
+  moshtarayat = moshtarayat.length > 5 ? moshtarayat.slice(1, 5) : moshtarayat;
 
   console.log(stepID, "id");
   return (
@@ -46,25 +45,26 @@ export function Card_project_moshatarayat({
             {moshtarayat.map((item) => {
               return (
                 <div class="rounded shadow p-4 m-2">
-
                   <Link to={`/mosh/${stepID}`}>
-                  <div className="flex justify-between w-full bg-light shadow pl-2 pr-2 rounded-full">
-                    <div
-                      className={
-                        "text-white  text-center inline-flex items-center justify-center w-5 h-5 shadow-lg rounded-full " +
-                        statIconColor
-                      }
-                      style={{ backgroundColor: "cadetblue" }}
-                    >
+                    <div className="flex justify-between w-full bg-light shadow pl-2 pr-2 rounded-full">
+                      <div
+                        className={
+                          "text-white  text-center inline-flex items-center justify-center w-5 h-5 shadow-lg rounded-full " +
+                          statIconColor
+                        }
+                        style={{ backgroundColor: "cadetblue" }}
+                      >
+                        <Link
+                          class="fa-solid fa-bolt text-xs"
+                          to={`/mosh/${stepID}`}
+                        ></Link>
+                      </div>
+                      {/** to update step */}
                       <Link
-                        class="fa-solid fa-bolt text-xs"
-                        to={`/mosh/${stepID}`}
+                        to={`/moshtrayat/update/${item.id}`}
+                        class="fas fa-regular  fa-user-pen"
                       ></Link>
-                    
                     </div>
-                    {/** to update step */}
-                     <Link to={`/moshtrayat/update/${item.id}`} class="fas fa-regular  fa-user-pen">test</Link>
-                     </div>
                     <h4 className="font-bold text-center"> {item.name}</h4>
                     <h4 className="font-bold text-center">
                       {" "}
@@ -74,7 +74,7 @@ export function Card_project_moshatarayat({
                 </div>
               );
             })}
-            
+
             <Link
               to={`/mosh/${stepID}`}
               className="fas fa fa-forward pl-4 ml-4 fade-in duration-1"
