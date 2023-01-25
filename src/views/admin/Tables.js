@@ -2,15 +2,15 @@ import React, { useEffect } from "react";
 
 // components
 
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import { Allproject_steps } from "data/DataProject";
 import { Allprojects } from "data/DataProject";
 const d = () => Allproject_steps(10).length;
 export default function Tables() {
   const projects = Allprojects();
-  console.log(projects, 55545454);
+  const history = useHistory()
   if (  localStorage.is_admin == 'true') {
-    location.history.push("/auth");
+    history.push("/auth");
   }
   const all_proj = () => {
     return projects.map((project) => {
