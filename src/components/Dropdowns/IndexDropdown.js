@@ -27,7 +27,7 @@ const IndexDropdown = () => {
 
   const logout = () => {
     localStorage.clear();
-    location.reload();
+    document.location.reload();
   };
   return (
     <>

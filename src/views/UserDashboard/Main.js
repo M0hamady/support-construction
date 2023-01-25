@@ -1,13 +1,13 @@
 import UseToken from "data/useToken";
 import { useHistory as Usehistory } from "react-router";
-import React, { useState } from "react";
+import React, { useState as UseState } from "react";
 import Beside from "./Component/Beside";
 import Body from "./Component/Body";
 import Header from "./Component/Header";
 
 export default function main() {
   const { token, setToken } = UseToken();
-  const [islogin, setislogin] = useState(localStorage.is_login ? true : false);
+  const [islogin, setislogin] = UseState(localStorage.is_login ? true : false);
   const history = Usehistory();
   if (!islogin) {
     history.push("/auth");

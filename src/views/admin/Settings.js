@@ -6,11 +6,12 @@ import CardSettings from "components/Cards/CardSettings.js";
 import CardProfile from "components/Cards/CardProfile.js";
 import CardTable from "components/Cards/CardTable.js";
 import { AllVisitors } from "data/DataVisitors";
+import { useHistory } from "react-router";
 
 export default function Settings() {
   const data = AllVisitors();
-  console.log(55555555555,data);
-  if (!islogin && localStorage.is_admin == 'true') {
+  const history = useHistory()
+  if ( localStorage.is_admin == 'true') {
     history.push("/auth");
   }
   return (
