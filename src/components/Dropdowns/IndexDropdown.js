@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import { createPopper } from "@popperjs/core";
 
 const IndexDropdown = () => {
@@ -24,10 +24,12 @@ const IndexDropdown = () => {
   const [is_Admin, setisAdmin] = useState(() =>
     localStorage.is_admin === "true" ? true : false
   );
+  const history = useHistory();
 
   const logout = () => {
+    history.push("/");
     localStorage.clear();
-    document.location.reload();
+    // document.location.reload();
   };
   return (
     <>
@@ -115,7 +117,7 @@ const IndexDropdown = () => {
                   Home
                 </Link>
                 <Link
-                  to="/admin/User"
+                  to="/"
                   className="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-slate-700"
                   onClick={() => logout()}
                 >
