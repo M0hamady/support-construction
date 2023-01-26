@@ -10,10 +10,6 @@ import { useHistory } from "react-router";
 
 export default function Settings() {
   const data = AllVisitors();
-  const history = useHistory()
-  if ( localStorage.is_admin == 'true') {
-    history.push("/auth");
-  }
   return (
     <>
       <div className="flex flex-wrap">

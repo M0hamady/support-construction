@@ -8,10 +8,6 @@ import { Allprojects } from "data/DataProject";
 const d = () => Allproject_steps(10).length;
 export default function Tables() {
   const projects = Allprojects();
-  const history = useHistory()
-  if (  localStorage.is_admin == 'true') {
-    history.push("/auth");
-  }
   const all_proj = () => {
     return projects.map((project) => {
       return (
@@ -20,7 +16,11 @@ export default function Tables() {
             <i class="fas fa-bolt"></i>
           </div>
           <p class="card__exit">{project.count_steps}</p>
-          <h2 class="card__title">{project.mettings.length > 0 ? 'mr/mrs: '+project.mettings[0].name:'name: '+project.name}</h2>
+          <h2 class="card__title">
+            {project.mettings.length > 0
+              ? "mr/mrs: " + project.mettings[0].name
+              : "name: " + project.name}
+          </h2>
           <p class="card__apply">
             <h2 class="card__title">cost: {project.cost} LE</h2>
 
@@ -47,7 +47,7 @@ export default function Tables() {
                   }
                   style={{
                     backgroundColor: "#f8f8f878",
-                    transform:"translateY(15px)"
+                    transform: "translateY(15px)",
                   }}
                 >
                   <i class="fas fa-solid fa-circle-plus"></i>

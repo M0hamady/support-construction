@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useContext, useEffect, useState } from "react";
-import { url } from "./DataMontagat";
+import { local, url } from "./DataMontagat";
 import { BasicData } from "./UseContext";
 import useToken from "./useToken";
 
@@ -49,7 +49,7 @@ export const Allprojects = () => {
         console.log(response.data, "from axios");
         setState(response.data);
         console.log("done state");
-        console.log(response.data);
+        console.log(state);
       })
       .catch(function (error) {
         console.log(error);

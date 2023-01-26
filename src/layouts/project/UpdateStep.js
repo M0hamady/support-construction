@@ -16,13 +16,15 @@ export default function UpdateStep() {
   const [finished_at, setFinished_at] = useState("");
   const [is_finished, setIs_finished] = useState(false);
   const [start_at, setstart_at] = useState("");
+  const [cost, setcost] = useState(0);
+  const [showtoowner, setshowtoowner] = useState(false);
   //   const [cost, setCoste] = useState(0);
   const [idproj, setidproj] = useState(useParams().id);
   const [id, setId] = useState(useParams().id);
   let data = new FormData();
   let config = {
     method: "get",
-    url: url+`project/astep/${id}/`,
+    url: url + `project/astep/${id}/`,
     headers: {
       ...data.getHeaders,
     },
@@ -37,6 +39,8 @@ export default function UpdateStep() {
         setIs_finished(response.data.is_finished);
         setstart_at(response.data.start_at);
         setFinished_at(response.data.finished_at.slice(0, 10));
+        setcost(response.data.cost);
+        setshowtoowner(response.data.show_to_owner);
       })
       .catch(function (error) {
         console.log("error");
@@ -56,7 +60,7 @@ export default function UpdateStep() {
     // data.append("cost", cost);
     let config = {
       method: "put",
-      url: url +`project/astep/${id}/`,
+      url: url + `project/astep/${id}/`,
       headers: {
         ...data.getHeaders,
       },
@@ -83,7 +87,7 @@ export default function UpdateStep() {
       <div
         className="container-item flexjustify-center rounded "
         id="first"
-        style={{ minWidth: "300px", maxHeight: "600px" }}
+        style={{ minWidth: "200px", maxHeight: "600px" }}
       >
         <h1>
           Step name.
@@ -113,17 +117,31 @@ export default function UpdateStep() {
           </div>
         </h1>
         <div className="input-group mb-3 flex flex-wrap flex-column m-2 justify-center">
-          <div className="input-group-prepend m-2 text-lg ">
+          <div className="input-group-prepend m-2 text-XS ">
             <input
               type="text"
               className="form-control rounded my-input"
               placeholder="Name"
-              aria-label="Username"
+              aria-label="step naem"
               aria-describedby="basic-addon1"
-              style={{ minWidth: "300px", transition: "0.6" }}
+              style={{ minWidth: "200px", transition: "0.6" }}
               value={Name}
               onChange={(e) => setName(e.target.value)}
             />
+          </div>
+          <div className="input-group-prepend m-2 text-XS ">
+          <div style={{display:'flex',flexDirection:"row" , justifyContent:'center',alignItems:'center'}}>
+            <input
+              type="text"
+              className="form-control rounded my-input"
+              placeholder="COSTS"
+              aria-label="step naem"
+              aria-describedby="basic-addon1"
+              style={{ minWidth: "100px", transition: "0.6" }}
+              value={cost}
+              onChange={(e) => setName(e.target.value)}
+            />
+            <label style={{marginLeft:"-5px",height:'100%',color:'white'}}>LE</label></div>
           </div>
           <div className="form-check flex">
             <input
@@ -131,11 +149,24 @@ export default function UpdateStep() {
               type="checkbox"
               id="flexCheckDefault"
               value={is_finished ? "False" : "False"}
-              checked={is_finished ? true : false}
+              checked={is_finished ? is_finished : is_finished}
               onChange={(e) => setIs_finished(e.target.value)}
             />
             <label className="form-check-label checked " for="flexCheckDefault">
-              Is finished
+              انتهت الخطوة
+            </label>
+          </div>
+          <div className="form-check flex">
+            <input
+              className="form-check-input mt-1"
+              type="checkbox"
+              id="flexCheckDefault"
+              value={showtoowner ? "False" : "False"}
+              checked={is_finished ? showtoowner : showtoowner}
+              onChange={(e) => setIs_finished(e.target.value)}
+            />
+            <label className="form-check-label checked " for="flexCheckDefault">
+              اظهار للعميل
             </label>
           </div>
 

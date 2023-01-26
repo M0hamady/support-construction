@@ -1,17 +1,41 @@
+import axios from "axios";
 import CardStats from "components/Cards/CardStats";
 import Card_project from "components/Cards/Card_project";
 import { Card_project_img } from "components/Cards/Card_project";
 import { Card_project_moshatarayat } from "components/Cards/Card_project_moshtarayt";
 import Card_user from "components/Cards/Card_user";
+import { local } from "data/DataMontagat";
+import { url } from "data/DataMontagat";
+import { Allprojects } from "data/DataProject";
 import { Allproject_steps } from "data/DataProject";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useParams } from "react-router";
 import { Link } from "react-router-dom";
 
 export default function Project() {
   const id = useParams().id;
+  const [project, setproject] = useState({});
+  const [token, settoken] = useState(
+    () => "Token " + localStorage.token.slice(1, localStorage.token.length - 1)
+  );
+  let config = {
+    method: "get",
+    url: url + `project/`,
+    headers: {
+      Authorization: token,
+    },
+  };
+  useEffect(() => {
+    axios(config)
+      .then(function (response) {
+        setproject(response.data[(id-1)]);
+      })
+      .catch(function (error) {
+        console.log("error");
+      });
+  }, [500]);
   const steps = Allproject_steps(id);
-  // console.log(steps);
+  console.log(project, 8989898);
   return (
     <div className="container py-0">
       <div className="row flex text-center text-black mb-2 justify-center ">
@@ -26,7 +50,8 @@ export default function Project() {
               >
                 <div className="content">
                   <h6 className="category">
-                    <span className="fas fa fa-house-user"></span> oroject owner
+                    <span className="fas fa fa-house-user"></span>{" "}
+                    {project.ownerName}
                     <span
                       className="fas fa fa-forward pl-4 "
                       style={{ color: "rgba(59, 130, 246, 0.9)" }}
@@ -44,8 +69,8 @@ export default function Project() {
                   <h4 className="title">
                     <a href="#">
                       {" "}
-                      <i className="fas fa-solid fa-compass-drafting"></i> project
-                      designer
+                      <i className="fas fa-solid fa-compass-drafting"></i>{" "}
+                      project designer
                     </a>
                     <span
                       className="fas fa fa-forward pl-4 "
@@ -119,7 +144,10 @@ export default function Project() {
               let month = months[d.getMonth()];
               // console.log(difference, 6666666666);
               return (
-                <li className="timeline-item bg-white rounded ml-3 p-4 shadow" key={Math.random()*100}>
+                <li
+                  className="timeline-item bg-white rounded ml-3 p-4 shadow"
+                  key={Math.random() * 100}
+                >
                   <div className="timeline-arrow"></div>
                   <h2 className="h5 mb-0">{step.name}</h2>
                   <div className="small text-gray justify-between flex  ">
@@ -130,7 +158,7 @@ export default function Project() {
                       {step.is_finished ? (
                         <i
                           className="fas fa-solid  fa-circle-check ml-4"
-                          style={{ Color: 'rgb(6 79 50)' }}
+                          style={{ Color: "rgb(6 79 50)" }}
                         ></i>
                       ) : (
                         ""

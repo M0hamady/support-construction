@@ -804,7 +804,7 @@ grid-template-rows: repeat(20, auto);
   grid-column-start: 4;
   grid-column-end:55;
   position: fixed;
-  left: 0;
+  right: 0;
   top: 0;
   display: flex;
   flex-direction: column;

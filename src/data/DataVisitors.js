@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { url } from "./DataMontagat";
+import { local, url } from "./DataMontagat";
 import useToken from "./useToken";
 
 export const AllVisitors = () => {
@@ -146,7 +146,7 @@ export const Change_accepted_stat = (id, val) => {
   data.append("is_accepted", val);
   let config = {
     method: "put",
-    url: url + `meeting/${id}/`,
+    url: local + `meeting/${id}/`,
     headers: {
       ...data.getHeaders,
     },
@@ -167,7 +167,7 @@ export const Change_success_stat = (id, val) => {
   data.append("succeded", val);
   let config = {
     method: "put",
-    url: url + `meeting/${id}/`,
+    url: local + `meeting/${id}/`,
     headers: {
       ...data.getHeaders,
     },
@@ -181,14 +181,14 @@ export const Change_success_stat = (id, val) => {
       console.log("error");
     });
 };
-export function AddPartment( number_of_step, id,token ) {
+export function AddPartment(number_of_step, id, token) {
   let data = new FormData();
   data.append("number", number_of_step);
   data.append("name", " website name test relation");
   data.append("address", "api address");
   data.append("id", id);
   data.append("owner", token);
-  console.log(token,55,id,number_of_step);
+  console.log(token, 55, id, number_of_step);
   // data.append('Authorization',{"Token":  token})
   let config = {
     method: "post",
