@@ -31,7 +31,7 @@ export default function useToken() {
     };
     let config2 = {
       method: "put",
-      url: url +"user/",
+      url: url + "user/",
       headers: {
         ...data.getHeaders,
       },
@@ -39,11 +39,12 @@ export default function useToken() {
     };
     axios(config)
       .then(function (response) {
-        console.log(response.data.is_admin, "from is admin session");
+        console.log(response.data, "from is admin session");
         localStorage.setItem("is_admin", response.data.is_admin);
+        localStorage.setItem("uuid", response.data.uuid);
       })
       .catch(function (error) {
-        console.log(error);
+        console.log('error in getting dara');
       });
     try {
       axios(config2)

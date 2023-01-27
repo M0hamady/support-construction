@@ -61,25 +61,28 @@ export default function Beside() {
           </div>
           <div class="face-5 face2">
             <div class="content">
-              {projects.map((project) => {
-                return (
-                  <Link className="rounded">
-                    <div
-                      className="w-full flex shadow p-2 justify-between aligne-center"
-                      style={{ minWidth: "240px", flexWrap: "wrap" }}
-                    >
-                      <h4>project: {project.address} </h4>
-                      <h4>{project.cost} ج</h4>
-                      <i className="fas fa-forward"></i>
-                    </div>
-                  </Link>
-                );
-              })}
-              <a href="#">Read More</a>
+              {projects ? (
+                projects.map((project) => {
+                  return (
+                    <Link className="rounded">
+                      <div
+                        className="w-full flex shadow p-2 justify-between aligne-center"
+                        style={{ minWidth: "240px", flexWrap: "wrap" }}
+                      >
+                        <h4>project: {project.address} </h4>
+                        <h4>{project.cost} ج</h4>
+                        <i className="fas fa-forward"></i>
+                      </div>
+                    </Link>
+                  );
+                })
+              ) : (
+                <h4>لايوجد مشاريع بعد</h4>
+              )}
+              <Link href="/book">طلب انشاء مشروع </Link>
             </div>
           </div>
         </div>
-       
       </div>
     </>
   );

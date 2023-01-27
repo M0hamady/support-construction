@@ -30,7 +30,7 @@ export default function Login() {
       .then(function (response) {
         setToken(response.data.token);
         console.log("loged in");
-        history.push('/');
+        history.push("/");
       })
       .catch(function (error) {
         seterr("check password or username.");

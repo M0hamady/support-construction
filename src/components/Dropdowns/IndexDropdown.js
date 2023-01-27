@@ -29,7 +29,7 @@ const IndexDropdown = () => {
   const logout = () => {
     history.push("/");
     localStorage.clear();
-    // document.location.reload();
+    document.location.reload();
   };
   return (
     <>
