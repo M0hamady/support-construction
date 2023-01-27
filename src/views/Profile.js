@@ -14,6 +14,7 @@ export default function Profile() {
   const history = useHistory();
   const [username, setusername] = useState("working on it");
   const [finishedProjects, setfinishedProjects] = useState(0);
+  const [is_profile_created, setis_profile_created] = useState(true);
   const [pic_url, setpic_url] = useState("working on it");
   const [location, setlocation] = useState("working on it");
   const [phone, setphone] = useState("working on it");
@@ -27,7 +28,12 @@ export default function Profile() {
   }
   useEffect(() => {
     let data = new FormData();
-    data.append("token", "Token " + token);
+    data.append(
+      "token",
+      localStorage
+        .getItem("token")
+        .slice(1, localStorage.getItem("token").length - 1)
+    );
     data.append("uuid", localStorage.uuid);
     let config = {
       method: "put",
@@ -39,6 +45,7 @@ export default function Profile() {
     };
     axios(config)
       .then(function (response) {
+        setis_profile_created(true);
         console.log(response.data);
         setusername(response.data.info[0].username);
         setemail(response.data.info[0].email);
@@ -54,6 +61,7 @@ export default function Profile() {
         setfinishedProjects(response.data.numper_of_finished_project);
       })
       .catch(function (error) {
+        setis_profile_created(false);
         console.log("error getting user info");
       });
   }, [50]);
@@ -90,7 +98,7 @@ export default function Profile() {
             ></span>
           </div>
           <div
-            className="top-auto bottom-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden h-70-px"
+            className="top-auto bottom-0 left-0 right-0 w-full absolute  pointer-events-none overflow-hidden h-70-px"
             style={{ transform: "translateZ(0)" }}
           >
             <svg
@@ -136,7 +144,14 @@ export default function Profile() {
                       )}
                     </div>
                   </div>
-                  <div className="w-full lg:w-4/12 px-4 lg:order-3 lg:text-right lg:self-center"></div>
+                  <div
+                    className="w-full lg:w-4/12 px-4 lg:order-3 lg:text-right lg:self-center rounded text-white"
+                    style={{ backgroundColor: "#e94444d6" }}
+                  >
+                    {is_profile_created
+                      ? ""
+                      : " لازلت لا تملك صفحة شخصبة لدينا نعمل عليها من اجلك "}
+                  </div>
                   <div className="w-full lg:w-4/12 px-4 lg:order-1">
                     <div className="flex justify-center py-4 lg:pt-4 pt-8">
                       <div className="mr-4 p-3 text-center">
