@@ -22,7 +22,6 @@ export default function Profile() {
   const [email, setemail] = useState("working on it");
   const [datejoined, setdatejoined] = useState("working on it");
   const { token, setToken } = useToken();
-  let x = 1;
   if (token == "false" || undefined) {
     history.push("/auth");
   }
@@ -37,7 +36,7 @@ export default function Profile() {
     data.append("uuid", localStorage.uuid);
     let config = {
       method: "put",
-      url: url + "UpdateProfileView/",
+      url: local + "UpdateProfileView/",
       headers: {
         ...data.getHeaders,
       },
