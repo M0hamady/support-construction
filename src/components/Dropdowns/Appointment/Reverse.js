@@ -79,15 +79,15 @@ export default function Reverse() {
   return (
     <div
       className="flex m-4 w-full  flex-row  flex-wrap hall-container"
-      id="main"
+      // id="main"
     >
       <div className="container-item flexjustify-center rounded " id="first">
-        <h1>please insert your phone.</h1>
-        <div className="input-group mb-3 flex  flex-column m-2 justify-center">
+        <h1>.من فضلك ادخل بيناتك</h1>
+        <div className="input-group mb-3 flex  flex-column  justify-center">
           <input
-            type="text"
-            className="form-control rounded my-input"
-            placeholder="NAME"
+            type="number"
+            className="form-control rounded my-input text-center m-5"
+            placeholder="مقاس الشقة"
             aria-label="Username"
             aria-describedby="basic-addon1"
             // style={{width:"50px"}}
@@ -96,8 +96,8 @@ export default function Reverse() {
 
           <input
             type="tel"
-            className="form-control rounded text-lg font-bold my-input p-2"
-            placeholder="015xxxxxxxxx"
+            className="form-control rounded text-lg font-bold my-input p-2 text-center m-5"
+            placeholder="رقم الهاتف"
             aria-label="number"
             aria-describedby="basic-addon1"
             onChange={(e) => setName(e.target.value)}
@@ -108,90 +108,52 @@ export default function Reverse() {
             </span>
           </div>
         </div>
-
-        <i
-          className="fas fa-duotone fa-forward text-xl cursor-pointer "
-          onClick={() => firstClick()}
-        ></i>
-      </div>
-      <div
-        className="container-item rounded"
-        id="seconed"
-        style={{ opacity: "0.1", transition: "0.5s" }}
-      >
-        <h1>Meeting time.</h1>
         <div className="input-group mb-3 flex flex-column m-2 justify-center">
-          <div className="input-group-prepend mt-1 text-lg ">
-            <span className="input-group-text mr-1" id="basic-addon1"></span>
-          </div>
-          <input
-            type="date"
-            className="form-control rounded"
-            placeholder="date"
-            aria-label="date"
-            aria-describedby="basic-addon1"
-            onChange={(e) => setDate(e.target.value)}
-            style={{ minWidth: "60px" ,backgroundColor:"bisque"}}
-          />
-          
-          <div className="input-group-prepend mt-1 text-lg ">
-            <span
-              className="input-group-text mr-1 ml-1"
-              id="basic-addon1"
-            ></span>
-          </div>
-          <input
-            type="time"
-            className="form-control rounded ml-2"
-            placeholder="Username"
-            aria-label="Username"
-            aria-describedby="basic-addon1"
-            onChange={(e) => setTime(e.target.value)}
-            style={{ minWidth: "60px" }}
-          />
-        </div>
-        <div className="flex " style={{ justifyContent: "space-around" }}>
-          <i
-            className="fas fa-duotone fa-backward text-xl cursor-pointer"
-            onClick={() => secClick_back()}
-          ></i>
-          <i
-            className="fas fa-duotone fa-forward text-xl cursor-pointer "
-            onClick={() => secClick()}
-          />
-        </div>
-      </div>
-      <div
-        className="container-item rounded"
-        id="third"
-        style={{ opacity: "0.1", transition: "0.5s" }}
-      >
-        <h1>Meeting Location.</h1>
-        <div className="input-group mb-3 flex flex-column m-2 justify-center">
-          <div className="input-group-prepend mt-1 text-lg ">
+          <div className="input-group-prepend mt-1 text-lg "></div>
+          <div className="input-group-prepend mt-1 text-lg text-center ">
             <span className="input-group-text mr-1" id="basic-addon1">
-              01
+              ادخل التاريخ المناسب
             </span>
+            <input
+              type="date"
+              className="form-control rounded mb-5"
+              placeholder="date"
+              defaultValue={date}
+              // aria-label="date"
+              aria-describedby="basic-addon1"
+              onChange={(e) => setDate(e.target.value)}
+              style={{ minWidth: "60px", backgroundColor: "bisque" }}
+            />
+            <label for="time">:الوقت</label>
+            <input
+              type="time"
+              className="form-control rounded mb-5"
+              placeholder="time"
+              aria-label="time"
+              aria-describedby="basic-addon1"
+              onChange={(e) => setTime(e.target.value)}
+              style={{ minWidth: "60px" }}
+            />
           </div>
+        </div>
+        <div className="input-group mb-3 flex flex-column m-2 justify-center">
+          <div className="input-group-prepend mt-1 text-lg text-center "></div>
           <input
             type="text"
-            className="form-control rounded"
-            placeholder="Cairo-tgamo3-aria-st-build-floor"
+            className="form-control rounded text-center"
+            placeholder=".ادخل العنوان من فضلك"
             aria-label="Location"
             aria-describedby="basic-addon1"
             onChange={(e) => setAdd(e.target.value)}
           />
         </div>
-        <div className="flex " style={{ justifyContent: "space-around" }}>
-          <i
-            className="fas fa-duotone fa-backward text-xl cursor-pointer"
-            onClick={() => thirdClick_back()}
-          ></i>
-          <i
-            className="fas fa-light fa-check text-xl cursor-pointer "
-            onClick={() => confirm()}
-          />
-        </div>
+
+        <i
+          className="fas fa-light fa-check text-xl cursor-pointer "
+          onClick={() => confirm()}
+        >
+          تاكيد
+        </i>
       </div>
     </div>
   );
