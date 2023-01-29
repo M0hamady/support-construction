@@ -36,7 +36,7 @@ export default function Profile() {
     data.append("uuid", localStorage.uuid);
     let config = {
       method: "put",
-      url: local + "UpdateProfileView/",
+      url: url + "UpdateProfileView/",
       headers: {
         ...data.getHeaders,
       },
