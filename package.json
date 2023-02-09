@@ -8,6 +8,7 @@
     "@fortawesome/fontawesome-free": "5.15.3",
     "@popperjs/core": "2.9.1",
     "@ramonak/react-progress-bar": "^5.0.3",
+    "aos": "^2.3.4",
     "axios": "^1.2.0",
     "canvas-particle-network": "^1.5.0",
     "chart.js": "2.9.4",

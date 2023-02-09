@@ -34,15 +34,6 @@ export function AddVisitor(ip) {
     },
     data: data,
   };
-  useEffect(() => {
-    axios(config)
-      .then(function (response) {
-        console.log(JSON.stringify(response.data));
-      })
-      .catch(function (error) {
-        console.log(error);
-      });
-  }, []);
 }
 
 export default function TodayMeetings(data) {
@@ -51,7 +42,7 @@ export default function TodayMeetings(data) {
   const month = "" + parseInt(current.getMonth()) + 1;
   const day = "" + parseInt(current.getDate());
   const today = current.getFullYear() + "-" + month + "-" + day;
-  console.log(data, "to filter", today);
+
   data.forEach((element) => {
     if (element.meet_at == today) {
       newDAta.push(element);
@@ -65,11 +56,11 @@ export function TodayMeetings_accepted(data) {
   data.forEach((element) => {
     if (
       element.meet_at ==
-        current.getFullYear() +
-          "-" +
-          (parseInt(current.getMonth()) + 1) +
-          "-" +
-          current.getDate() &&
+      current.getFullYear() +
+      "-" +
+      (parseInt(current.getMonth()) + 1) +
+      "-" +
+      current.getDate() &&
       element.is_accepted
     ) {
       newDAta.push(element);
@@ -103,11 +94,11 @@ export function TodayMeetings_success(data) {
   data.forEach((element) => {
     if (
       element.meet_at ==
-        current.getFullYear() +
-          "-" +
-          (parseInt(current.getMonth()) + 1) +
-          "-" +
-          current.getDate() &&
+      current.getFullYear() +
+      "-" +
+      (parseInt(current.getMonth()) + 1) +
+      "-" +
+      current.getDate() &&
       element.is_success
     ) {
       newDAta.push(element);

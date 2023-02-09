@@ -9,15 +9,14 @@ import CardSmartAsk from "components/Cards/CardSmartAsk";
 import { AddVisitor } from "data/DataVisitors";
 
 export default function Index() {
-  const ip =window.location.host
+  const ip = window.location.host
   AddVisitor(ip)
   return (
     <>
       <IndexNavbar fixed />
-      <CardLanding  />
+      <CardLanding />
       <CardOverView />
-
-      <CardSmartAsk/>
+      <CardSmartAsk />
       <Footer />
     </>
   );

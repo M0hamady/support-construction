@@ -1,29 +1,13 @@
-import axios from "axios";
-import { url } from "data/DataMontagat";
-import { local } from "data/DataMontagat";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 
 export default function CardOverviewAnImageWithDescrAndpoints() {
-  const [data, setdata] = useState({});
-  useEffect(() => {
-    let config = {
-      method: "get",
-      url: url + "website/website/",
-      headers: {},
-    };
-    axios(config)
-      .then(function (response) {
-        // console.log(JSON.stringify(response.data));
-        setdata(response.data[0]);
-        // console.log(data);
-      })
-      .catch(function (error) {
-        console.log(error);
-      });
-  }, [1000]);
+
   return (
-    <section className="pb-16 bg-blueGray-200 relative pt-32">
+    <section
+      data-aos='fade-up'
+      data-aos-mirror='true'
+      className="pb-16 bg-blueGray-200 relative pt-32">
       <div
         className="-mt-20 top-0 bottom-auto left-0 right-0 w-full absolute h-20"
         style={{ transform: "translateZ(0)" }}
@@ -49,13 +33,12 @@ export default function CardOverviewAnImageWithDescrAndpoints() {
           <div className="w-full text-center lg:w-8/12">
             <p className="text-4xl text-center">
               <span role="img" aria-label="love">
-                😍{data.manager_title}{" "}
+                😍TECHNICAL OFFICE DIRECTOR {" "}
               </span>
               <h1>Ahmed elkorashi</h1>
             </p>
-            <h3 className="font-semibold text-3xl"></h3>
             <p className="text-blueGray-500 text-lg leading-relaxed mt-4 mb-4">
-              {data.manager_description}
+              I am part of the company which has contributed in the development of a country with 38 million people.
             </p>
             <div className="sm:block flex flex-col mt-10">
               <Link

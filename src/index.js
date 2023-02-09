@@ -1,7 +1,8 @@
-import React, { useContext } from "react";
+import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
-
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import "assets/styles/tailwind.css";
 
@@ -17,10 +18,8 @@ import Profile from "views/Profile.js";
 import Index from "views/Index.js";
 import Shop from "views/montgat.js";
 import Montag from "views/monatg.js";
-import Fstep from "components/order/FirstStep";
 import Order from "views/order";
 import Project from "layouts/project/Project";
-import moshtrayat from "layouts/moshtrayat/moshtrayat";
 import Create_moshtrayat from "layouts/moshtrayat/Create_moshtrayat";
 import Usermoshtrayat from "layouts/moshtrayat/UserMoshtra";
 import UpdateMoshtrayt from "layouts/moshtrayat/UpdateMoshatr";
@@ -33,7 +32,10 @@ import Project_user from "views/UserDashboard/Project";
 import Money_user from "views/UserDashboard/Money";
 import Moshtrayat_user from "views/UserDashboard/Moshtrayat";
 import Designes from "views/UserDashboard/Designes";
-import { BasicData } from "data/UseContext";
+
+AOS.init({
+  duration: 1000,
+});
 
 ReactDOM.render(
   <BrowserRouter>

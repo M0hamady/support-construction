@@ -1,14 +1,10 @@
 /*eslint-disable*/
-import React, { useContext } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
-// components
 import IndexDropdown from "components/Dropdowns/IndexDropdown.js";
-import { BasicData } from "data/UseContext";
 
-export default function Navbar(props) {
+export default function Navbar() {
   const [navbarOpen, setNavbarOpen] = React.useState(false);
-  const { name, changName } = useContext(BasicData);
-  changName("hbhb");
 
   return (
     <>
@@ -19,7 +15,7 @@ export default function Navbar(props) {
               to="/"
               className="text-blueGray-700 text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase"
             >
-              Support construction {/*name*/}
+              Support construction
             </Link>
             <small style={{ textTransform: "uppercase" }}>
               {localStorage.user_info
@@ -48,16 +44,14 @@ export default function Navbar(props) {
                   href="https://www.facebook.com/supportconstructioneg"
                 >
                   <i className="text-blueGray-400 far fa-file-alt text-lg leading-lg mr-2" />{" "}
-                  {/*Docs*/}
                 </a>
               </li>
             </ul>
             <ul className="flex flex-col lg:flex-row list-none lg:ml-auto">
               <li className="flex items-center ">
-                <IndexDropdown /> {/** relation with an other component */}
+                <IndexDropdown />
               </li>
               <li className="flex items-center">
-                {/** link relation with face book */}
                 <a
                   className="hover:text-blueGray-500 text-blueGray-700 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
                   href="https://www.facebook.com/supportconstructioneg"
@@ -69,20 +63,6 @@ export default function Navbar(props) {
               </li>
 
               <li className="flex items-center">
-                {/**   <a
-                  className="hover:text-blueGray-500 text-blueGray-700 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
-                  href="https://www.facebook.com/supportconstructioneg"
-                  target="_blank"
-                >
-              link relation with tweet in fut 
-
-                  <i className="text-blueGray-400 fab fa-twitter text-lg leading-lg " />
-
-                  <span className="lg:hidden inline-block ml-2">Tweet</span>
-                  book 
-
-                </a>
-                */}
               </li>
 
               <li className="flex items-center">

@@ -28,26 +28,14 @@ export default function Footer() {
           <div className="flex flex-wrap text-center lg:text-left">
             <div className="w-full lg:w-6/12 px-4">
               <h4 className="text-3xl font-semibold">Contact us</h4>
-              <h5 className="text-lg mt-0 mb-2 text-blueGray-600">.</h5>
+              <h5 className="text-lg mt-0 mb-2 text-blueGray-600"></h5>
               <div className="mt-6 lg:mb-0 mb-6">
-                <a
-                  className="bg-white text-lightBlue-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
-                  type="button"
-                >
-                  <i className="fab fa-twitter ml-3 mt-3"></i>
-                </a>
                 <a
                   className="bg-white text-lightBlue-600 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
                   type="button"
                   href="https://www.facebook.com/supportconstructioneg"
                 >
                   <i className="fab fa-facebook ml-3 mt-3"></i>
-                </a>
-                <a
-                  className="bg-white text-pink-400 shadow-lg font-normal h-10 w-10 items-center rounded-full outline-none focus:outline-none mr-2"
-                  type="button"
-                >
-                  <i className="fab fa-dribbble ml-3 mt-3"></i>
                 </a>
               </div>
             </div>
@@ -66,35 +54,7 @@ export default function Footer() {
                         About Us
                       </Link>
                     </li>
-                    <li>
-                      <a
-                        className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
-                        href="https://www.facebook.com/supportconstructioneg"
-                      >
-                        Blog
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
-                        href="https://www.facebook.com/supportconstructioneg"
-                      >
-                        Github
-                      </a>
-                    </li>
                     <li></li>
-                  </ul>
-                </div>
-                <div className="w-full lg:w-4/12 px-4">
-                  <ul className="list-unstyled">
-                    <li>
-                      <a
-                        className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
-                        href="https://www.facebook.com/supportconstructioneg"
-                      >
-                        Contact Us
-                      </a>
-                    </li>
                   </ul>
                 </div>
               </div>
@@ -104,14 +64,13 @@ export default function Footer() {
           <div className="flex flex-wrap items-center md:justify-between justify-center">
             <div className="w-full md:w-4/12 px-4 mx-auto text-center">
               <div className="text-sm text-blueGray-500 font-semibold py-1">
-                Copyright © {new Date().getFullYear()} Notus React by{" "}
+                Copyright © {new Date().getFullYear()} {" "}
                 <a
                   href="https://www.facebook.com/supportconstructioneg"
                   className="text-blueGray-500 hover:text-blueGray-800"
                 >
-                  mohammedy
+                  support construction
                 </a>
-                .
               </div>
             </div>
           </div>
