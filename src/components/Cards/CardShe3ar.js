@@ -11,10 +11,15 @@ export default function CardShe3ar({ children }) {
                 <div className="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-red-400">
                   <i className="fas fa-award"></i>
                 </div>
-                <h6 className="text-xl font-semibold">
+                <h6
+                  data-aos="fade-in"
+                  className="text-xl font-semibold">
                   sustainability strategy 2030
                 </h6>
-                <p className="mt-2 mb-4 text-blueGray-500">
+                <p
+                  data-aos="fade-up"
+                  data-aos-easing="ease-in-out"
+                  className="mt-2 mb-4 text-blueGray-500">
                   Respect for the environment and striving to support
                   responsible social development are behind all of our actions
                   and our commitments.
@@ -29,10 +34,16 @@ export default function CardShe3ar({ children }) {
                 <div className="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-lightBlue-400">
                   <i className="fas fa-retweet"></i>
                 </div>
-                <h6 className="text-xl font-semibold">
+                <h6
+                  data-aos="fade-in"
+                  data-aos-easing="ease-in-out"
+                  className="text-xl font-semibold">
                   Committed to the SDG’s{" "}
                 </h6>
-                <p className="mt-2 mb-4 text-blueGray-500">
+                <p
+                  data-aos="fade-up"
+                  data-aos-easing="ease-in-out"
+                  className="mt-2 mb-4 text-blueGray-500">
                   Respect for the environment and striving to support
                   responsible social development are behind all of our actions
                   and our commitments.
@@ -47,10 +58,16 @@ export default function CardShe3ar({ children }) {
                 <div className="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-emerald-400">
                   <i className="fas fa-fingerprint"></i>
                 </div>
-                <h6 className="text-xl font-semibold ">
+                <h6
+                  data-aos="fade-in"
+                  data-aos-easing="ease-in-out"
+                  className="text-xl font-semibold ">
                   Health and Safety Strategy
                 </h6>
-                <p className="mt-2 mb-4 text-blueGray-500">
+                <p
+                  data-aos="fade-up"
+                  data-aos-easing="ease-in-out"
+                  className="mt-2 mb-4 text-blueGray-500">
                   Empowering a broader group of people in the creation process
                   so they are more efficient, resilient and frictionless in
                   their application

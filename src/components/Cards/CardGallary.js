@@ -1,63 +1,85 @@
 import React from "react";
+import gallary1 from "assets/img/gallary1.jpeg";
+import gallary2 from "assets/img/gallary2.jpeg";
+import gallary3 from "assets/img/gallary3.jpeg";
+import gallary4 from "assets/img/gallary4.webp";
+import gallary5 from "assets/img/gallary5.jpeg";
+import gallary6 from "assets/img/gallary16.jpeg";
+import gallary7 from "assets/img/gallary7.jpeg";
+import gallary8 from "assets/img/gallary8.webp";
+import gallary9 from "assets/img/gallary9.jpeg";
+import gallary10 from "assets/img/gallary10.jpeg";
+
 
 export default function CardGallary() {
   return (
-    <div>
+    <div
+    >
       <div class="gallery  ">
         <img
           className=""
+          data-aos="fade-up-right"
           style={{ animationDelay: "2s" }}
-          src="https://images.pexels.com/photos/2219024/pexels-photo-2219024.jpeg?auto=compress&cs=tinysrgb&w=600"
+          src={gallary1}
           alt=""
         />
         <img
           className=""
+          data-aos="fade-up-right"
           style={{ animationDelay: "5s" }}
-          src="https://images.pexels.com/photos/5691631/pexels-photo-5691631.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          src={gallary2}
           alt=""
         />
         <img
           className=""
           style={{ animationDelay: "1s" }}
-          src="https://images.pexels.com/photos/5691606/pexels-photo-5691606.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          src={gallary3}
           alt=""
+          data-aos="fade-up-right"
         />
         <img
           className=""
           style={{ animationDelay: "4s" }}
-          src="https://images.pexels.com/photos/8092/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          src={gallary4}
           alt=""
+          data-aos="fade-up-right"
         />
         <img
           className=""
           style={{ animationDelay: "6s" }}
-          src="https://images.pexels.com/photos/585419/pexels-photo-585419.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          src={gallary5}
           alt=""
+          data-aos="fade-up-right"
         />
         <img
           className=""
-          src="https://images.pexels.com/photos/4249477/pexels-photo-4249477.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          src={gallary6}
           alt=""
+          data-aos="fade-up-right"
         />
         <img
           className=""
-          src="https://images.pexels.com/photos/4966809/pexels-photo-4966809.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          src={gallary7}
           alt=""
+          data-aos="fade-up-right"
         />
         <img
           className=""
-          src="https://images.pexels.com/photos/1216544/pexels-photo-1216544.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          src={gallary8}
           alt=""
+          data-aos="fade-up-right"
         />
         <img
           className=""
-          src="https://images.pexels.com/photos/1145434/pexels-photo-1145434.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          src={gallary9}
           alt=""
+          data-aos="fade-up-right"
         />
         <img
           className=""
-          src="https://images.pexels.com/photos/1145434/pexels-photo-1145434.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          src={gallary10}
           alt=""
+          data-aos="fade-up-right"
         />
       </div>
     </div>

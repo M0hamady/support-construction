@@ -10,8 +10,12 @@ export default function CardEmployee() {
       <div className="container mx-auto px-4">
         <div className="flex flex-wrap justify-center text-center mb-24">
           <div className="w-full lg:w-6/12 px-4">
-            <h2 className="text-4xl font-semibold">ها هم خبرائنا</h2>
-            <p className="text-lg leading-relaxed m-4 text-blueGray-500">
+            <h2
+              data-aos="fade-up"
+              className="text-4xl font-semibold">ها هم خبرائنا</h2>
+            <p
+              data-aos="fade-in"
+              className="text-lg leading-relaxed m-4 text-blueGray-500">
               بعد كل ما قدمتة مجموعه العمل يمكننا ان نقول عنهم خبراء بكل ثقة
               وذالك نتج عن اراء الضيوف قم بالتجربة واكتشف بنفسك
             </p>
@@ -21,12 +25,15 @@ export default function CardEmployee() {
           <div className="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4 hover:shadow-lg ease-linear transition-all duration-150 rounded-lg">
             <div className="px-6">
               <img
+                data-aos="fade-up"
                 alt="..."
                 src={img}
                 className="shadow-lg rounded-full mx-auto max-w-120-px"
               />
               <div className="pt-6 text-center">
-                <h5 className="text-xl font-bold">احمد القرشي</h5>
+                <h5 className="text-xl font-bold"
+                  data-aos="fade-in"
+                >احمد القرشي</h5>
                 <p className="mt-1 text-sm text-blueGray-400 uppercase font-semibold">
                   مدير المشروع
                 </p>
@@ -56,6 +63,7 @@ export default function CardEmployee() {
           <div className="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4 hover:shadow-lg ease-linear transition-all duration-150 rounded-lg">
             <div className="px-6">
               <img
+                data-aos="fade-up"
                 alt="..."
                 src={img2}
                 className="shadow-lg rounded-full mx-auto max-w-120-px"
@@ -85,6 +93,7 @@ export default function CardEmployee() {
           <div className="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4 hover:shadow-lg ease-linear transition-all duration-150 rounded-lg">
             <div className="px-6">
               <img
+                data-aos="fade-up"
                 alt="..."
                 src={img3}
                 className="shadow-lg rounded-full mx-auto max-w-120-px"

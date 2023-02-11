@@ -1,10 +1,8 @@
-import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import React from "react";
 import {
   montagat,
-  url,
 } from "../data/DataMontagat";
-
+import summaryImg from "assets/img/summaryCover.avif";
 // components
 
 import Navbar from "components/Navbars/IndexNavbar";
@@ -15,47 +13,27 @@ import CardTank from "components/Cards/CardTank";
 import CardContact from "components/Cards/CardContact";
 import CardShe3ar from "components/Cards/CardShe3ar";
 import CardGallary from "components/Cards/CardGallary";
-import axios from "axios";
 
 export default function Montgat() {
-  const [itemsdata, setItemsdata] = useState(montagat);
 
-  var config = {
-    method: "get",
-    url: url + "/website/montgat/",
-    headers: {},
-  };
-
-  useEffect(() => {
-    axios(config)
-      .then(function (response) {
-        console.log(JSON.stringify(response.data));
-        setItemsdata(response.data);
-      })
-      .catch(function (error) {
-        console.log(error);
-      });
-  }, [500]);
-  const allQesm = [...new Set(itemsdata.map((i) => i.qesm))];
+  const allQesm = [...new Set(montagat.map((i) => i.qesm))];
   const filter_by_qesm = (categor) => {
     let newArr = [];
-    newArr = itemsdata.filter((item) => item.qesm === categor);
+    newArr = montagat.filter((item) => item.qesm === categor);
 
     return newArr;
   };
-  // const itemsdata =montagat
-  // console.log(itemsdata)
+
   return (
     <>
       <Navbar transparent />
       <main>
-        {/**kenburns-top for animation */}
         <div className="relative pt-16 pb-32 flex flex-wrap content-center items-center justify-center min-h-screen-75 ">
           <div
             className="absolute top-0 w-full h-full bg-center bg-cover "
             style={{
               backgroundImage:
-                "url('https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1267&q=80')",
+                `url(${summaryImg})`,
             }}
           >
             <span
@@ -67,10 +45,14 @@ export default function Montgat() {
             <div className="items-center flex flex-wrap">
               <div className="w-full lg:w-6/12 px-4 ml-auto mr-auto text-center">
                 <div className="pr-12 ">
-                  <h1 className="text-white font-semibold text-5xl">
+                  <h1
+                    data-aos="fade"
+                    className="text-white font-semibold text-5xl">
                     Support Construction{" "}
                   </h1>
-                  <p className="mt-4 text-lg text-blueGray-200">
+                  <p
+                    data-aos="fade-up"
+                    className="mt-4 text-lg text-blueGray-200">
                     One of our most distinguishing characteristics is our
                     commitment to society. Accordingly, we are committed to
                     Corporate Responsibility, best practices in Quality and the
@@ -105,11 +87,12 @@ export default function Montgat() {
         </div>
 
         <CardShe3ar />
+
         {allQesm.map((qesm) => {
-          console.log(filter_by_qesm(qesm));
+
           let color =
             allQesm.indexOf(qesm) + (1 % 1) === 0 ? "blueGray" : "white";
-          console.log(color);
+
           return (
             <MontagatComponen
               key={Math.random() * 100}
