@@ -6,13 +6,10 @@ import axios from "axios";
 
 export default function Login() {
   const history = useHistory();
-  const { token, setToken } = useToken();
   const [username, setUserName] = useState();
   const [password, setPassword] = useState();
   const [err, seterr] = useState("");
-  function suc_login() {
-    history.goBack();
-  }
+
   const handleSubmit = async (e) => {
     var data = new FormData();
     data.append("username", username);
@@ -27,9 +24,7 @@ export default function Login() {
     };
 
     axios(config)
-      .then(function (response) {
-        setToken(response.data.token);
-        console.log("loged in");
+      .then(() => {
         history.push("/");
       })
       .catch(function (error) {
@@ -54,16 +49,16 @@ export default function Login() {
                 <hr className="mt-6 border-b-1 border-blueGray-300" />
               </div>
               <div className="flex-auto px-4 lg:px-10 py-10 pt-0">
-                <div className="text-blueGray-400 text-center mb-3 font-bold">
-                  <small>Or sign in with credentials</small>
+                <div className="text-blueGray-500 text-center mb-3 font-bold">
+                  Or sign in with credentials
                 </div>
                 <div className="err-handle rounded shadow" role="alert">
                   {err}
                 </div>
                 <form>
-                  <div className="relative w-full mb-3">
+                  <div className="relative w-full mb-3 mt-4">
                     <label
-                      className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
+                      className="block text-blueGray-500  text-sm mb-2"
                       htmlFor="grid-password"
                     >
                       Username
@@ -79,7 +74,7 @@ export default function Login() {
 
                   <div className="relative w-full mb-3">
                     <label
-                      className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
+                      className="block text-blueGray-500 text-sm mb-2"
                       htmlFor="grid-password"
                     >
                       Password
@@ -92,45 +87,47 @@ export default function Login() {
                       value={password}
                     />
                   </div>
-                  <div>
-                    <label className="inline-flex items-center cursor-pointer">
-                      <input
-                        id="customCheckLogin"
-                        type="checkbox"
-                        className="form-checkbox border-0 rounded text-blueGray-700 ml-1 w-5 h-5 ease-linear transition-all duration-150"
-                      />
-                      <span className="ml-2 text-sm font-semibold text-blueGray-600">
+                  <div className="
+                  flex flex-wrap items-center  justify-between gap-3
+                  ">
+                    <div class="form-check flex">
+                      <input className="form-check-input appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer
+                      shadow-none
+                      " type="checkbox" value="" id="flexCheckDefault" />
+                      <label class="text-blueGray-500" for="flexCheckDefault">
                         Remember me
-                      </span>
-                    </label>
+                      </label>
+                    </div>
+                    <div className="text-blueGray-500">
+                      <a
+                        href="#pablo"
+                        onClick={(e) => e.preventDefault()}
+                        className="text-blueGray-200"
+                      >
+                        <small className="text-blueGray-500">Forgot password?</small>
+                      </a>
+                    </div>
                   </div>
-
                   <div className="text-center mt-6">
                     <button
-                      className="bg-blueGray-800 text-white active:bg-blueGray-600 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 w-full ease-linear transition-all duration-150"
+                      className="text-white bg-[#1e293b] text-sm font-bold uppercase px-6 py-3 rounded  hover:shadow-lg outline-none focus:outline-none mr-1 ease-linear transition-all duration-150 w-1/2  "
+                      style={{
+                        textShadow: "none",
+                      }}
                       type="button"
                       onClick={() => handleSubmit()}
                     >
                       Sign In
                     </button>
                   </div>
+                  <div className="flex flex-wrap text-center justify-center mt-6 relative">
+                    <div className="w-1/2 text-center text-blueGray-500">
+                      <Link to="/auth/register" className="text-blueGray-200">
+                        <small className="text-blueGray-500">Create new account</small>
+                      </Link>
+                    </div>
+                  </div>
                 </form>
-              </div>
-            </div>
-            <div className="flex flex-wrap mt-6 relative">
-              <div className="w-1/2">
-                <a
-                  href="#pablo"
-                  onClick={(e) => e.preventDefault()}
-                  className="text-blueGray-200"
-                >
-                  <small>Forgot password?</small>
-                </a>
-              </div>
-              <div className="w-1/2 text-right">
-                <Link to="/auth/register" className="text-blueGray-200">
-                  <small>Create new account</small>
-                </Link>
               </div>
             </div>
           </div>

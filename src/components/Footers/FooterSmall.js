@@ -20,7 +20,7 @@ export default function FooterSmall(props) {
                   href="https://www.facebook.com/supportconstructioneg"
                   className="text-white hover:text-blueGray-300 text-sm font-semibold py-1"
                 >
-                  Mohammedy
+                  Support Construction
                 </a>
               </div>
             </div>
@@ -31,7 +31,7 @@ export default function FooterSmall(props) {
                     href="https://www.facebook.com/supportconstructioneg"
                     className="text-white hover:text-blueGray-300 text-sm font-semibold block py-1 px-3"
                   >
-                    Mohammedy
+                    Support Construction
                   </a>
                 </li>
                 <li>

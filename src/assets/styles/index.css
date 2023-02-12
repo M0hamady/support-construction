@@ -21,18 +21,18 @@
   box-shadow: 5px 5px 5px 0 rgba(92, 91, 91, 0.315);
   transition: 1s;
 }
-.container-item h1 {
+/* .container-item h1 {
   background-color: rgb(94, 211, 207);
   border-radius: 5px;
   padding: 2px;
   color: white;
   margin-bottom: 30px;
-}
+} */
 .container-item i {
   color: rgb(77, 158, 230);
 }
 .hall-container {
-  height: fit-content;
+  height: 590px;
   width: 100%;
   margin: 50px 0 120px;
   /* background-color: aliceblue; */

@@ -2,7 +2,7 @@ import { AddMeeting } from "data/DatLanding";
 import React, { useState } from "react";
 import "../../../assets/styles/index.css";
 {
-  /* get num 
+  /* get num
         tmie
         location wait untill performing
         or call us directilly
@@ -79,24 +79,36 @@ export default function Reverse() {
   return (
     <div
       className="flex m-4 w-full  flex-row  flex-wrap hall-container"
-      // id="main"
+    // id="main"
     >
       <div className="container-item flexjustify-center rounded " id="first">
-        <h1>.من فضلك ادخل بيناتك</h1>
+        <h1
+          style={{
+            fontSize: "20px",
+            fontWeight: "bold",
+            textAlign: "center",
+            color: "red !important",
+          }}
+        >.من فضلك ادخل بيناتك</h1>
         <div className="input-group mb-3 flex  flex-column  justify-center">
           <input
             type="number"
-            className="form-control rounded my-input text-center m-5"
+            className="form-control rounded my-input text-center m-5 shadow-none border border-solid border-[#eee]"
+            style={{
+              width: "180px"
+            }}
             placeholder="مقاس الشقة"
             aria-label="Username"
             aria-describedby="basic-addon1"
-            // style={{width:"50px"}}
             onChange={(e) => setNum(e.target.value)}
           />
 
           <input
             type="tel"
-            className="form-control rounded text-lg font-bold my-input p-2 text-center m-5"
+            className="form-control rounded my-input text-center m-5 shadow-none border border-solid border-[#eee]"
+            style={{
+              width: "180px"
+            }}
             placeholder="رقم الهاتف"
             aria-label="number"
             aria-describedby="basic-addon1"
@@ -108,31 +120,30 @@ export default function Reverse() {
             </span>
           </div>
         </div>
-        <div className="input-group mb-3 flex flex-column m-2 justify-center">
-          <div className="input-group-prepend mt-1 text-lg "></div>
-          <div className="input-group-prepend mt-1 text-lg text-center ">
+        <div className="flex items-center mb-3   flex-column m-2 justify-center">
+          <div className="mt-1 text-lg text-center ">
             <span className="input-group-text mr-1" id="basic-addon1">
               ادخل التاريخ المناسب
             </span>
             <input
               type="date"
-              className="form-control rounded mb-5"
+              className="form-control rounded my-input text-center my-3 shadow-none border border-solid border-[#eee]"
               placeholder="date"
               defaultValue={date}
               // aria-label="date"
               aria-describedby="basic-addon1"
               onChange={(e) => setDate(e.target.value)}
-              style={{ minWidth: "60px", backgroundColor: "bisque" }}
+              style={{ width: "100%" }}
             />
             <label for="time">:الوقت</label>
             <input
               type="time"
-              className="form-control rounded mb-5"
+              className="form-control rounded my-input text-center my-3 shadow-none border border-solid border-[#eee]"
               placeholder="time"
               aria-label="time"
               aria-describedby="basic-addon1"
               onChange={(e) => setTime(e.target.value)}
-              style={{ minWidth: "60px" }}
+              style={{ width: "315px" }}
             />
           </div>
         </div>
@@ -140,7 +151,10 @@ export default function Reverse() {
           <div className="input-group-prepend mt-1 text-lg text-center "></div>
           <input
             type="text"
-            className="form-control rounded text-center"
+            className="form-control rounded my-input text-center my-3 shadow-none border border-solid border-[#eee]"
+            style={{
+              width: "450px"
+            }}
             placeholder=".ادخل العنوان من فضلك"
             aria-label="Location"
             aria-describedby="basic-addon1"
@@ -149,7 +163,8 @@ export default function Reverse() {
         </div>
 
         <i
-          className="fas fa-light fa-check text-xl cursor-pointer "
+          className="fas fa-light fa-check text-xl cursor-pointer my-4 text-white border- font-bold uppercase px-6 py-3 rounded  hover:shadow-lg outline-none focus:outline-none mr-1 ease-linear transition-all duration-150 w-1/2 border border-solid border-[#eee]  "
+
           onClick={() => confirm()}
         >
           تاكيد

@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
+import img1 from "assets/img/apout1.jpg";
+import img2 from "assets/img/apout2.jpg";
+import img3 from "assets/img/about4.jpg";
 export default function CardOverViewHistory() {
 
   return (
@@ -24,7 +26,7 @@ export default function CardOverViewHistory() {
                     <img
                       alt="..."
                       className="align-middle border-none max-w-full h-auto rounded-lg"
-                      src={"https://octopus-app-8uosp.ondigitalocean.app/media/ImagIndex/23/apout1_38uFScg.jpg"}
+                      src={img1}
                     />
                   </div>
                 </Link>
@@ -42,7 +44,7 @@ export default function CardOverViewHistory() {
                     <img
                       alt="..."
                       className="align-middle border-none max-w-full h-auto rounded-lg"
-                      src={"https://octopus-app-8uosp.ondigitalocean.app/media/ImagIndex/23/about4_Raxu6a5.jpg"}
+                      src={img2}
                       style={{ objectFit: "contain" }}
                     />
                   </div>
@@ -61,7 +63,7 @@ export default function CardOverViewHistory() {
                     <img
                       alt="..."
                       className="align-middle border-none max-w-full h-auto rounded-lg"
-                      src={"https://octopus-app-8uosp.ondigitalocean.app/media/ImagIndex/apout1.jpg"}
+                      src={img3}
                     />
                   </div>
                 </Link>
