@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import img from "assets/img/villa.png";
 
-export default function MontagatComponen({ groubName, montagat, sec_colo }) {
+export default function MontagatComponen({ groubName, montagat, sec_colo, index }) {
   function get_name_return_pic(name) {
     return (
       <img
@@ -18,9 +18,11 @@ export default function MontagatComponen({ groubName, montagat, sec_colo }) {
       <div
         className="flex flex-wrap  items-center text-right "
       >
-        <div className="w-full  px-4 mr-auto ml-auto">
-          <div className=" text-blueGray-500 p-3 text-center flex gap-2  items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-white mx-auto">
-            <i className="fas fa-house text-xl"></i>
+        <div className="w-full px-4 mr-auto ml-auto">
+          <div className="p-3 text-center flex gap-2  items-center justify-center mb-6 mx-auto flex-col ">
+            <div className="text-blueGray-500 p-2 text-center inline-flex items-center justify-center w-16 h-16 shadow-lg rounded-full bg-white">
+              {index === 0 ? <i class="fas fa-holly-berry"></i> : <i className="fas fa-file-alt text-xl"></i>}
+            </div>
             <h3
               data-aos="fade-up"
               className="text-3xl mb-2 font-semibold leading-normal">

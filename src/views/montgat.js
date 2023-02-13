@@ -88,7 +88,7 @@ export default function Montgat() {
 
         <CardShe3ar />
 
-        {allQesm.map((qesm) => {
+        {allQesm.map((qesm, index) => {
 
           let color =
             allQesm.indexOf(qesm) + (1 % 1) === 0 ? "blueGray" : "white";
@@ -99,6 +99,7 @@ export default function Montgat() {
               groubName={qesm}
               montagat={filter_by_qesm(qesm)}
               sec_colo={color}
+              index={index}
             />
           );
         })}
