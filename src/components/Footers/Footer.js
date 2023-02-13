@@ -1,79 +1,43 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
     <>
-      <footer className="relative bg-blueGray-200 pt-8 pb-6">
-        <div
-          className="bottom-auto top-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden -mt-20 h-20"
-          style={{ transform: "translateZ(0)" }}
-        >
-          <svg
-            className="absolute bottom-0 overflow-hidden"
-            xmlns="http://www.w3.org/2000/svg"
-            preserveAspectRatio="none"
-            version="1.1"
-            viewBox="0 0 2560 100"
-            x="0"
-            y="0"
-          >
-            <polygon
-              className="text-blueGray-200 fill-current"
-              points="2560 0 2560 100 0 100"
-            ></polygon>
-          </svg>
-        </div>
-        <div className="container mx-auto px-4">
-          <div className="flex flex-wrap text-center lg:text-left">
-            <div className="w-full lg:w-6/12 px-4">
-              <h4 className="text-3xl font-semibold">Contact us</h4>
-              <h5 className="text-lg mt-0 mb-2 text-blueGray-600"></h5>
-              <div className="mt-6 lg:mb-0 mb-6">
-                <a
-                  className="bg-white text-lightBlue-600 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
-                  type="button"
-                  href="https://www.facebook.com/supportconstructioneg"
-                >
-                  <i className="fab fa-facebook ml-3 mt-3"></i>
-                </a>
+      <footer className="h-80 bg-gradient-to-r from-purple-100 to-green-500 ">
+        <div className="max-w-screen-xl px-4 pt-16 mx-auto sm:px-6 lg:px-8">
+          <div >
+            <div className="flex items-center justify-between">
+              <div>
+                <h2 className="text-2xl font-bold text-gray-900">support construction</h2>
+                <p className="max-w-xs mt-4 text-sm text-gray-600">
+                  Support Construction —a leader in design-build construction projects in Egypt. Civil engineering | buildings | transport infrastructure.
+                </p>
+                <div className="flex mt-8 space-x-6 text-gray-600">
+                  <a className="hover:opacity-75" href="https://www.facebook.com/supportconstructioneg" target="_blank" rel="noreferrer">
+                    <span className="sr-only"> Facebook </span>
+                    <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                      <path fillRule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clipRule="evenodd" />
+                    </svg>
+                  </a>
+                </div>
               </div>
-            </div>
-            <div className="w-full lg:w-6/12 px-4">
-              <div className="flex flex-wrap items-top mb-6">
-                <div className="w-full lg:w-4/12 px-4 ml-auto">
-                  <span className="block uppercase text-blueGray-500 text-sm font-semibold mb-2">
-                    Useful Links
-                  </span>
-                  <ul className="list-unstyled">
-                    <li>
-                      <Link
-                        className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
-                        to="/"
-                      >
-                        About Us
-                      </Link>
-                    </li>
-                    <li></li>
-                  </ul>
+              <div className="grid grid-cols-1 gap-8 lg:col-span-2 sm:grid-cols-2 lg:grid-cols-2">
+                <div>
+                  <p className="font-medium">
+                    Helpful Links
+                  </p>
+                  <nav className="flex flex-col mt-4 space-y-2 text-sm text-gray-500">
+                    <a className="hover:opacity-75" href="https://www.facebook.com/supportconstructioneg " target="_blank" rel="noreferrer"> Contact </a>
+                    <a className="hover:opacity-75" href> FAQs </a>
+                    <a className="hover:opacity-75" href> Live Chat </a>
+                  </nav>
                 </div>
               </div>
             </div>
           </div>
-          <hr className="my-6 border-blueGray-300" />
-          <div className="flex flex-wrap items-center md:justify-between justify-center">
-            <div className="w-full md:w-4/12 px-4 mx-auto text-center">
-              <div className="text-sm text-blueGray-500 font-semibold py-1">
-                Copyright © {new Date().getFullYear()} {" "}
-                <a
-                  href="https://www.facebook.com/supportconstructioneg"
-                  className="text-blueGray-500 hover:text-blueGray-800"
-                >
-                  support construction
-                </a>
-              </div>
-            </div>
-          </div>
+          <p className="mt-8 text-lg text-gray-800 text-center">
+            © 2022 support construction
+          </p>
         </div>
       </footer>
     </>

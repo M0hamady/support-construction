@@ -248,7 +248,7 @@ li.timeline-item::before {
   min-height: 130px;
 }
 
-button,
+/* button, */
 input {
   border: 0;
   outline: 0;

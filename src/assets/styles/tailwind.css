@@ -192,20 +192,21 @@ Remove the inheritance of text transform in Edge and Firefox.
 1. Remove the inheritance of text transform in Firefox.
 */
 
-button,
+/* button,
 select {
   /* 1 */
-  text-transform: none;
-}
+text-transform: none;
+/* } */
+*/
 
 /**
 Correct the inability to style clickable types in iOS and Safari.
 */
 
-button,
+/* button,
 [type="button"] {
   -webkit-appearance: button;
-}
+} */
 
 /**
 Remove the inner border and padding in Firefox.
@@ -293,20 +294,20 @@ pre {
   margin: 0;
 }
 
-button {
+/* button {
   background-color: transparent;
   background-image: none;
-}
+} */
 
 /**
  * Work around a Firefox/IE bug where the transparent `button` background
  * results in a loss of the default `button` focus styles.
  */
 
-button:focus {
+/* button:focus {
   outline: 1px dotted;
   outline: 5px auto -webkit-focus-ring-color;
-}
+} */
 
 fieldset {
   margin: 0;
@@ -464,7 +465,7 @@ a {
  * normalize.css.
  */
 
-button,
+/* button,
 input,
 optgroup,
 select,
@@ -472,7 +473,7 @@ textarea {
   padding: 0;
   line-height: inherit;
   color: inherit;
-}
+} */
 
 /**
  * Use the configured 'mono' font family for elements that

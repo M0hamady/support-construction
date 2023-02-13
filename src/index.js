@@ -79,7 +79,7 @@ ReactDOM.render(
         />
         <Route path="/" exact component={Index} />
         {/* add redirect for first page */}
-        <Redirect from="*" to="/" />
+        {/* <Redirect from="*" to="/" /> */}
       </Switch>
     </UseContext>
   </BrowserRouter>,

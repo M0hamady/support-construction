@@ -4,7 +4,7 @@ import { useHistory } from "react-router-dom";
 // components
 
 import Navbar from "components/Navbars/IndexNavbar";
-import Footer from "components/Footers/Footer.js";
+import Footer from "components/Footers/Footer";
 import Reverse from "components/Dropdowns/Appointment/Reverse";
 
 export default function Landing() {

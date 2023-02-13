@@ -50,45 +50,37 @@ export default function Login() {
               </div>
               <div className="flex-auto px-4 lg:px-10 py-10 pt-0">
                 <div className="text-blueGray-500 text-center mb-3 font-bold">
-                  Or sign in with credentials
+                  sign in with credentials
                 </div>
                 <div className="err-handle rounded shadow" role="alert">
                   {err}
                 </div>
                 <form>
-                  <div className="relative w-full mb-3 mt-4">
-                    <label
-                      className="block text-blueGray-500  text-sm mb-2"
-                      htmlFor="grid-password"
-                    >
-                      Username
-                    </label>
-                    <input
-                      type="text"
-                      className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
-                      placeholder="User_name"
+                  <div class="relative mt-3">
+                    <input class="appearance-none border pl-12 border-gray-100 shadow-sm focus:shadow-md focus:placeholder-gray-600  transition  rounded-md w-full py-3 text-gray-600 leading-tight focus:outline-none focus:ring-gray-600 focus:shadow-outline" id="username" type="text" placeholder="Enter your username"
                       onChange={(e) => setUserName(e.target.value)}
                       value={username}
                     />
+                    <div class="absolute left-0 inset-y-0 flex items-center">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 ml-3 text-gray-400 p-1" viewBox="0 0 20 20" fill="currentColor">
+                        <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z" />
+                      </svg>
+                    </div>
                   </div>
-
-                  <div className="relative w-full mb-3">
-                    <label
-                      className="block text-blueGray-500 text-sm mb-2"
-                      htmlFor="grid-password"
-                    >
-                      Password
-                    </label>
-                    <input
-                      type="password"
-                      className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
-                      placeholder="Password"
+                  <div class="relative mt-3">
+                    <input class="appearance-none border pl-12 border-gray-100 shadow-sm focus:shadow-md focus:placeholder-gray-600  transition  rounded-md w-full py-3 text-gray-600 leading-tight focus:outline-none focus:ring-gray-600 focus:shadow-outline"
                       onChange={(e) => setPassword(e.target.value)}
                       value={password}
+                      id="password" type="password" placeholder="Enter your password"
                     />
+                    <div class="absolute left-0 inset-y-0 flex items-center">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 ml-3 text-gray-400 p-1" viewBox="0 0 20 20" fill="currentColor"            >
+                        <path d="M10 2a5 5 0 00-5 5v2a2 2 0 00-2 2v5a2 2 0 002 2h10a2 2 0 002-2v-5a2 2 0 00-2-2H7V7a3 3 0 015.905-.75 1 1 0 001.937-.5A5.002 5.002 0 0010 2z" />
+                      </svg>
+                    </div>
                   </div>
                   <div className="
-                  flex flex-wrap items-center  justify-between gap-3
+                  flex flex-wrap items-center  justify-between gap-3 mt-4
                   ">
                     <div class="form-check flex">
                       <input className="form-check-input appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer
@@ -121,7 +113,7 @@ export default function Login() {
                     </button>
                   </div>
                   <div className="flex flex-wrap text-center justify-center mt-6 relative">
-                    <div className="w-1/2 text-center text-blueGray-500">
+                    <div className="w-1/2 text-center text-blueGray-500 border border-l-yellow-900 px-5 py-3 rounded-md">
                       <Link to="/auth/register" className="text-blueGray-200">
                         <small className="text-blueGray-500">Create new account</small>
                       </Link>
@@ -136,6 +128,3 @@ export default function Login() {
     </>
   );
 }
-Login.propTypes = {
-  // setToken: PropTypes.func.isRequired,
-};

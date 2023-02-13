@@ -13,7 +13,7 @@ import { useParams } from "react-router";
 import { Link } from "react-router-dom";
 
 export default function Project() {
-  const id = useParams().id;
+  const id = useParams()?.id;
   const [project, setproject] = useState({});
   const [token, settoken] = useState(
     () => "Token " + localStorage.token.slice(1, localStorage.token.length - 1)
@@ -25,15 +25,17 @@ export default function Project() {
       Authorization: token,
     },
   };
+
   useEffect(() => {
     axios(config)
       .then(function (response) {
-        setproject(response.data[(id-1)]);
+        setproject(response.data[(id - 1)]);
       })
       .catch(function (error) {
         console.log("error");
       });
-  }, [500]);
+  }, []);
+
   const steps = Allproject_steps(id);
   console.log(project, 8989898);
   return (
@@ -174,9 +176,8 @@ export default function Project() {
                           " p-4 text-center inline-flex items-center justify-center w-4 h-4 shadow-lg rounded-full "
                         }
                         style={{
-                          backgroundColor: `${
-                            step.is_finished ? "#15e291" : "#f8f8f878"
-                          }`,
+                          backgroundColor: `${step.is_finished ? "#15e291" : "#f8f8f878"
+                            }`,
                         }}
                       >
                         <i className="fas fa-solid fa-user-pen "></i>
@@ -187,9 +188,8 @@ export default function Project() {
                           " p-3 text-center inline-flex items-center justify-center w-4 h-4 shadow-lg rounded-full "
                         }
                         style={{
-                          backgroundColor: `${
-                            step.is_finished ? "#15e291" : "#f8f8f878"
-                          }`,
+                          backgroundColor: `${step.is_finished ? "#15e291" : "#f8f8f878"
+                            }`,
                         }}
                       >
                         <i className="fas fa-solid fa-plus"></i>
