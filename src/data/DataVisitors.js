@@ -152,8 +152,6 @@ export const Change_accepted_stat = (id, val) => {
     });
 };
 export const Change_success_stat = (id, val) => {
-  console.log(val);
-  console.log(id);
   let data = new FormData();
   data.append("succeded", val);
   let config = {
@@ -179,8 +177,7 @@ export function AddPartment(number_of_step, id, token) {
   data.append("address", "api address");
   data.append("id", id);
   data.append("owner", token);
-  console.log(token, 55, id, number_of_step);
-  // data.append('Authorization',{"Token":  token})
+
   let config = {
     method: "post",
     url: url + `project/`,
@@ -191,7 +188,6 @@ export function AddPartment(number_of_step, id, token) {
     data: data,
   };
 
-  console.log(1);
   axios(config)
     .then(function (response) {
       console.log(JSON.stringify(response.data));

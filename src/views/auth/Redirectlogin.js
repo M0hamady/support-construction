@@ -32,7 +32,6 @@ export default function Redirectlogin() {
 
 export function Is_admin() {
   const [result, setResult] = useState(false);
-  const { token, setToken } = useToken();
   const { is_admin, changis_admin, chanislogin, tokenS } =
     useContext(BasicData);
   let data = new FormData();
@@ -49,7 +48,6 @@ export function Is_admin() {
   useEffect(() => {
     axios(config)
       .then(function (response) {
-        console.log(JSON.stringify(response.data));
         setResult(response.data.is_admin);
       })
       .catch(function (error) {

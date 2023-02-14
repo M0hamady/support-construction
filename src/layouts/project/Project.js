@@ -1,12 +1,8 @@
 import axios from "axios";
-import CardStats from "components/Cards/CardStats";
 import Card_project from "components/Cards/Card_project";
 import { Card_project_img } from "components/Cards/Card_project";
 import { Card_project_moshatarayat } from "components/Cards/Card_project_moshtarayt";
-import Card_user from "components/Cards/Card_user";
-import { local } from "data/DataMontagat";
 import { url } from "data/DataMontagat";
-import { Allprojects } from "data/DataProject";
 import { Allproject_steps } from "data/DataProject";
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router";
@@ -37,7 +33,6 @@ export default function Project() {
   }, []);
 
   const steps = Allproject_steps(id);
-  console.log(project, 8989898);
   return (
     <div className="container py-0">
       <div className="row flex text-center text-black mb-2 justify-center ">

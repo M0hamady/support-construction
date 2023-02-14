@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import ProgressBar from "@ramonak/react-progress-bar";
 import { url } from "data/DataMontagat";
 import axios from "axios";
 import { Link } from "react-router-dom";
@@ -34,7 +33,8 @@ export default function Beside() {
       .catch(function (error) {
         console.log("error from user data in data", error);
       });
-  }, [600]);
+  }, []);
+
   return (
     <>
       <div class="container-5">
