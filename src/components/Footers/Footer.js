@@ -3,7 +3,7 @@ import React from "react";
 export default function Footer() {
   return (
     <>
-      <footer className="h-80 bg-gradient-to-r from-purple-100 to-green-500 ">
+      <footer className="h-80 bg-[#334155] text-[#fff]">
         <div className="max-w-screen-xl px-4 pt-16 mx-auto sm:px-6 lg:px-8">
           <div >
             <div className="flex items-center justify-between">

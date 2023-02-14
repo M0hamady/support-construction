@@ -33,7 +33,7 @@ export default function CardOverviewAnImageWithDescrAndpoints() {
           <div className="w-full text-center lg:w-8/12">
             <p className="text-4xl text-center">
               <span role="img" aria-label="love">
-                😍TECHNICAL OFFICE DIRECTOR {" "}
+                TECHNICAL OFFICE DIRECTOR {" "}
               </span>
               <h1>Ahmed elkorashi</h1>
             </p>
@@ -42,7 +42,7 @@ export default function CardOverviewAnImageWithDescrAndpoints() {
             </p>
             <div className="sm:block flex flex-col mt-10">
               <Link
-                to={"/landing"}
+                to={"/shop"}
                 className="get-started text-white font-bold px-6 py-4 rounded outline-none focus:outline-none mr-1 mb-2 bg-lightBlue-500 active:bg-lightBlue-600 uppercase text-sm shadow hover:shadow-lg ease-linear transition-all duration-150"
               >
                 <i className="fas fa-briefcase text-lg mr-1"></i>

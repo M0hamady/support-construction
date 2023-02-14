@@ -195,7 +195,7 @@ export default function CardOverViewAndItenDescription() {
         data-aos="fade-up"
         className="container mx-auto px-4 pb-32 pt-4 text-center">
         <div className="items-center flex flex-wrap">
-          <div className="w-full md:w-5/12 ml-auto px-12 md:px-4">
+          <div className="w-full md:w-5/12 ml-auto px-12 md:px-4 text-left">
             <div className="md:pr-12">
               <div className="text-blueGray-500 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-white">
                 <i className="fas fa-file-alt text-xl"></i>

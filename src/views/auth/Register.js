@@ -12,7 +12,6 @@ export default function Register() {
   const [email, setEmail] = useState("");
   const [fName, setFName] = useState("");
   const [lName, setLName] = useState("");
-  const [err_name, seterr_name] = useState("");
 
   function Database_connections() {
     let data = new FormData();
@@ -32,7 +31,6 @@ export default function Register() {
     };
     axios(config)
       .then(function (response) {
-        //   console.log(JSON.stringify(response.data));
         history.push("auth/login");
       })
       .catch(function (error) {
@@ -66,114 +64,82 @@ export default function Register() {
             <div className="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-blueGray-200 border-0">
               <div className="rounded-t mb-0 px-6 py-6">
                 <div className="text-center mb-3">
-                  <h6 className="text-blueGray-500 text-sm font-bold">
-                    Sign up for connection.
+                  <h6 className="text-[#1e293b] text-lg font-bold">
+                    Sign up for connection
                   </h6>
                 </div>
                 <div className="btn-wrapper text-center"></div>
                 <hr className="mt-6 border-b-1 border-blueGray-300" />
               </div>
               <div className="flex-auto px-4 lg:px-10 py-10 pt-0">
-                <div className="text-blueGray-400 text-center mb-3 font-bold">
-                  <small>simple signup</small>
-                  <label>{err_name}</label>
+                <div className="text-[#1e293b] text-center mb-3 font-bold text-lg">
+                  <small>Register</small>
                 </div>
-                <div className="relative w-full mb-3">
-                  <label
-                    className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
-                    htmlFor="grid-password"
-                  >
-                    Name
-                  </label>
-
-                  <input
-                    type="email"
-                    className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
-                    placeholder="Name"
+                <div class="relative mt-3">
+                  <div class="absolute left-0 inset-y-0 flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="h-7 w-7 ml-3 text-gray-400 p-1" stroke-width="1.5" stroke="currentColor" >
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
+                    </svg>
+                  </div>
+                  <input class="appearance-none border border-gray-100  pl-12 shadow-sm focus:shadow-md focus:placeholder-gray-600  transition  rounded-md w-full py-3 text-gray-600 leading-tight focus:outline-none focus:ring-gray-600 focus:shadow-outline" id="username" type="text" placeholder="Enter your username"
                     onChange={(e) => setname(e.target.value)}
+                    value={name}
                   />
-                  <label
-                    className="block uppercase text-white text-xs font-bold m-1 rounded p-1 bg-red-500"
-                    style={{ width: "fit-content" }}
-                    htmlFor="grid-password"
-                    id="nameErr"
-                  ></label>
                 </div>
+                <div class="relative mt-3">
+                  <div class="absolute left-0 inset-y-0 flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-7 w-7 ml-3 text-gray-400 p-1">
+                      <path stroke-linecap="round" d="M16.5 12a4.5 4.5 0 11-9 0 4.5 4.5 0 019 0zm0 0c0 1.657 1.007 3 2.25 3S21 13.657 21 12a9 9 0 10-2.636 6.364M16.5 12V8.25" />
+                    </svg>
 
-                <div className="relative w-full mb-3">
-                  <label
-                    className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
-                    htmlFor="grid-password"
-                  >
-                    Email
-                  </label>
-                  <input
-                    type="email"
-                    className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
-                    placeholder="Email"
+                  </div>
+                  <input class=" pl-12 appearance-none border border-gray-100 shadow-sm focus:shadow-md focus:placeholder-gray-600  transition  rounded-md w-full py-3 text-gray-600 leading-tight focus:outline-none focus:ring-gray-600 focus:shadow-outline" id="username" type="email" placeholder="Enter your Email"
                     onChange={(e) => setEmail(e.target.value)}
+                    value={email}
                   />
-                  <label
-                    className="block uppercase text-white text-xs font-bold m-1 rounded p-1 bg-red-500"
-                    style={{ width: "fit-content" }}
-                    htmlFor="grid-password"
-                    id="emailErr"
-                  ></label>
                 </div>
-                <div className="flex flex-wrap justify-between text-center">
-                  <div className="relative  mb-3">
-                    <label
-                      className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
-                      htmlFor="grid-password"
-                    >
-                      Firist name
-                    </label>
-                    <input
-                      type="text"
-                      className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
-                      placeholder="Firist name"
+                <div className="flex flex-wrap text-center gap-3 ">
+                  <div class="relative mt-3 flex-grow">
+                    <div class="absolute left-0 inset-y-0 flex items-center">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="h-7 w-7 ml-3 text-gray-400 p-1" stroke-width="1.5" stroke="currentColor" >
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
+                      </svg>
+                    </div>
+                    <input class=" pl-12 appearance-none border border-gray-100 shadow-sm focus:shadow-md focus:placeholder-gray-600  transition  rounded-md w-full py-3 text-gray-600 leading-tight focus:outline-none focus:ring-gray-600 focus:shadow-outline " id="username" type="text" placeholder="Enter First Name"
                       onChange={(e) => setFName(e.target.value)}
+                      value={fName}
                     />
                   </div>
-                  <div className="relative  mb-3">
-                    <label
-                      className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
-                      htmlFor="grid-password"
-                    >
-                      last name
-                    </label>
-                    <input
-                      type="text"
-                      className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
-                      placeholder="last name"
+                  <div class="relative mt-3 flex-grow">
+                    <div class="absolute left-0 inset-y-0 flex items-center">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="h-7 w-7 ml-3 text-gray-400 p-1" stroke-width="1.5" stroke="currentColor" >
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
+                      </svg>
+                    </div>
+                    <input class=" pl-12 appearance-none border border-gray-100 shadow-sm focus:shadow-md focus:placeholder-gray-600  transition  rounded-md w-full py-3 text-gray-600 leading-tight focus:outline-none focus:ring-gray-600 focus:shadow-outline " id="username" type="text" placeholder="Enter Last Name"
                       onChange={(e) => setLName(e.target.value)}
+                      value={lName}
                     />
                   </div>
                 </div>
-                <div className="relative w-full mb-3">
-                  <label
-                    className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
-                    htmlFor="grid-password"
-                  >
-                    Password
-                  </label>
-                  <input
-                    type="password"
-                    className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
-                    placeholder="Password"
-                    onChange={(e) => setPass1(e.target.value)}
-                  />
-                  <label
-                    className="block uppercase text-white text-xs font-bold m-1 rounded p-1 bg-red-500"
-                    style={{ width: "fit-content" }}
-                    htmlFor="grid-password"
-                    id="passErr"
-                  ></label>
-                </div>
+                <div class="relative mt-3">
+                  <div class="absolute left-0 inset-y-0 flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-7 w-7 ml-3 text-gray-400 p-1">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z" />
+                    </svg>
 
+                  </div>
+                  <input class="pl-12 appearance-none border border-gray-100 shadow-sm focus:shadow-md focus:placeholder-gray-600  transition  rounded-md w-full py-3 text-gray-600 leading-tight focus:outline-none focus:ring-gray-600 focus:shadow-outline flex-grow" id="username" type="password" placeholder="Enter your Password"
+                    onChange={(e) => setPass1(e.target.value)}
+                    value={pass1}
+                  />
+                </div>
                 <div className="text-center mt-6">
                   <button
-                    className="bg-blueGray-800 text-white active:bg-blueGray-600 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 w-full ease-linear transition-all duration-150"
+                    className="text-white bg-[#1e293b] text-sm font-bold uppercase px-6 py-3 rounded  hover:shadow-lg outline-none focus:outline-none mr-1 ease-linear transition-all duration-150 w-1/2  "
+                    style={{
+                      textShadow: "none",
+                    }}
                     type="button"
                     onClick={() => Database_connections()}
                   >

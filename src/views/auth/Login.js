@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Link, useHistory } from "react-router-dom";
 import { url } from "data/DataMontagat";
-import useToken from "data/useToken";
 import axios from "axios";
 
 export default function Login() {
@@ -50,9 +49,15 @@ export default function Login() {
               </div>
               <div className="flex-auto px-4 lg:px-10 py-10 pt-0">
                 <div className="text-blueGray-500 text-center mb-3 font-bold">
-                  sign in with credentials
+                  sign Up with credentials
                 </div>
-                <div className="err-handle rounded shadow" role="alert">
+                <div role="alert"
+                  style={{
+                    backgroundColor: "transparent",
+                    color: "red",
+                    textAlign: "center",
+                  }}
+                >
                   {err}
                 </div>
                 <form>
@@ -112,12 +117,19 @@ export default function Login() {
                       Sign In
                     </button>
                   </div>
-                  <div className="flex flex-wrap text-center justify-center mt-6 relative">
-                    <div className="w-1/2 text-center text-blueGray-500 border border-l-yellow-900 px-5 py-3 rounded-md">
+                  <div className="text-center mt-6">
+                    <button
+                      className="text-white text-sm font-bold uppercase px-6 py-3 rounded  hover:shadow-lg outline-none focus:outline-none mr-1 ease-linear transition-all duration-150 w-1/2  "
+                      style={{
+                        textShadow: "none",
+                        border: "1px solid #1e293b",
+                      }}
+                      type="button"
+                    >
                       <Link to="/auth/register" className="text-blueGray-200">
-                        <small className="text-blueGray-500">Create new account</small>
+                        <small className="text-[#1e293b]">Create new account</small>
                       </Link>
-                    </div>
+                    </button>
                   </div>
                 </form>
               </div>

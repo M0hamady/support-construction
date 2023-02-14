@@ -39,23 +39,7 @@ export default function FooterSmall(props) {
                     href="https://www.facebook.com/supportconstructioneg"
                     className="text-white hover:text-blueGray-300 text-sm font-semibold block py-1 px-3"
                   >
-                    About Us
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://www.facebook.com/supportconstructioneg"
-                    className="text-white hover:text-blueGray-300 text-sm font-semibold block py-1 px-3"
-                  >
-                    Blog
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://www.facebook.com/supportconstructioneg"
-                    className="text-white hover:text-blueGray-300 text-sm font-semibold block py-1 px-3"
-                  >
-                    MIT License
+                    Contact Us
                   </a>
                 </li>
               </ul>

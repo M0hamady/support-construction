@@ -181,7 +181,7 @@ export const Navbar = () => {
     top: "-10px",
     zIndex: "100",
     justifyContent: "space-between",
-    backgroundColor: " #097a7354",
+    backgroundColor: "#33415559",
     height: "9vh",
     padding: theme.spacing(5),
     "&.MuiContainer-root": {
