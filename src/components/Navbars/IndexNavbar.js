@@ -268,7 +268,7 @@ export const Navbar = () => {
           backgroundColor="#334155"
           color="#fff"
           onClick={() => logout()}
-          buttonText="Register"
+          buttonText="Logout"
         /> :
           <>
             <CustomButton
