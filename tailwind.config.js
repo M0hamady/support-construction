@@ -4,25 +4,16 @@ const colors = require("tailwindcss/colors");
 module.exports = {
   content: {
     enabled: true,
-    content: [
-      "./public/**/*.html",
-      "./public/*.html",
-      "./src/**/*.js",
-      "./src/*.js",
-      "./src/**/*.html",
-      "./src/*.html",
-      "./public/**/*.js",
-      "./public/*.js",
-    ],
+    content: ["./public/**/*.html", "./src/**/*.{js,jsx,ts,tsx}"],
     options: {
       safelist: [],
     },
   },
   theme: {
     colors: {
-        green: colors.emerald,
-        yellow: colors.amber,
-        purple: colors.violet,
+      green: colors.emerald,
+      yellow: colors.amber,
+      purple: colors.violet,
     },
     extend: {
       minHeight: {
