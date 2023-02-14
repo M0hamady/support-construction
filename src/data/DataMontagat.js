@@ -90,4 +90,4 @@ export const GetExactMontag = (id) => {
 };
 // export const url = "http://127.0.0.1:8000/";
 export const local = "http://127.0.0.1:8000/";
-export const url = "https://octopus-app-8uosp.ondigitalocean.app/";
+export const url = "https://sea-turtle-app-xw9tc.ondigitalocean.app/";

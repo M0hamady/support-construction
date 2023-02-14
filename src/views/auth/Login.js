@@ -2,20 +2,21 @@ import React, { useState } from "react";
 import { Link, useHistory } from "react-router-dom";
 import { url } from "data/DataMontagat";
 import axios from "axios";
+import useToken from "data/useToken";
 
 export default function Login() {
   const history = useHistory();
   const [username, setUserName] = useState();
   const [password, setPassword] = useState();
   const [err, seterr] = useState("");
-
+  const { _, setToken } = useToken();
   const handleSubmit = async (e) => {
     var data = new FormData();
     data.append("username", username);
     data.append("password", password);
     let config = {
       method: "post",
-      url: url + "project/generate-token/",
+      url: url + "login/",
       headers: {
         ...data.getHeaders,
       },
@@ -23,7 +24,8 @@ export default function Login() {
     };
 
     axios(config)
-      .then(() => {
+      .then(function (response) {
+        setToken(response.data.token);
         history.push("/");
       })
       .catch(function (error) {

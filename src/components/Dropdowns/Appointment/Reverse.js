@@ -57,7 +57,7 @@ export default function Reverse() {
                 <h2 class="leading-relaxed">من فضلك ادخل بياناتك</h2>
 
               </div>
-              <div class="h-14 w-14 bg-green-800 rounded-full flex flex-shrink-0 justify-center items-center text-yellow-50 text-2xl font-mono">i</div>
+              <div class="h-14 w-14 bg-[#2e3a4c] rounded-full flex flex-shrink-0 justify-center items-center text-yellow-50 text-2xl font-mono">i</div>
             </div>
             <div class="divide-y divide-gray-200">
               <div class="py-8 text-base leading-6 space-y-4 text-gray-700 sm:text-lg sm:leading-7">
@@ -107,7 +107,7 @@ export default function Reverse() {
               </div>
               <div class="pt-4 flex items-center justify-center">
                 <i
-                  className="fas fa-light fa-check text-xl flex justify-center cursor-pointer my-4 text-white font-bold uppercase px-6 py-3 rounded  hover:shadow-lg outline-none focus:outline-none mr-1 ease-linear transition-all duration-150 w-1/2 border border-solid border-[#eee] text-center  bg-green-800 "
+                  className="fas fa-light fa-check text-xl flex justify-center cursor-pointer my-4 text-white font-bold uppercase px-6 py-3 rounded  hover:shadow-lg outline-none focus:outline-none mr-1 ease-linear transition-all duration-150 w-1/2 border border-solid border-[#eee] text-center  bg-[#2e3a4c] "
 
                   onClick={() => confirm()}
                 >

@@ -3,13 +3,6 @@ import { url } from "data/DataMontagat";
 import React, { useState } from "react";
 import { useParams } from "react-router";
 import { Link } from "react-router-dom";
-{
-  /* get num 
-        tmie
-        location wait untill performing
-        or call us directilly
-    */
-}
 export default function Reverse() {
   // id of step to create
   const [Name, setName] = useState("");
@@ -22,7 +15,7 @@ export default function Reverse() {
     data.append("cost", cost);
     let config = {
       method: "post",
-      url: url  + `project/moshtrayat/${id}/`,
+      url: url + `project/moshtrayat/${id}/`,
       headers: {
         ...data.getHeaders,
       },

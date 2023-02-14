@@ -2,7 +2,6 @@ import axios from "axios";
 import { url } from "./DataMontagat";
 export function AddMeeting(ip, name, time, date, location, number) {
   let is_done = false;
-  console.log(ip, 44444);
   let data = new FormData();
   data.append("ip", ip);
   data.append("name", name);
@@ -22,7 +21,6 @@ export function AddMeeting(ip, name, time, date, location, number) {
 
   axios(config)
     .then(function (response) {
-      console.log(JSON.stringify(response.data));
       is_done = true;
     })
     .catch(function (error) {
@@ -30,4 +28,3 @@ export function AddMeeting(ip, name, time, date, location, number) {
     });
   return is_done;
 }
-// "2022-12-16 12:58:12"

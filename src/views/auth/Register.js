@@ -8,12 +8,20 @@ export default function Register() {
   const history = useHistory();
   const [name, setname] = useState("");
   const [pass1, setPass1] = useState("");
-  // const [pass2, setPass2] = useState("");
   const [email, setEmail] = useState("");
   const [fName, setFName] = useState("");
   const [lName, setLName] = useState("");
+  const [phoneNumber, setPhoneNumber] = useState("");
+
+  const [errorMessage, setErrorMessage] = useState("");
+
 
   function Database_connections() {
+    if (name === "" || pass1 === "" || email === "" || fName === "" || lName === "" || phoneNumber === "") {
+      setErrorMessage("Please fill all the fields");
+      return;
+    }
+
     let data = new FormData();
     data.append("username", name);
     data.append("password", pass1);
@@ -21,6 +29,8 @@ export default function Register() {
     data.append("first_name", fName);
     data.append("last_name", lName);
     data.append("email", email);
+    data.append("number", phoneNumber);
+
     var config = {
       method: "post",
       url: url + "register/",
@@ -34,25 +44,7 @@ export default function Register() {
         history.push("auth/login");
       })
       .catch(function (error) {
-        console.log(error.response.data);
-        if (error.response.data.username) {
-          document.getElementById("nameErr").innerText =
-            error.response.data.username;
-        } else {
-          document.getElementById("nameErr").innerText = "";
-        }
-        if (error.response.data.email) {
-          document.getElementById("emailErr").innerText =
-            error.response.data.email;
-        } else {
-          document.getElementById("emailErr").innerText = "";
-        }
-        if (error.response.data.password) {
-          document.getElementById("passErr").innerText =
-            error.response.data.password;
-        } else {
-          document.getElementById("passErr").innerText = "";
-        }
+        new Error(error.message)
       });
   }
 
@@ -74,6 +66,9 @@ export default function Register() {
               <div className="flex-auto px-4 lg:px-10 py-10 pt-0">
                 <div className="text-[#1e293b] text-center mb-3 font-bold text-lg">
                   <small>Register</small>
+                  <p>
+                    <small className="text-red-500">{errorMessage}</small>
+                  </p>
                 </div>
                 <div class="relative mt-3">
                   <div class="absolute left-0 inset-y-0 flex items-center">
@@ -96,6 +91,17 @@ export default function Register() {
                   <input class=" pl-12 appearance-none border border-gray-100 shadow-sm focus:shadow-md focus:placeholder-gray-600  transition  rounded-md w-full py-3 text-gray-600 leading-tight focus:outline-none focus:ring-gray-600 focus:shadow-outline" id="username" type="email" placeholder="Enter your Email"
                     onChange={(e) => setEmail(e.target.value)}
                     value={email}
+                  />
+                </div>
+                <div class="relative mt-3">
+                  <div class="absolute left-0 inset-y-0 flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-7 w-7 ml-3 text-gray-400 p-1">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 1.5H8.25A2.25 2.25 0 006 3.75v16.5a2.25 2.25 0 002.25 2.25h7.5A2.25 2.25 0 0018 20.25V3.75a2.25 2.25 0 00-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3" />
+                    </svg>
+                  </div>
+                  <input class=" pl-12 appearance-none border border-gray-100 shadow-sm focus:shadow-md focus:placeholder-gray-600  transition  rounded-md w-full py-3 text-gray-600 leading-tight focus:outline-none focus:ring-gray-600 focus:shadow-outline" id="phoneNumber" type="tel" placeholder="Enter your phone number"
+                    onChange={(e) => setPhoneNumber(e.target.value)}
+                    value={phoneNumber}
                   />
                 </div>
                 <div className="flex flex-wrap text-center gap-3 ">

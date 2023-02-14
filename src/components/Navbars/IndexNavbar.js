@@ -147,11 +147,11 @@ export const Navbar = () => {
 
   const NavLink = styled(Link)(({ theme }) => ({
     fontSize: "14px",
-    color: "#4F5361",
+    color: "#fff",
     fontWeight: "bold",
     cursor: "pointer",
     "&:hover": {
-      color: "#fff",
+      color: "#4F5361",
     },
   }));
 
