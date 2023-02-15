@@ -22,10 +22,12 @@ export default function Profile() {
   const [email, setemail] = useState("working on it");
   const [datejoined, setdatejoined] = useState("working on it");
   const { token, setToken } = useToken();
-  if (token == "false" || undefined) {
-    history.push("/auth");
-  }
+
   useEffect(() => {
+    if (token === "false" || token === undefined) {
+      return history.push("/");
+    }
+
     let data = new FormData();
     data.append(
       "token",
@@ -33,6 +35,7 @@ export default function Profile() {
         .getItem("token")
         .slice(1, localStorage.getItem("token").length - 1)
     );
+
     data.append("uuid", localStorage.uuid);
     let config = {
       method: "put",
@@ -42,6 +45,7 @@ export default function Profile() {
       },
       data: data,
     };
+
     axios(config)
       .then(function (response) {
         setis_profile_created(true);
@@ -51,8 +55,8 @@ export default function Profile() {
         setpic_url(response.data.pic);
         setdatejoined(
           response.data.info[0].date_joined.slice(0, 10) +
-            " : " +
-            response.data.info[0].date_joined.slice(11, 16)
+          " : " +
+          response.data.info[0].date_joined.slice(11, 16)
         );
         setlocation(response.data.location);
         setphone(response.data.phone);
@@ -61,9 +65,9 @@ export default function Profile() {
       })
       .catch(function (error) {
         setis_profile_created(false);
-        console.log("error getting user info");
       });
-  }, [50]);
+  }, []);
+
   const [imageupload, setimageupload] = useState("");
   function getPath(e) {
     var file = e.target.files[0];
@@ -129,7 +133,7 @@ export default function Profile() {
                             alt="..."
                             src={pic_url}
                             className="shadow-xl rounded-full  align-center border-none absolute -m-16  lg:-ml-16 max-w-150-px"
-                            // style={{ width: "150px", height: "150px" }}
+                          // style={{ width: "150px", height: "150px" }}
                           />
                         </>
                       ) : (
@@ -222,7 +226,7 @@ export default function Profile() {
                       <a
                         className="hover:text-blueGray-500 text-blueGray-700 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
                         href="tel:01003234531"
-                        target="_blank"
+                        target="_blank" rel="noreferrer"
                       />
                       <i className="text-blueGray-400 fas  fa-phone text-lg leading-lg ">
                         اتصال

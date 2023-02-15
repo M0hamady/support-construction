@@ -154,7 +154,7 @@ export default function CardOverViewAndItenDescription() {
             </Link>
           </div>
 
-          <div className="w-full md:w-5/12 px-4 mr-auto ml-auto mt-32">
+          <div className="w-full md:w-5/12 px-[45px]  lg:px-4 mx-auto mt-32">
             <div className="relative flex flex-col min-w-0 w-full mb-6 mt-48 md:mt-0">
               <img
                 alt="..."
@@ -174,7 +174,7 @@ export default function CardOverViewAndItenDescription() {
               <img
                 alt="..."
                 src={overviewImg3}
-                className="w-full align-middle rounded-lg absolute shadow-2xl max-w-200-px -left-50-px top-25-px"
+                className="w-full align-middle rounded-lg absolute shadow-2xl max-w-200-px -left-25-px top-25-px"
               />
               <img
                 alt="..."

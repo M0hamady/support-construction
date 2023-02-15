@@ -271,18 +271,20 @@ export const Navbar = () => {
           buttonText="Logout"
         /> :
           <>
-            <CustomButton
-              backgroundColor="#fff"
-              color="#334155"
-              onClick={() => history.push('/auth/login')}
-              buttonText="Sign Up"
-            />
-            <CustomButton
-              backgroundColor="#334155"
-              color="#fff"
-              onClick={() => history.push("/auth/register")}
-              buttonText="Register"
-            />
+            <button
+              className="get-started text-white font-bold px-6 py-4 text-pop-up-top rounded outline-none focus:outline-none mr-1 mb-1   bg-blueGray-700 active:bg-lightBlue-600 uppercase text-sm shadow hover:shadow-lg ease-linear transition-all duration-150"
+            >
+              <NavLink variant="body2" to="/auth/login">
+                Login
+              </NavLink>
+            </button>
+            <button
+              className="get-started text-white font-bold px-6 py-4 text-pop-up-top rounded outline-none focus:outline-none mr-1 mb-1   bg-lightBlue-500 active:bg-lightBlue-600 uppercase text-sm shadow hover:shadow-lg ease-linear transition-all duration-150"
+            >
+              <NavLink variant="body2" to="/auth/register">
+                Sign Up
+              </NavLink>
+            </button>
           </>
         }
       </Box>

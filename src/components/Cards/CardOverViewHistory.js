@@ -16,9 +16,8 @@ export default function CardOverViewHistory() {
             <div className="flex flex-wrap">
               <div
                 data-aos="slide-down"
-                data-aos-duration="1000"
                 className="w-full lg:w-4/12 px-4">
-                <h5 className="text-xl font-semibold pb-4 text-center">
+                <h5 className="text-xl font-semibold pb-4 text-center ">
                   Our startup
                 </h5>
                 <Link to="/auth/login">
@@ -34,9 +33,8 @@ export default function CardOverViewHistory() {
 
               <div
                 data-aos="slide-down"
-                data-aos-duration="1000"
                 className="w-full lg:w-4/12 px-4">
-                <h5 className="text-xl font-semibold pb-4 text-center">
+                <h5 className="text-xl font-semibold pb-4 text-center text-[#fff] lg:text-[#5f6b89] ">
                   with some employed
                 </h5>
                 <Link to="/profile">
@@ -53,9 +51,8 @@ export default function CardOverViewHistory() {
 
               <div
                 data-aos="slide-down"
-                data-aos-duration="1000"
                 className="w-full lg:w-4/12 px-4">
-                <h5 className="text-xl font-semibold pb-4 text-center">
+                <h5 className="text-xl font-semibold pb-4 text-center text-[#fff] lg:text-[#5f6b89] ">
                   While working
                 </h5>
                 <Link to="/landing">
